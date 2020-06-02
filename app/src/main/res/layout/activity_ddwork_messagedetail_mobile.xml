@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:orientation="vertical"
+    tools:context=".module.message.MessageDetailActivity">
+
+    <!--<include layout="@layout/toolbar_layout_mobile"/>-->
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.WorkToolbar
+        android:id="@+id/work_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.tsinghuabigdata.edu.ddmath.module.message.view.MsgDetailView
+            android:id="@+id/message_detailview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/font_size_large"
+            android:background="@color/white"/>
+
+        <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+            android:id="@+id/loadingPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+
+</LinearLayout>
+
+
+

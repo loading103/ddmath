@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="48dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/selector_item_report_week_extract"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="3"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#C37E40"
+            android:textSize="@dimen/text_middle"/>
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_middle"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_middle"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_redpoint"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:src="@drawable/shape_redpoint_bg"
+        android:contentDescription="@null"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/common_green"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        >
+
+        <!-- 左边 返回 -->
+        <LinearLayout
+            android:id="@+id/ll_lefttitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="@null"
+                android:src="@drawable/ico_fanhui"/>
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/goback"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:visibility="visible"
+                />
+
+        </LinearLayout>
+
+        <!-- 中间标题-->
+        <TextView
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxEms="20"
+            android:maxLines="1"
+            android:text="@string/knowledge_diagnosis"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            />
+
+        <!-- 右边按钮 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/iv_help"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_question_white"
+                android:contentDescription="@null"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="16dp"
+                android:background="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_class"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:text="@string/class_rank"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="16dp"
+                android:background="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_grade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/gradle_rank"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+            android:id="@+id/loadingPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"/>
+
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@color/color_FFFEEE"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_all_accuracy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:hint="已学全部知识点平均正确率为XX%，详情查看"
+                        android:textColor="@color/color_666666"
+                        android:textSize="16sp"/>
+
+                    <Button
+                        android:id="@+id/btn_look_graph"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="92dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/bg_look_graph"
+                        android:text="@string/look_graph"
+                        android:textColor="@color/color_FAB000"
+                        android:textSize="18sp"
+                        />
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:gravity="center_vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:hint="时间:"
+                            android:textColor="@color/color_333333"
+                            android:textSize="18sp"/>
+
+                        <com.tsinghuabigdata.edu.ddmath.view.TimeSpinnerView
+                            android:id="@+id/timeSpinnerView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="6dp"
+                            android:gravity="center_vertical"
+                            app:source="true"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center_vertical">
+
+                        <CheckBox
+                            android:id="@+id/cb_allknowledge_select"
+                            android:layout_width="36dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/selector_select_knowledge"
+                            android:button="@null"/>
+
+                        <TextView
+                            android:id="@+id/tv_allknowledge_select"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:text="全部等级"
+                            android:textColor="@color/select_knowledge_text_color"
+                            android:textSize="@dimen/text_large_xx"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/ll_chart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+
+                        <com.github.mikephil.charting.charts.PieChart
+                            android:id="@+id/chart1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"/>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp">
+
+                            <TextView
+                                android:id="@+id/tv_avg_accuracy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="平均正确率  XX%"
+                                android:textColor="@color/color_333333"
+                                android:textSize="21sp"
+                                android:visibility="invisible"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_learned_knowledges"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="已学知识点  X个"
+                                android:textColor="@color/color_666666"
+                                android:textSize="18sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_knowledge_level"
+                                android:layout_width="28dp"
+                                android:layout_height="26dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="16dp"
+                                android:layout_toStartOf="@id/tv_learned_knowledges"
+                                android:background="@drawable/bg_knowledge_level_cha"
+                                android:gravity="center"
+                                android:text="良"
+                                android:textColor="@color/white"
+                                android:textSize="18sp"
+                                android:visibility="invisible"
+                                />
+
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="总题数"
+                                android:textColor="@color/color_666666"
+                                android:textSize="18sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_question_count"
+                                android:layout_width="76dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:text="XX题"
+                                android:textColor="@color/color_666666"
+                                android:textSize="18sp"
+                                />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="错题数"
+                                android:textColor="@color/color_666666"
+                                android:textSize="18sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_error_count"
+                                android:layout_width="76dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:text="XX题"
+                                android:textColor="@color/color_666666"
+                                android:textSize="18sp"
+                                />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <!-- 没有数据 -->
+                    <LinearLayout
+                        android:id="@+id/ll_empty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            android:layout_width="155dp"
+                            android:layout_height="104dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/pic_nodata"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_horizontal"
+                            android:text="@string/no_knowledges_tips"
+                            android:textColor="@color/color_666666"
+                            android:textSize="18sp"/>
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:background="@color/color_F3FEFF"
+                android:paddingTop="6dp"
+                >
+
+                <!-- 没有选择等级 -->
+                <RelativeLayout
+                    android:id="@+id/ll_none_knowledge"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:layout_width="144dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/pic_nodata"
+                            android:contentDescription="@null"
+                            android:layout_marginBottom="12dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/create_know_tips"
+                            android:textColor="@color/color_666666"
+                            android:textSize="@dimen/text_large_x"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/create_know_tips"
+                            android:textSize="@dimen/text_large_x"
+                            android:visibility="invisible"
+                            android:textColor="@color/color_3BCCD9"
+                            android:layout_marginTop="48dp"
+                            android:drawableStart="@drawable/ic_arrow_left"
+                            android:drawablePadding="4dp"/>
+
+                        <!--  图片要换
+                            android:drawableStart="@drawable/bonus" -->
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <!-- 全部等级 -->
+                <LinearLayout
+                    android:id="@+id/ll_all_knowledge"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingEnd="12dp"
+                    android:paddingStart="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="全部等级的知识点显示如下："
+                        android:textColor="@color/color_999999"
+                        android:textSize="18sp"/>
+
+
+                    <ListView
+                        android:id="@+id/lv_all_knowledge"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:divider="@drawable/select_knowledge_dashline"
+                        android:dividerHeight="5dp"
+                        android:layerType="software"
+                        android:listSelector="@color/transparent"
+                        android:scrollbars="none"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:background="@drawable/select_knowledge_dashline"
+                        android:layerType="software"/>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="78dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <Button
+                                android:id="@+id/btn_createall"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:layout_width="156dp"
+                                android:layout_height="48dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/bg_create_promote_enable"
+                                android:text="@string/create_promote_practice"
+                                android:textColor="@color/white"
+                                android:textSize="21sp"/>
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/iv_create_arrow"
+                                android:layout_width="27dp"
+                                android:layout_height="15dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="160dp"
+                                android:contentDescription="@null"
+                                android:src="@drawable/yindao"/>
+
+                            <TextView
+                                android:id="@+id/tv_createbtn_tip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toStartOf="@id/iv_create_arrow"
+                                android:text="@string/create_promote_tips"
+                                android:textColor="@color/color_3BCCD9"
+                                android:textSize="18sp"
+                                />
+
+
+                        </RelativeLayout>
+
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+                <!-- 单一等级 -->
+                <LinearLayout
+                    android:id="@+id/ll_single_knowledge"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingEnd="12dp"
+                    android:paddingStart="12dp"
+                    android:visibility="invisible">
+
+                    <TextView
+                        android:id="@+id/tv_knowldeg_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="等级X（XX%～XX%）的已学知识点显示如下："
+                        android:textColor="@color/color_999999"
+                        android:textSize="18sp"/>
+
+
+                    <ListView
+                        android:id="@+id/lv_single_knowledge"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:divider="@drawable/select_knowledge_dashline"
+                        android:dividerHeight="5dp"
+                        android:layerType="software"
+                        android:listSelector="@color/transparent"
+                        android:scrollbars="none"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="78dp"
+                        android:gravity="center_vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical">
+
+                            <CheckBox
+                                android:id="@+id/cb_all_select"
+                                android:layout_width="34dp"
+                                android:layout_height="31dp"
+                                android:background="@drawable/selector_select_knowledge"
+                                android:button="@null"/>
+
+                            <TextView
+                                android:id="@+id/tv_all_select"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="6dp"
+                                android:text="全选"
+                                android:textColor="@color/select_knowledge_text_color"
+                                android:textSize="21sp"/>
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="已选："
+                                android:textColor="@color/color_666666"
+                                android:textSize="18sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_select_knowledge_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="X个知识点"
+                                android:textColor="@color/color_666666"
+                                android:textSize="18sp"
+                                />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+
+                        <Button
+                            android:id="@+id/btn_create_enalbe"
+                            style="?android:attr/borderlessButtonStyle"
+                            android:layout_width="180dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/bg_create_promote_enable"
+                            android:text="@string/create_promote_practice"
+                            android:textColor="@color/white"
+                            android:textSize="21sp"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- 没有数据 -->
+                <TextView
+                    android:id="@+id/tv_no_display_knowledges"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/no_display_knowledges"
+                    android:textColor="@color/color_666666"
+                    android:textSize="18sp"/>
+
+            </FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

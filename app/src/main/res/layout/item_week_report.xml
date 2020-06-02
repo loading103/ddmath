@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="99dp"
+        android:background="@drawable/bg_day_report_submited"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp">
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="68dp"
+            android:singleLine="true"
+            android:text="作业名称01作业名称01作业名称01作业名称01"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_question_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:singleLine="true"
+            android:text="本周 XX题   正确率 XX%   错题未订正 XX题 测试文字测试文字测试文字"
+            android:textColor="@color/color_888888"
+            android:textSize="14sp"/>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="79dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/bg_report_read_status"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="未阅读"
+        android:textColor="@color/report_read_text_color"
+        android:textSize="16sp"/>
+
+</RelativeLayout>

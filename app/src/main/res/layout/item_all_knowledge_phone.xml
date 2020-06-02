@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_point_name"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:textStyle="bold"
+        android:text="三级知识点名称"
+        android:textColor="@color/color_333333"
+        android:textSize="14sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginStart="12dp"
+        android:background="@drawable/select_knowledge_dashline"
+        android:layerType="software"/>
+
+
+    <com.tsinghuabigdata.edu.ddmath.view.MultListView
+        android:id="@+id/lv_inner_knowledge"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:divider="@drawable/select_knowledge_dashline"
+        android:dividerHeight="5dp"
+        android:layerType="software"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none"
+        />
+
+</LinearLayout>

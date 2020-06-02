@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/mask_bg">
+
+    <LinearLayout
+        android:layout_width="345dp"
+        android:layout_height="223dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/ic_frame"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:text="服务器正在维护，请稍候...."
+            android:textColor="@color/color_AC9C51"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/iv_quit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/btn_quitapp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

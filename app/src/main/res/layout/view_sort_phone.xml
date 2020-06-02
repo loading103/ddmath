@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/ll_upload_time"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_upload_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:text="上传时间"
+            android:textColor="@color/sort_tv_color"
+            android:textSize="14sp"/>
+
+        <ImageView
+            android:id="@+id/iv_upload_time"
+            android:layout_width="16dp"
+            android:layout_height="13dp"
+            android:layout_marginLeft="4dp"
+            android:src="@drawable/ic_arrow3"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:id="@+id/ll_wrong_count"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_wrong_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:text="错误次数"
+            android:textColor="@color/sort_tv_color"
+            android:textSize="14sp"/>
+
+        <ImageView
+            android:id="@+id/iv_wrong_count"
+            android:layout_width="13dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="4dp"
+            android:src="@drawable/ic_arrow3"/>
+
+    </LinearLayout>
+
+</LinearLayout>

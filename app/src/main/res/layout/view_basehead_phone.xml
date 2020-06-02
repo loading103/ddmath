@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+    <!-- 第三层 白色圆圈，首页按钮专用 -->
+    <ImageView
+        android:id="@+id/view_iv_shead_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:contentDescription="@null"/>
+
+    <!-- 第一层 用户头像 -->
+    <com.tsinghuabigdata.edu.ddmath.view.CircleImageView
+        android:id="@+id/view_iv_head_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        app:border_color="@color/white"
+        app:border_width="2dp"/>
+
+    <!-- 第二层 头像挂件 -->
+    <ImageView
+        android:id="@+id/view_iv_head_pendant"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:visibility="visible"
+        android:contentDescription="@null"/>
+
+
+    <!-- 第四层 身份VIP -->
+    <ImageView
+        android:id="@+id/view_iv_membergrade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/svip_buy"
+        android:visibility="visible"
+        android:contentDescription="@null"/>
+
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="96dp"
+    android:layout_height="96dp"
+    >
+
+    <View
+        android:id="@+id/view_markrect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="2dp"
+        android:background="@drawable/camera_rect_normal_phone"
+        />
+
+    <RelativeLayout
+        android:id="@+id/view_marklayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/view_markimageview"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="@null"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

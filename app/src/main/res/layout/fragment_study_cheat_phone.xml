@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    tools:context=".module.studycheat.StudyCheatActivity">
+
+    <!-- include layout="@layout/toolbar_layout_mobile"/ -->
+
+    <!-- Toolbar 状态条 -->
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.WorkToolbar
+        android:id="@+id/work_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:background="#F1FEFF"
+        android:gravity="center_horizontal">
+
+        <!-- 已完成人数 -->
+        <RelativeLayout
+            android:id="@+id/cheat_finishedcount_layout"
+            android:layout_width="270dp"
+            android:layout_height="80dp"
+            android:background="@drawable/ic_bubble_cheat"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/cheat_finishedcount_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cheat_allfinish_tips_2"
+                android:textColor="@color/color_8B572A"
+                android:textSize="@dimen/text_small_x"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp"
+                android:paddingTop="6dp"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_small_x"
+            android:textColor="@color/color_666666"
+            android:text="@string/cheat_tips"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <!-- 任务 -->
+            <LinearLayout
+                android:id="@+id/task_mainlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="4"/>
+
+                <!-- 错题回顾 -->
+                <com.tsinghuabigdata.edu.ddmath.module.studycheat.view.CheatTaskView
+                    android:id="@+id/cheat_errquestion_cheatTaskView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cheattype="0"/>
+
+                <View
+                    android:id="@+id/cheat_middle_spaceView"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+
+                <!-- 强化训练 -->
+                <com.tsinghuabigdata.edu.ddmath.module.studycheat.view.CheatTaskView
+                    android:id="@+id/cheat_forcetrain_cheatTaskView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cheattype="1"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="4"/>
+            </LinearLayout>
+
+            <!-- 没有任务 -->
+            <RelativeLayout
+                android:id="@+id/cheat_nodata_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/text_large"
+                    android:text="@string/cheat_no_task"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@drawable/img_rest"/>
+
+            </RelativeLayout>
+
+            <!-- 未登录处理 -->
+            <com.tsinghuabigdata.edu.ddmath.view.UnLoginView
+                android:id="@+id/cheat_unregister_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone"/>
+
+            <!-- 加载中 -->
+            <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+                android:id="@+id/loadingPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

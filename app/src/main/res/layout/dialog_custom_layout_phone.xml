@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zx30_black"
+    >
+
+    <!-- 主要内容区  -->
+    <RelativeLayout
+        android:id="@+id/dialog_qreview_mainlayout"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:minHeight="140dp"
+        android:background="@drawable/bg_rect_white"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp">
+
+        <!-- 关闭按钮 -->
+        <ImageView
+            android:id="@+id/dialog_custom_closebtn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/selector_dialog_close"
+            android:contentDescription="@null"/>
+
+        <!-- 普通dialog模式 -->
+        <LinearLayout
+            android:id="@+id/dialog_custom_commonlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="30dp"
+            android:visibility="visible"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dialog_custom_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:lineSpacingMultiplier="1.2"
+                android:maxLines="3"
+                android:ellipsize="end"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:textColor="@color/color_333333"
+                android:minHeight="60dp"
+                android:text="@string/delete_allimage"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+
+                <!-- 取消按钮 -->
+                <Button
+                    android:id="@+id/dialog_custom_leftbtn"
+                    android:layout_width="120dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/bg_rect_blue_r24white"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_3BCCD9"
+                    android:text="取消"
+                    android:gravity="center"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    style="?android:attr/borderlessButtonStyle"
+                    />
+
+                <!-- 确定-->
+                <Button
+                    android:id="@+id/dialog_custom_rightbtn"
+                    android:layout_width="120dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/bg_rect_red_r24white"
+                    android:layout_marginLeft="32dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_FF7555"
+                    android:text="全部删除"
+                    android:gravity="center"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <!-- 仅仅显示新用户特权使用 -->
+            <LinearLayout
+                android:id="@+id/layout_newuser_priviledge"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
+
+                <!-- 分割线 -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@drawable/bg_dot_line_blue"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="16dp">
+
+                    <ImageView
+                        android:id="@+id/iv_weixin_code"
+                        android:layout_width="62dp"
+                        android:layout_height="62dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/qrcode_for_gh_9d96ed018d82_430"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="6dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_666666"
+                            android:textSize="@dimen/text_middle"
+                            android:textStyle="bold"
+                            android:text="@string/scanwx_jion_gzh"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_F5A623"
+                            android:textSize="@dimen/text_small"
+                            android:textStyle="bold"
+                            android:text="@string/scanwx_tips"
+                            android:layout_marginTop="6dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 预估题目数量 -->
+        <LinearLayout
+            android:id="@+id/dialog_custom_entercountlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/enter_count"
+                android:gravity="center"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="36dp"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/dialog_custom_edittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text=""
+                        android:inputType="number"
+                        android:digits="@string/filter_vcode"
+                        android:maxLines="1"
+                        android:maxLength="2"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:gravity="center"
+                        android:textColor="@color/color_ff9523"
+                        android:textSize="18sp"
+                        android:background="@null"
+                        android:imeOptions="flagNoExtractUi"
+                        />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:background="@drawable/orange_line"
+                        android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+
+               <!-- android:background="@drawable/edittext_bg"-->
+                <!-- 确定-->
+                <Button
+                    android:id="@+id/dialog_custom_enterbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_rect_lightblue_r24"
+                    android:layout_marginLeft="16dp"
+                    android:textSize="@dimen/text_large_x"
+                    android:textColor="@color/white"
+                    android:text="确定"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    style="?android:attr/borderlessButtonStyle"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- 提示 图标 -->
+    <ImageView
+        android:id="@+id/dialog_qreview_tipimage"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_above="@id/dialog_qreview_mainlayout"
+        android:layout_marginBottom="-10dp"
+        android:layout_centerHorizontal="true"
+        android:paddingRight="220dp"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

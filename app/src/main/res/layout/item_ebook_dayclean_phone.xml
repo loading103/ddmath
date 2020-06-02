@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bluebg"
+    android:paddingStart="7dp"
+    android:paddingEnd="6dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="7dp">
+
+    <!-- 内容区 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="8dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="8dp"
+        android:gravity="center_vertical">
+
+        <!-- 标题 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/item_ebookday_newtips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/new_icon"
+                android:layout_marginEnd="6dp"/>
+
+            <!-- 标题 -->
+            <TextView
+                android:id="@+id/item_ebookday_examname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2017-11-03周五错题订正"
+                android:textColor="@color/color_3DA4BD"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_large"/>
+
+        </LinearLayout>
+
+        <!-- 已订正情况 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:id="@+id/item_ebookday_correctcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已订正15题("
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/text_small"/>
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:contentDescription="@null"
+                android:src="@drawable/righticon"/>
+
+            <TextView
+                android:id="@+id/item_ebookday_rightcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10题"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/text_small"/>
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_dayclean_wrong"/>
+
+            <TextView
+                android:id="@+id/item_ebookday_wrongcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3题"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/text_small"/>
+
+        </LinearLayout>
+
+        <!-- 待订正 -->
+        <TextView
+            android:id="@+id/item_ebookday_waitcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="待订正15题"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/text_small"
+            android:layout_marginTop="8dp"/>
+
+        <!-- 时间 -->
+        <TextView
+            android:id="@+id/item_ebookday_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="上次订正时间2017-11-08- 17:00"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_small_x"
+            />
+
+    </LinearLayout>
+
+    <!-- 订正状态 -->
+    <ImageView
+        android:id="@+id/item_ebookday_correctstatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/yidingzheng"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="@null"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>
+

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.WorkToolbar
+        android:id="@+id/worktoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/activity_goodsdetail_maincontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- 显示商品介绍图片 -->
+            <ScrollView
+                android:id="@+id/activity_goodsdetail_scollview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#E0CEAF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <!-- 商品介绍图 -->
+                    <ImageView
+                        android:id="@+id/activity_goodsdetail_intro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+            <!-- 下面状态栏 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#FFFFF9">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="30dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <!-- 宝贝类型 -->
+                        <ImageView
+                            android:id="@+id/activity_goodsdetail_exchangetype"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:contentDescription="@null"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_frequency" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <!-- 剩余机会 -->
+                            <TextView
+                                android:id="@+id/activity_goodsdetail_leavecount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="#AC9C51"
+                                android:textSize="@dimen/text_middle" />
+
+                            <!-- 使用次数 -->
+                            <TextView
+                                android:id="@+id/activity_goodsdetail_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/color_999999"
+                                android:textSize="@dimen/text_small" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- 使用期限 -->
+                    <TextView
+                        android:id="@+id/activity_goodsdetail_usedate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/color_999999"
+                        android:textSize="@dimen/text_small" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_alignParentEnd="true">
+
+                    <!-- 购买需要的学豆 -->
+                    <TextView
+                        android:id="@+id/activity_goodsdetail_priceofbuy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="55dp"
+                        android:text=""
+                        android:textColor="@color/color_999999"
+                        android:textSize="@dimen/text_small" />
+
+                    <!-- 购买功能  -->
+                    <ImageView
+                        android:id="@+id/activity_goodsdetail_gobuy"
+                        android:layout_width="147dp"
+                        android:layout_height="63dp"
+                        android:layout_marginEnd="20dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/selector_gobuy_btn" />
+
+                    <!-- 去学习 -->
+                    <Button
+                        android:id="@+id/activity_goodsdetail_gostudy"
+                        android:layout_width="147dp"
+                        android:layout_height="63dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@drawable/selector_gostudy"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+            android:id="@+id/loadingPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+</LinearLayout>

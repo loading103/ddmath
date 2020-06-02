@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/bg_picture"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <!--<include layout="@layout/toolbar_layout_mobile"/>-->
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.WorkToolbar
+        android:id="@+id/work_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/ll_entrance_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:id="@+id/ll_entrance_apply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_entrance_tip"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="每个人都是一个独立的个体，都有属于自己的个性成长，而了解自己是成长的第一步。"
+                    android:textColor="#C298EC"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="测试一下，获得权威的入学评测报告，帮助你更好地了解自己 Y(^_^)Y"
+                    android:textColor="#666666"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="9dp"
+                    android:text="（完成AB两项即可申请专业版的入学评测报告，完成ABC三项可申请精准版的入学评测报告。）"
+                    android:textColor="#666666"
+                    android:textSize="12sp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_entrance_return"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_entrance_tip"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="老师的退回理由："
+                        android:textColor="#F47E21"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="（请根据老师的退回理由，修改相应部分后再重新申请领取报告。）"
+                        android:textColor="#999999"
+                        android:textSize="12sp"/>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E6E6E6"/>
+
+                <TextView
+                    android:id="@+id/tv_return_reason"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="6dp"
+                    android:text="你在个人学习数据中上传的图片不清晰，老师无法辨认，请重新上传～"
+                    android:textColor="#313131"
+                    android:textSize="12sp"/>
+
+                <!--<ListView
+                    android:id="@+id/lv_return_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="13dp"
+                    android:layout_marginTop="10dp"></ListView>-->
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_quality_analyze"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="181"
+                    android:background="@drawable/bg_entrance_analyze1">
+
+                    <TextView
+                        android:id="@+id/tv_quality"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="28dp"
+                        android:gravity="center_horizontal"
+                        android:lineSpacingExtra="4dp"
+                        android:text="A\n素质分析"
+                        android:textColor="#5AAED7"
+                        android:textSize="20sp"/>
+
+
+                    <TextView
+                        android:id="@+id/tv_quality_modify"
+                        android:layout_width="60dp"
+                        android:layout_height="24dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="90dp"
+                        android:background="@drawable/bg_dialog_entrance"
+                        android:gravity="center"
+                        android:text="已改"
+                        android:textColor="#6A9500"
+                        android:textSize="14sp"
+                        android:visibility="invisible"/>
+
+                    <TextView
+                        android:id="@+id/tv_quality_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="92dp"
+                        android:gravity="center_horizontal"
+                        android:text="大约需要15分钟"
+                        android:textColor="#85C1DE"
+                        android:textSize="12sp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_quality"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_enter_upload_success_green"/>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="32"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_knowledge_analyze"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="181"
+                    android:background="@drawable/bg_entrance_analyze2">
+
+                    <TextView
+                        android:id="@+id/tv_knowledge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="28dp"
+                        android:gravity="center_horizontal"
+                        android:lineSpacingExtra="4dp"
+                        android:text="B\n知识分析"
+                        android:textColor="#5A81D7"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_knowledge_modify"
+                        android:layout_width="60dp"
+                        android:layout_height="24dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="90dp"
+                        android:background="@drawable/bg_dialog_entrance"
+                        android:gravity="center"
+                        android:text="已改"
+                        android:textColor="#6A9500"
+                        android:textSize="14sp"
+                        android:visibility="invisible"/>
+
+                    <TextView
+                        android:id="@+id/tv_knowledge_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="92dp"
+                        android:gravity="center_horizontal"
+                        android:text="拍照上传已批阅的考试或作业"
+                        android:textColor="#85A1DE"
+                        android:textSize="12sp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_knowledge"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_enter_upload_success_green"/>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="32"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_accurate_evaluation"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="181"
+                    android:background="@drawable/bg_entrance_analyze3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="28dp"
+                        android:gravity="center_horizontal"
+                        android:lineSpacingExtra="4dp"
+                        android:text="C\n精准评测"
+                        android:textColor="#D79A5A"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_accurate_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="92dp"
+                        android:gravity="center_horizontal"
+                        android:text="全面、精准评测知识漏洞"
+                        android:textColor="#DEB384"
+                        android:textSize="12sp"/>
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_see_report"
+                android:layout_width="244dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/selector_see_report"
+                android:gravity="center"
+                android:text="申请领取报告（专业版）"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+        <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+            android:id="@+id/loadingPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"/>
+
+    </FrameLayout>
+
+
+</LinearLayout>

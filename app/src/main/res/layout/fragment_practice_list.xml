@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    >
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/fragment_practice_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/transparent"
+        android:dividerHeight="16dp"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none"
+        android:showDividers="middle"
+        android:paddingTop="10dp"
+        />
+
+    <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+        android:id="@+id/loading_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+</FrameLayout>
+

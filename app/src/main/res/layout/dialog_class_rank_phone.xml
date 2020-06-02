@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="422dp"
+             android:layout_height="306dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/bg_class_rank_phone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:background="@drawable/bg_rect_ranklist_phone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_centerHorizontal="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_rank_class"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="班级榜"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"/>
+                    
+                    <View
+                        android:id="@+id/view_select_class"
+                        android:layout_width="80dp"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@color/white"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_marginStart="40dp">
+
+                    <TextView
+                        android:id="@+id/tv_rank_grade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="年级榜"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:id="@+id/view_select_grade"
+                        android:layout_width="80dp"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@color/white"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_close"
+                android:layout_width="26dp"
+                android:layout_height="28dp"
+                android:layout_alignParentEnd="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginTop="6dp"
+                    android:src="@drawable/icon_tuichu"
+                    android:contentDescription="@null"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="-24dp">
+
+            <com.tsinghuabigdata.edu.ddmath.module.onekeydiagnose.view.ClassGloryView
+                android:id="@+id/class_rank_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <com.tsinghuabigdata.edu.ddmath.module.onekeydiagnose.view.GradeGloryView
+                android:id="@+id/grade_rank_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+
+
+</FrameLayout>

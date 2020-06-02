@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="345dp"
+    android:layout_height="223dp"
+    android:background="@drawable/ic_frame">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="23dp">
+
+        <Button
+            android:id="@+id/bt_cancel"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/ic_frame_cancle"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:textColor="@color/color_AC9C51"
+        android:textSize="14sp"
+        android:text="请勿提交重复的兑换码，您输入的兑换码正在验证中或已经被验证。"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="25dp"
+        android:paddingRight="35dp"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="15"/>
+
+    <TextView
+        android:textColor="@color/color_AC9C51"
+        android:textSize="14sp"
+        android:text="若有疑问，请联系豆豆客服：400-9928-918"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="30"/>
+
+    <Button
+        android:id="@+id/bt_know"
+        android:layout_width="94dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/ic_btn_know"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="24"/>
+
+</LinearLayout>

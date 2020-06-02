@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="345dp"
+                android:layout_height="223dp"
+                android:background="@drawable/ic_frame"
+                android:orientation="vertical">
+
+
+    <!-- 关闭按钮 -->
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_frame_cancle"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="142dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="使用说明:"
+            android:textColor="@color/color_AC9C51"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:lineSpacingMultiplier="1.2"
+            android:text="@string/create_work_intro"
+            android:textColor="@color/color_AC9C51"
+            android:textSize="14sp"/>
+
+
+    </LinearLayout>
+
+    <!-- 知道了 -->
+    <ImageView
+        android:id="@+id/iv_know"
+        android:layout_width="94dp"
+        android:layout_height="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="172dp"
+        android:src="@drawable/ic_btn_know"/>
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/item_workimage_layout"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:visibility="visible"
+        >
+
+        <ImageView
+            android:id="@+id/item_workimage_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+        <com.tsinghuabigdata.edu.ddmath.view.CaptureView
+            android:id="@+id/item_workimage_rectcoverView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/item_workimage_index"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textColor="@color/color_6A6AA1"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_rect_imageindex"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"/>
+
+
+</LinearLayout>

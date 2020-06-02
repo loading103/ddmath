@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zx30_black"
+    android:orientation="vertical"
+    >
+    <!-- 提示 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lm_adjust_tips"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_large"
+        android:gravity="center"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        />
+
+    <!-- -->
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.MyRelativeLayout
+        android:id="@+id/view_main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <FrameLayout
+            android:id="@+id/view_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- 显示图片 -->
+            <ImageView
+                android:id="@+id/view_crop_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:contentDescription="@null"
+                />
+
+            <!-- 自定义的截图View -->
+            <com.tsinghuabigdata.edu.ddmath.module.learnmaterial.view.CaptureView
+                android:id="@+id/view_crop_capture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+        </FrameLayout>
+
+        <!-- 显示题号 和 上下题切换 -->
+        <LinearLayout
+            android:id="@+id/view_changequestion_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            >
+            <ImageView
+                android:id="@+id/view_pre_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_takephoto_previous"
+                android:contentDescription="@null"
+                />
+
+            <TextView
+                android:id="@+id/view_curr_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="@dimen/text_large"
+                android:textColor="@color/white"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_gravity="center_vertical"
+                android:textStyle="bold"
+                />
+
+            <ImageView
+                android:id="@+id/view_next_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_takephoto_next"
+                android:textSize="@dimen/text_large"
+                android:textColor="@color/bar_tint"
+                android:contentDescription="@null"
+                />
+
+        </LinearLayout>
+    </com.tsinghuabigdata.edu.ddmath.module.ddwork.view.MyRelativeLayout>
+
+    <!-- 按钮区 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/view_crop_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:gravity="center"
+            android:textSize="@dimen/text_middle"
+            android:textColor="@color/bar_tint"
+            android:background="@drawable/bg_rect_white_r24_phone"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/view_crop_enter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alert_positive"
+            android:textSize="@dimen/text_middle"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="@drawable/bg_rect_blue_r24_phone"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+</LinearLayout>

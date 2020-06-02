@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:id="@+id/item_lm_mainlayout"
+        android:layout_width="60dp"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:id="@+id/item_lm_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/sel_question_item"
+            android:contentDescription="@null"/>
+
+        <TextView
+            android:id="@+id/item_lm_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="@dimen/text_large_x"
+            android:layout_centerInParent="true"/>
+
+        <!-- 得分 -->
+        <RelativeLayout
+            android:id="@+id/layout_question_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone">
+
+            <View
+                android:id="@+id/item_score_bg"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@drawable/sel_errorquestion_item_studentscore"/>
+
+            <TextView
+                android:id="@+id/item_tv_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="@dimen/text_large_x"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

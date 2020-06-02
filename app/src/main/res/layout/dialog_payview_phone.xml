@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dialog_payview"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="47"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="28" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="603"
+            android:gravity="center_vertical"
+            android:text="请选择充值方式"
+            android:textColor="@color/color_666666"
+            android:textSize="14sp"/>
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/ic_close_pdf"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="33"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="充值金额"
+            android:textColor="@color/color_666666"
+            android:textSize="24sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_666666"
+            android:textSize="24sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元"
+            android:textColor="@color/color_666666"
+            android:textSize="24sp"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="26" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="100"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="10" />
+
+        <ImageView
+            android:id="@+id/iv_Alipay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="204"
+            android:background="@drawable/selector_alipay_pay"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="15" />
+
+        <ImageView
+            android:id="@+id/iv_parentPay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="204"
+            android:background="@drawable/selector_parent_pay"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="15" />
+
+        <ImageView
+            android:id="@+id/iv_WechatPay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="204"
+            android:background="@drawable/ic_weixin_grey"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="10" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="18" />
+
+    <Button
+        android:id="@+id/bt_confirmPay"
+        android:layout_width="122dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_loading_retry"
+        android:text="确认支付"
+        android:textColor="@color/white"
+        android:textSize="14sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="26"/>
+
+</LinearLayout>

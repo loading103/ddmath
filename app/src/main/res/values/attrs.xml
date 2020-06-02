@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="auto_clomu">4</integer>
+
+    <declare-styleable name="CircularImage">
+        <attr name="border_width" format="dimension"/>
+        <attr name="border_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="PullToRefresh">
+        <attr name="adapterViewBackground" format="reference|color"/>
+        <attr name="headerBackground" format="reference|color"/>
+        <attr name="headerTextColor" format="color"/>
+        <attr name="modes">
+            <flag name="pullDownFromTop" value="0x1"/>
+            <flag name="pullUpFromBottom" value="0x2"/>
+            <flag name="both" value="0x3"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="Themes">
+        <attr name="numberProgressBarStyle" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="GifImageView">
+        <attr name="auto_play" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="MyProgressLine">
+        <attr name="progress_color" format="color|reference"/>
+        <attr name="progress_hight" format="float|dimension"/>
+        <attr name="progress_src" format="reference"/>
+        <attr name="text_color" format="color|reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="TagView">
+        <attr name="arcDistance" format="integer"/>
+        <attr name="color1" format="color"/>
+        <attr name="color2" format="color"/>
+        <attr name="color3" format="color"/>
+        <attr name="textSize" format="integer"/>
+    </declare-styleable>
+
+    <attr name="borderRadius" format="dimension" />
+    <attr name="type">
+        <enum name="circle" value="0" />
+        <enum name="round" value="1" />
+        <enum name="left" value="2" />
+        <enum name="right" value="3" />
+    </attr>
+    <declare-styleable name="RoundImageViewByXfermode">
+        <attr name="borderRadius" />
+        <attr name="type" />
+    </declare-styleable>
+    <declare-styleable name="RoundImageView">
+        <attr name="borderRadius" />
+        <attr name="type" />
+    </declare-styleable>
+    <declare-styleable name="FixedPiontView">
+        <attr name="type" />
+    </declare-styleable>
+
+    <declare-styleable name="CheatTaskView">
+        <attr name="cheattype" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="PaySelectView">
+        <attr name="payName" format="string" />
+        <attr name="leftDrawable" format="reference" />
+        <attr name="selected" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="BaseHeadView">
+        <attr name="showFirstBg" format="boolean" />
+        <attr name="showPendant" format="boolean" />
+        <attr name="showGrade" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="UserPrivilegeView">
+        <attr name="fromParent" format="boolean"/>
+        <attr name="fromSuite" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="TimeSpinner">
+        <attr name="questiontype" format="integer"/>
+        <attr name="source" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="QuestionItem">
+        <attr name="blockColor" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="PowerProgress"/>
+
+    <!-- 卫星菜单属性 -->
+    <attr name="am_position">
+        <enum name="left_top" value="0" />
+        <enum name="left_bottom" value="1" />
+        <enum name="center" value="2" />
+        <enum name="right_top" value="3" />
+        <enum name="right_bottom" value="4" />
+    </attr>
+    <attr name="am_radius" format="dimension" />
+
+    <declare-styleable name="ArcMenu">
+        <attr name="am_position" />
+        <attr name="am_radius" />
+    </declare-styleable>
+
+    <declare-styleable name="DayTaskView">
+        <attr name="tasktype" format="integer"/>
+    </declare-styleable>
+
+</resources>

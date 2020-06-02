@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zx30_black"
+    >
+
+    <RelativeLayout
+        android:layout_width="720dp"
+        android:layout_height="420dp"
+        android:background="@drawable/bg_rect_white"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/iv_close_btn"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:contentDescription="@null"
+            android:src="@drawable/personalcenter_bg_popup_logout_icon_quit"
+            android:layout_alignParentEnd="true"/>
+
+        <!-- 主要内容区-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <!-- 标题 -->
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_2FAF79"
+                android:textSize="@dimen/text_large_xx"
+                android:textStyle="bold"
+                android:text=""
+                android:layout_gravity="center_horizontal"/>
+
+            <!-- 总题量 -->
+            <TextView
+                android:id="@+id/tv_question_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/text_large_x20"
+                android:text=""
+                android:layout_gravity="center_horizontal"/>
+
+            <!-- 知识点 详情-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/bg_rect_know_r8"
+                android:layout_marginTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp">
+
+                <TextView
+                    android:id="@+id/tv_know_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/text_large_x20"
+                    android:text=""
+                    android:layout_marginStart="27dp"
+                    android:layout_marginTop="18dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@drawable/know_divide_line"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"/>
+
+                <ListView
+                    android:id="@+id/lv_know_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@null"
+                    android:listSelector="@color/transparent"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="1dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+

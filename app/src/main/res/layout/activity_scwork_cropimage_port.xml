@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_333333">
+
+    <!-- 提示文本 -->
+    <TextView
+        android:id="@+id/xbook_crop_tiptext"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="@string/crop_tips"
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
+
+    <!-- -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:id="@+id/xbook_crop_mainlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <!-- 显示图片 -->
+            <com.tsinghuabigdata.edu.ddmath.module.mylearn.view.RotateImageView
+                android:id="@+id/xbook_crop_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                />
+
+            <!-- 自定义的截图View -->
+            <com.tsinghuabigdata.edu.ddmath.module.mylearn.view.CaptureView
+                android:id="@+id/xbook_crop_capture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+
+            <!-- 加载中 -->
+            <!--<ProgressBar-->
+                <!--android:id="@+id/xbook_crop_loading"-->
+                <!--style="@style/ProgressDialogTheme"-->
+                <!--android:layout_width="28dp"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--&gt;-->
+            <!--</ProgressBar>-->
+
+        </RelativeLayout>
+
+        <!-- 裁剪工具 -->
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+            <!--<com.tsinghuabigdata.edu.CropToolView-->
+                <!--android:id="@+id/xbook_crop_tools"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="160dp"/>-->
+
+        <!--</RelativeLayout>-->
+
+    </FrameLayout>
+
+    <!-- 按钮区 -->
+    <RelativeLayout
+        android:id="@+id/s8s_layout_tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/zx_666666"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        >
+
+        <!-- 重拍 -->
+        <!--<TextView-->
+            <!--android:id="@+id/xbook_crop_redo"-->
+            <!--android:layout_width="80dp"-->
+            <!--android:layout_height="80dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:textColor="@android:color/white"-->
+            <!--android:gravity="center"-->
+            <!--android:textSize="24sp"-->
+            <!--android:text="重拍"-->
+            <!--android:background="@drawable/xbook_circle_background"/>-->
+        <RelativeLayout
+            android:id="@+id/xbook_crop_redo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/xbook_circle_background">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back1"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/xbook_crop_enter"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:background="@drawable/btn_enter_circle_bg"
+            />
+
+        <RelativeLayout
+            android:id="@+id/xbook_croplayout_cancel"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/xbook_circle_background"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/xbook_camera_flashimg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_close_round"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+
+

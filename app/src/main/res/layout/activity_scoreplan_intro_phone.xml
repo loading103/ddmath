@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.WorkToolbar
+        android:id="@+id/worktoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_F3FEFF">
+
+        <LinearLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- 介绍内容，网页实现-->
+            <com.tsinghuabigdata.edu.ddmath.view.ProgressWebView
+                android:id="@+id/progress_webview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <!-- 阴影没有实现 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@drawable/bg_shadow_black"
+                android:layout_marginTop="-4dp"/>
+            <!-- 操作部分 -->
+            <LinearLayout
+                android:id="@+id/layout_btntool"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/tv_use_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_middle"
+                    android:textColor="@color/color_666666"
+                    android:drawablePadding="8dp"
+                    android:drawableStart="@drawable/toatlperson"
+                    android:text=""
+                    android:layout_gravity="center_vertical"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:id="@+id/btn_jion"
+                    android:layout_width="264dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/selector_create_promote"
+                    android:text="@string/immediate_jion"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginEnd="36dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+            android:id="@+id/loadingPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+
+</LinearLayout>

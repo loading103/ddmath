@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- 多条消息 -->
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"/>
+
+    <!-- 单条消息使用 -->
+    <TextView
+        android:id="@+id/tv_single_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="12sp"
+
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"/>
+
+</RelativeLayout>
+

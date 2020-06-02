@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ll_root"
+                android:background="@drawable/bg"
+                android:fitsSystemWindows="true">
+
+
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.tsinghuabigdata.edu.ddmath.view.HeadView
+            android:id="@+id/headView"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="4dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_usercenter"
+            style="@style/Main_TextView_Phone"
+            android:text="@string/module_usercenter"/>
+
+
+        <LinearLayout
+            android:id="@+id/ll_team"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_first"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_first"
+                    style="@style/Main_ImageView_Phone"
+                    android:src="@drawable/selector_first"/>
+
+                <TextView
+                    android:id="@+id/tv_first"
+                    style="@style/Main_TextView_Phone"
+                    android:text="@string/module_myworld"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_study_task"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_study_task"
+                    style="@style/Main_ImageView_Phone"
+                    android:src="@drawable/selector_study_task"/>
+
+                <TextView
+                    android:id="@+id/tv_study_task"
+                    style="@style/Main_TextView_Phone"
+                    android:text="@string/module_studytask"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_question_book"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_question_book"
+                    style="@style/Main_ImageView_Phone"
+                    android:src="@drawable/selector_question_book"/>
+
+                <TextView
+                    android:id="@+id/tv_question_book"
+                    style="@style/Main_TextView_Phone"
+                    android:text="@string/module_capturebook"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_study_condition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_study_condition"
+                    style="@style/Main_ImageView_Phone"
+                    android:src="@drawable/selector_study_condition"/>
+
+                <TextView
+                    android:id="@+id/tv_study_condition"
+                    style="@style/Main_TextView_Phone"
+                    android:text="@string/module_diagnosticreport"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/container_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="50dp"/>
+
+
+</RelativeLayout>

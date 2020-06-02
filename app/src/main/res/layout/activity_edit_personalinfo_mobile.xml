@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/bg_zhuye"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <!--<include layout="@layout/toolbar_layout_mobile"/>-->
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.WorkToolbar
+        android:id="@+id/work_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp"
+                android:orientation="vertical"
+                android:paddingBottom="40dp">
+
+                <EditText
+                    android:id="@+id/et_nickname"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:background="@drawable/inputbox_login"
+                    android:drawableLeft="@drawable/login_icon_nickname"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:hint="输入昵称"
+                    android:imeOptions="flagNoExtractUi"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textColorHint="@color/input_hint_text_color"
+                    android:textSize="@dimen/text_large"/>
+
+                <!--<EditText
+                    android:id="@+id/et_reallyname"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:background="@drawable/inputbox_login"
+                    android:drawableLeft="@drawable/login_icon_user"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:hint="输入真实姓名，方便老师和小伙伴们找到你"
+                    android:imeOptions="flagNoExtractUi"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textColorHint="@color/input_hint_text_color"
+                    android:textSize="@dimen/text_large"/>-->
+
+                <com.tsinghuabigdata.edu.ddmath.view.GenderSelectorView
+                    android:id="@+id/genderview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </com.tsinghuabigdata.edu.ddmath.view.GenderSelectorView>
+
+                <AutoCompleteTextView
+                    android:id="@+id/et_school"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:background="@drawable/inputbox_login"
+                    android:drawableLeft="@drawable/login_icon_school"
+                    android:drawablePadding="10dp"
+                    android:hint="输入所在学校"
+                    android:textColorHint="@color/input_hint_text_color"
+                    android:textSize="@dimen/text_large"
+                    android:visibility="gone"/>
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:background="@drawable/inputbox_login"
+                    android:drawableLeft="@drawable/ic_phone"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:hint="输入手机号码"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:singleLine="true"
+                    android:textColorHint="@color/input_hint_text_color"
+                    android:textSize="@dimen/text_large"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_verifycode"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/inputbox_login"
+                        android:drawableStart="@drawable/img_yanzheng"
+                        android:drawablePadding="10dp"
+                        android:hint="@string/usercenter_pw_incode"
+                        android:digits="@string/redeem_code_filter"
+                        android:maxLength="10"
+                        android:textColorHint="@color/input_hint_text_color"
+                        android:textSize="@dimen/text_middle"
+                        android:imeOptions="flagNoExtractUi" />
+
+                    <Button
+                        android:id="@+id/bt_verifycode"
+                        android:layout_width="134dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/sel_btn_verifycode_bg"
+                        android:text="@string/usercenter_pw_getcode"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_middle" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/et_encrollyears"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:background="@drawable/inputbox_login"
+                    android:clickable="true"
+                    android:drawableLeft="@drawable/login_icon_grade"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:hint="输入入学年份"
+                    android:maxLength="16"
+                    android:singleLine="true"
+                    android:textColor="@color/color_999999"
+                    android:textColorHint="@color/input_hint_text_color"
+                    android:textSize="@dimen/text_large"/>
+
+                <EditText
+                    android:id="@+id/et_mailaddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="88dp"
+                    android:background="@drawable/inputbox_login"
+                    android:drawableStart="@drawable/mail_address"
+                    android:drawablePadding="6dp"
+                    android:hint="@string/hint_mailaddr"
+                    android:maxLines="3"
+                    android:inputType="textMultiLine"
+                    android:textColorHint="@color/input_hint_text_color"
+                    android:textSize="@dimen/text_large"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:gravity="top|start"/>
+
+                <Button
+                    android:id="@+id/bt_done"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/btn_state_bg"
+                    android:gravity="center"
+                    android:text="完成"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_large_x20"/>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</LinearLayout>

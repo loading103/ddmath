@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/color_FCFCFC"
+    android:orientation="vertical">
+
+    <!-- 状态栏 -->
+    <com.tsinghuabigdata.edu.ddmath.parent.view.ParentToolbar
+        android:id="@+id/worktoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/color_F1FBF7">
+
+        <!-- 主要内容区 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginTop="4dp"
+            android:paddingTop="48dp"
+            android:paddingBottom="32dp">
+
+            <ImageView
+                android:layout_width="93dp"
+                android:layout_height="93dp"
+                android:src="@drawable/ic_launcher"
+                android:contentDescription="@null"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_middle"
+                    android:text="当前版本:"/>
+
+                <TextView
+                    android:id="@+id/iv_about_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_middle"
+                    android:text="v14.0"
+                    android:layout_marginStart="8dp"/>
+
+            </LinearLayout>
+
+
+            <!-- 客服邮箱 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="48dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="客服邮箱："
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_middle"
+                    android:layout_marginStart="44dp"/>
+
+                <TextView
+                    android:id="@+id/iv_email_adress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/usercenter_email"
+                    android:textColor="@color/color_009457"
+                    android:textSize="@dimen/text_middle"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="服务电话："
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_middle"
+                    android:layout_marginStart="44dp"/>
+
+                <TextView
+                    android:id="@+id/iv_phone_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/contactphone"
+                    android:textColor="@color/color_009457"
+                    android:textSize="@dimen/text_middle"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <!-- 底部 数据 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="8dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/text_middle"
+                android:text="@string/bigdatacenter"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/text_middle"
+                android:text="@string/companyname"
+                android:layout_marginTop="6dp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

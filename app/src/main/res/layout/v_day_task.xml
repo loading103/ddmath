@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/bg_look_work"
+        android:gravity="center_vertical"
+        android:paddingEnd="30dp"
+        android:paddingStart="20dp">
+
+        <ImageView
+            android:id="@+id/iv_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_chakan"/>
+
+        <TextView
+            android:id="@+id/tv_def"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="@string/look_work_detail"
+            android:textSize="36sp"/>
+
+        <TextView
+            android:id="@+id/tv_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:textSize="24sp"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_new"
+        android:layout_width="56dp"
+        android:layout_height="42dp"
+        android:layout_alignParentEnd="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_new"/>
+
+    <ImageView
+        android:id="@+id/iv_finish"
+        android:layout_width="56dp"
+        android:layout_height="42dp"
+        android:layout_alignParentEnd="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_finish"/>
+
+
+</RelativeLayout>

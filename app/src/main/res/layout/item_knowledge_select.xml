@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_knowledge_select"
+              android:layout_width="match_parent"
+              android:layout_height="54dp"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+    <CheckBox
+        android:id="@+id/cb_knowledge"
+        android:layout_width="34dp"
+        android:layout_height="31dp"
+        android:background="@drawable/selector_select_knowledge"
+        android:button="@null"
+        android:clickable="false"/>
+
+    <TextView
+        android:id="@+id/tv_knowledge_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_weight="2"
+        android:text="知识点名称"
+        android:textColor="@color/select_knowledge_text_color"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/tv_accuracy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="正确率   XX%"
+        android:textColor="@color/select_knowledge_text_color"
+        android:textSize="18sp"/>
+
+
+</LinearLayout>

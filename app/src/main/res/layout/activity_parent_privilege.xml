@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:background="@color/color_FCFCFC"
+    android:orientation="vertical">
+
+    <!-- 状态栏 -->
+    <com.tsinghuabigdata.edu.ddmath.parent.view.ParentToolbar
+        android:id="@+id/worktoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_F1FBF7"
+        android:orientation="vertical"
+        android:paddingTop="12dp"
+        >
+
+        <!-- 孩子信息部分 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_parent_chindinfo"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:padding="2dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="#EDF5F2">
+
+                <!-- 用户头像 -->
+                <com.tsinghuabigdata.edu.ddmath.view.CircleImageView
+                    android:id="@+id/iv_children_headimage"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@null"
+                    android:scaleType="centerInside" />
+
+                <!-- 用户昵称 -->
+                <TextView
+                    android:id="@+id/iv_children_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_children_headimage"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    android:text=""
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_middle" />
+
+            </RelativeLayout>
+
+            <!-- 信息 -->
+            <LinearLayout
+                android:id="@+id/layout_info_detail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:orientation="vertical"
+                android:background="#F8FFFC"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp">
+
+                <!-- 真实姓名 -->
+                <TextView
+                    android:id="@+id/iv_children_realname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_middle"
+                    android:textColor="@color/color_333333"
+                    android:text=""
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="10dp"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/geren_xingming"
+                    />
+
+                <!-- 入学年份 -->
+                <TextView
+                    android:id="@+id/iv_children_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_middle"
+                    android:textColor="@color/color_333333"
+                    android:text=""
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="6dp"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/personal_nianfen"
+                    />
+
+                <TextView
+                    android:id="@+id/iv_children_gradeinfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_middle"
+                    android:textColor="@color/color_333333"
+                    android:text=""
+                    android:layout_marginStart="4dp"
+                    android:drawablePadding="10dp"
+                    android:layout_marginTop="6dp"
+                    android:drawableStart="@drawable/personal_xuexiao"
+                    />
+
+                <!--  -->
+                <TextView
+                    android:id="@+id/tv_moreclass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/look_more_class"
+                    android:textSize="@dimen/text_small"
+                    android:textColor="@color/color_888888"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="36dp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 特权 -->
+        <com.tsinghuabigdata.edu.ddmath.module.mycenter.view.UserPrivilegeView
+            android:id="@+id/upv_user_priviledge_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:fromParent="true"/>
+
+    </LinearLayout>
+
+</LinearLayout>

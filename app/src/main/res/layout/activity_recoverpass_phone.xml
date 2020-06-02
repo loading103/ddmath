@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/bg_zhuye"
+    android:orientation="vertical">
+
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.WorkToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.tsinghuabigdata.edu.ddmath.module.ddwork.view.WorkToolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginRight="120dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/inputbox_login"
+                    android:drawableStart="@drawable/login_icon_phonenumber"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/usercenter_input_phone"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:textColorHint="@color/input_hint_text_color"
+                    android:textSize="@dimen/text_middle"
+                    android:imeOptions="flagNoExtractUi" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_verifycode"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/inputbox_login"
+                        android:drawableStart="@drawable/login_icon_vcode"
+                        android:drawablePadding="10dp"
+                        android:hint="@string/usercenter_pw_incode"
+                        android:digits="@string/redeem_code_filter"
+                        android:maxLength="10"
+                        android:textColorHint="@color/input_hint_text_color"
+                        android:textSize="@dimen/text_middle"
+                        android:imeOptions="flagNoExtractUi" />
+
+                    <Button
+                        android:id="@+id/bt_verifycode"
+                        android:layout_width="134dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/sel_btn_verifycode_bg"
+                        android:text="@string/usercenter_pw_getcode"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_middle" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_passwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/inputbox_login"
+                    android:drawableStart="@drawable/login_icon_password"
+                    android:drawablePadding="10dp"
+                    android:hint="新的密码"
+                    android:inputType="textPassword"
+                    android:digits="@string/password_filter"
+                    android:maxLength="16"
+                    android:maxLines="1"
+                    android:textColorHint="@color/input_hint_text_color"
+                    android:textSize="@dimen/text_middle"
+                    android:imeOptions="flagNoExtractUi" />
+
+                <EditText
+                    android:id="@+id/et_confirm_passwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/inputbox_login"
+                    android:drawableStart="@drawable/login_icon_re_password"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/usercenter_pw_second"
+                    android:inputType="textPassword"
+                    android:digits="@string/password_filter"
+                    android:maxLength="16"
+                    android:maxLines="1"
+                    android:textColorHint="@color/input_hint_text_color"
+                    android:textSize="@dimen/text_middle"
+                    android:imeOptions="flagNoExtractUi" />
+
+                <Button
+                    android:id="@+id/btn_finish"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/finished"
+                    android:textSize="@dimen/text_large"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_login_btn_blue"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</LinearLayout>

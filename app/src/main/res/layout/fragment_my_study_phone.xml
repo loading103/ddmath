@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/main_bottom_distance_phone"
+    android:paddingEnd="@dimen/main_end_distance_phone"
+    android:paddingStart="@dimen/main_nav_distance_phone"
+    android:paddingTop="@dimen/main_top_distance_phone">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="48dp"
+        android:background="@drawable/bg_task_test">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+
+        <!-- 未登录处理 -->
+        <com.tsinghuabigdata.edu.ddmath.view.UnLoginView
+            android:id="@+id/unLoginView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="invisible"/>
+
+        <!-- 未加入班级 -->
+        <LinearLayout
+            android:id="@+id/ll_no_class_tips"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+
+            <com.tsinghuabigdata.edu.ddmath.view.NoClassView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"/>
+
+
+        </LinearLayout>
+
+        <!-- 未加入正式班级 -->
+        <LinearLayout
+            android:id="@+id/ll_no_formal_class_tips"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+
+            <com.tsinghuabigdata.edu.ddmath.view.NoFormalClassView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"/>
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_school_work"
+                android:layout_width="140dp"
+                android:layout_height="48dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/selector_school_work"
+                android:contentDescription="@null"/>
+
+            <ImageView
+                android:id="@+id/iv_check_work"
+                android:layout_width="140dp"
+                android:layout_height="48dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/selector_check_work"
+                android:contentDescription="@null"/>
+
+            <!--<ImageView
+                android:id="@+id/iv_exclusive_exercises"
+                android:layout_width="104dp"
+                android:layout_height="40dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/selector_exclusive_exercises"
+                android:contentDescription="@null"/>-->
+
+            <!-- 错题订正 -->
+            <ImageView
+                android:id="@+id/iv_error_revise"
+                android:layout_width="140dp"
+                android:layout_height="48dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/selector_ebook_dayclean"
+                android:contentDescription="@null"/>
+
+            <ImageView
+                android:id="@+id/iv_famous_teacher"
+                android:layout_width="140dp"
+                android:layout_height="48dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/selector_famous_teacher"
+                android:contentDescription="@null"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_ddwork_selectlayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_pageitem_bg"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        >
+
+        <TextView
+            android:id="@+id/item_ddwork_pagenum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="第 1 页"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/color_48B8FF"/>
+
+        <RelativeLayout
+            android:id="@+id/item_ddwork_pagestatuslayout"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/bg_pagestatus_uncamera"
+            android:layout_marginTop="1dp"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/item_ddwork_pagestatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未拍照"
+                android:textSize="10sp"
+                android:textColor="@color/color_948ECD"
+                android:drawablePadding="1dp"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

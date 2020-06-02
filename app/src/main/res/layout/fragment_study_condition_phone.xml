@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/main_bottom_distance_phone"
+                android:paddingEnd="@dimen/main_end_distance_phone"
+                android:paddingStart="@dimen/main_nav_distance_phone"
+                android:paddingTop="@dimen/main_top_distance_phone">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_conquer_correct"
+        >
+
+
+        <!-- 未登录处理 -->
+        <com.tsinghuabigdata.edu.ddmath.view.UnLoginView
+            android:id="@+id/unLoginView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="visible"/>
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/ll_report"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:divider="@drawable/my_report_divide_line_phone"
+                android:orientation="horizontal"
+                android:showDividers="middle">
+
+                <!-- 作业考试 -->
+                <RelativeLayout
+                    android:id="@+id/rl_work_report"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_work_report"
+                        style="@style/report_tab_icon_phone"
+                        android:src="@drawable/selector_homework_report"
+                        android:contentDescription="@null"/>
+
+                    <ImageView
+                        android:id="@+id/iv_work_redpoint"
+                        style="@style/report_tab_redpoint_phone"
+                        android:contentDescription="@null"/>
+
+
+                </RelativeLayout>
+
+                <!-- 错题订正 -->
+                <RelativeLayout
+                    android:id="@+id/rl_daily_clear_report"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_daily_clear_report"
+                        style="@style/report_tab_icon_phone"
+                        android:src="@drawable/selector_correct_report"
+                        android:contentDescription="@null"/>
+
+                    <ImageView
+                        android:id="@+id/iv_daily_clear_redpoint"
+                        style="@style/report_tab_redpoint_phone"
+                        android:contentDescription="@null"/>
+
+
+                </RelativeLayout>
+
+                <!-- 培优订正 -->
+                <RelativeLayout
+                    android:id="@+id/rl_promote_report"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_promote_report"
+                        style="@style/report_tab_icon_phone"
+                        android:src="@drawable/selector_promote_report"
+                        android:contentDescription="@null"/>
+
+                    <ImageView
+                        android:id="@+id/iv_promote_redpoint"
+                        style="@style/report_tab_redpoint_phone"
+                        android:contentDescription="@null"/>
+
+                </RelativeLayout>
+
+                <!-- 个人知识图谱 -->
+                <RelativeLayout
+                    android:id="@+id/rl_knowledge_report"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_knowledge_report"
+                        style="@style/report_tab_icon_phone"
+                        android:src="@drawable/selector_knowledge_report"
+                        android:contentDescription="@null"/>
+
+                    <ImageView
+                        android:id="@+id/iv_knowledge_redpoint"
+                        style="@style/report_tab_redpoint_phone"
+                        android:contentDescription="@null"/>
+
+
+                </RelativeLayout>
+
+                <!-- 综合能力 -->
+                <RelativeLayout
+                    android:id="@+id/rl_allround_report"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_allround_report"
+                        style="@style/report_tab_icon_phone"
+                        android:src="@drawable/selector_allround_report"
+                        android:contentDescription="@null"/>
+
+                    <ImageView
+                        android:id="@+id/iv_allround_redpoint"
+                        style="@style/report_tab_redpoint_phone"
+                        android:contentDescription="@null"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <FrameLayout
+            android:id="@+id/fl_report_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+
+</RelativeLayout>

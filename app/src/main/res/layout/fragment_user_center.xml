@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="120dp"
+            android:layout_height="50dp">
+
+            <LinearLayout
+                android:id="@+id/ll_my_message"
+                android:layout_width="127dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_my_message"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_shortmessage"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="我的消息"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"/>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_new_message"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/ic_oval"
+                android:visibility="invisible"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_item_list"
+            android:layout_width="270dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_my_info"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@drawable/selector_bg_center_item">
+
+
+                <ImageView
+                    style="@style/user_item_icon"
+                    android:src="@drawable/selector_user_my_info"/>
+
+                <TextView
+                    style="@style/user_item_title"
+                    android:text="会员中心"/>
+
+                <ImageView
+                    style="@style/user_item_arrow"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_my_class"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/selector_bg_center_item">
+
+
+                <ImageView
+                    style="@style/user_item_icon"
+                    android:src="@drawable/selector_user_my_class"/>
+
+                <TextView
+                    style="@style/user_item_title"
+                    android:text="我的班级"/>
+
+                <ImageView
+                    style="@style/user_item_arrow"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_my_studybean"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@drawable/selector_bg_center_item">
+
+
+                <ImageView
+                    style="@style/user_item_icon"
+                    android:src="@drawable/selector_user_my_bean"/>
+
+                <TextView
+                    style="@style/user_item_title"
+                    android:text="@string/i_will_buy"/>
+
+                <ImageView
+                    android:id="@+id/iv_my_studybean"
+                    style="@style/user_item_arrow"/>
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_my_studybean"-->
+                <!--android:maxWidth="70dp"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_toStartOf="@id/iv_my_studybean"-->
+                <!--android:singleLine="true"-->
+                <!--android:textColor="@color/center_my_power_color"-->
+                <!--android:textSize="18sp"/>-->
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_card_exchange"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/selector_bg_center_item">
+
+                <ImageView
+                    style="@style/user_item_icon"
+                    android:src="@drawable/selector_card_exchange"/>
+
+                <TextView
+                    style="@style/user_item_title"
+                    android:text="VIP卡兑换"/>
+
+                <ImageView
+                    style="@style/user_item_arrow"/>
+
+
+            </RelativeLayout>
+
+            <!-- 我的积分  -->
+            <RelativeLayout
+                android:id="@+id/rl_my_score"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/selector_bg_center_item">
+
+                <ImageView
+                    style="@style/user_item_icon"
+                    android:src="@drawable/selector_user_my_score"
+                    android:contentDescription="@null"/>
+
+                <TextView
+                    style="@style/user_item_title"
+                    android:text="我的积分"/>
+
+                <ImageView
+                    android:id="@+id/iv_arrow_score"
+                    style="@style/user_item_arrow"
+                    android:contentDescription="@null"/>
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_my_score"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_toStartOf="@id/iv_arrow_score"-->
+                <!--android:singleLine="true"-->
+                <!--android:textColor="@color/center_my_power_color"-->
+                <!--android:textSize="18sp"/>-->
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_my_power"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/selector_bg_center_item">
+
+
+                <ImageView
+                    style="@style/user_item_icon"
+                    android:src="@drawable/selector_user_my_power"/>
+
+                <TextView
+                    style="@style/user_item_title"
+                    android:text="我的学力"/>
+
+
+                <ImageView
+                    android:id="@+id/iv_arrow_power"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="24dp"
+                    android:src="@drawable/selector_user_item_arrow"/>
+
+                <ImageView
+                    style="@style/user_item_arrow"/>
+
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_my_power"-->
+                <!--android:maxWidth="70dp"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_toStartOf="@id/iv_arrow_power"-->
+                <!--android:singleLine="true"-->
+                <!--android:textColor="@color/center_my_power_color"-->
+                <!--android:textSize="18sp"/>-->
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false">
+                <RelativeLayout
+                    android:id="@+id/rl_invite"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/selector_bg_center_item">
+
+                    <ImageView
+                        style="@style/user_item_icon"
+                        android:src="@drawable/selector_invite"/>
+
+                    <TextView
+                        style="@style/user_item_title"
+                        android:text="邀请好友"/>
+
+                    <ImageView
+                        android:id="@+id/iv_invite"
+                        style="@style/user_item_arrow"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="奖学豆"
+                        android:layout_toStartOf="@id/iv_invite"
+                        android:singleLine="true"
+                        android:textColor="@color/center_invite_color"
+                        android:textSize="14sp"
+                        android:visibility="gone"/>
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_feedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_below="@+id/rl_invite"
+                    android:background="@drawable/selector_bg_center_item">
+
+                    <ImageView
+                        style="@style/user_item_icon"
+                        android:src="@drawable/selector_user_feedback"/>
+
+                    <TextView
+                        style="@style/user_item_title"
+                        android:text="帮助与反馈"/>
+
+                    <ImageView
+                        android:id="@+id/iv_jt"
+                        style="@style/user_item_arrow"/>
+                    1
+                </RelativeLayout>
+                <ImageView
+                    android:id="@+id/iv_has_newcontent"
+                    android:layout_width="42dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_new"
+                    android:layout_marginRight="44dp"
+                    android:layout_marginTop="-18dp"
+                    android:layout_below="@+id/rl_invite"
+                    android:contentDescription="@null"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0.1dp">
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_about"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/selector_bg_center_item">
+
+
+                <ImageView
+                    style="@style/user_item_icon"
+                    android:src="@drawable/selector_user_about"/>
+
+                <TextView
+                    style="@style/user_item_title"
+                    android:text="关于"/>
+
+                <ImageView
+                    style="@style/user_item_arrow"/>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#C7C2CF"
+        android:visibility="gone"/>
+
+    <FrameLayout
+        android:id="@+id/container_user_center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/zx40_white"/>
+
+
+</LinearLayout>

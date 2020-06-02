@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_zhuye"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.WorkToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:layout_marginEnd="120dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="@string/usercenter_register_success"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_large_x"
+                    android:textColor="@color/color_999999"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:orientation="horizontal">
+
+                        <!-- 昵称 -->
+                        <EditText
+                            android:id="@+id/et_nickname"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bg_rect_white_r4"
+                            android:drawableStart="@drawable/icon_nicheng"
+                            android:drawablePadding="15dp"
+                            android:hint="@string/usercenter_input_nickname"
+                            android:imeOptions="flagNoExtractUi"
+                            android:maxLength="10"
+                            android:singleLine="true"
+                            android:textColorHint="@color/input_hint_text_color"
+                            android:textSize="@dimen/text_large_xx"/>
+
+                        <!--性别 -->
+                        <com.tsinghuabigdata.edu.ddmath.view.GenderSelectorView
+                            android:id="@+id/sex_genderview"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"/>
+
+                    </LinearLayout>
+
+                    <!-- 真实姓名 -->
+                    <EditText
+                        android:id="@+id/et_reallyname"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@drawable/bg_rect_white_r4"
+                        android:drawableStart="@drawable/login_icon_user"
+                        android:drawablePadding="15dp"
+                        android:layout_marginTop="10dp"
+                        android:hint="@string/usercenter_input_real_name"
+                        android:imeOptions="flagNoExtractUi"
+                        android:maxLength="10"
+                        android:singleLine="true"
+                        android:textColorHint="@color/input_hint_text_color"
+                        android:textSize="@dimen/text_large_xx" />
+
+                    <!-- 班级模式 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_small"
+                        android:textColor="@color/color_999999"
+                        android:text="@string/classcode_tips"
+                        android:drawableStart="@drawable/notice"
+                        android:drawablePadding="6dp"
+                        android:layout_marginTop="15dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp">
+
+                        <!-- 有班级码 -->
+                        <RelativeLayout
+                            android:id="@+id/layout_classcode_input"
+                            android:layout_width="0dp"
+                            android:layout_weight="4"
+                            android:layout_height="wrap_content">
+
+                            <!-- 班级码 -->
+                            <EditText
+                                android:id="@+id/et_classcode_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="64dp"
+                                android:background="@drawable/bg_rect_white_r4"
+                                android:drawableStart="@drawable/icon_banjima"
+                                android:drawablePadding="16dp"
+                                android:hint="@string/tips_classcode"
+                                android:imeOptions="flagNoExtractUi"
+                                android:singleLine="true"
+                                android:textColorHint="@color/input_hint_text_color"
+                                android:textSize="@dimen/text_large_x"
+                                android:textColor="@color/color_333333"/>
+
+                            <!-- 加载动画效果 -->
+                            <ProgressBar
+                                android:id="@+id/loadingPragressBar"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="200dp"
+                                android:indeterminateDrawable="@drawable/my_progress"
+                                android:indeterminateOnly="true"
+                                android:indeterminateBehavior="repeat"
+                                android:visibility="gone"/>
+
+                            <!-- 删除内容 -->
+                            <ImageView
+                                android:id="@+id/im_cleardata"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:contentDescription="@null"
+                                android:src="@drawable/ic_delete_round"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="36dp"
+                                android:layout_centerVertical="true"
+                                android:visibility="gone"/>
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tv_noclasscode_view"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_height="match_parent"
+                            android:textSize="@dimen/text_large_xx"
+                            android:textColor="@color/bar_tint"
+                            android:text="@string/no_classcode"/>
+
+                    </LinearLayout>
+
+                    <!-- 班级 学校选择结果 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="9dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_999999"
+                            android:textSize="@dimen/text_large_x"
+                            android:text="已选择"/>
+
+                        <TextView
+                            android:id="@+id/tv_select_schoolclass"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_38D1F7"
+                            android:textSize="@dimen/text_large_xx"
+                            android:text=""/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/bt_enterdoudou"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/bg_login_btn_blue"
+                    android:gravity="center"
+                    android:text="@string/enter_dd_world"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_large_x20" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/usercenter_confirm_info_right"
+                    android:textSize="@dimen/text_large_x"
+                    android:textColor="@color/color_999999"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

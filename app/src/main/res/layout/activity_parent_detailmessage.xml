@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/color_FCFCFC"
+    android:orientation="vertical">
+
+    <!-- 状态栏 -->
+    <com.tsinghuabigdata.edu.ddmath.parent.view.ParentToolbar
+        android:id="@+id/worktoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <!-- 内容输入区域 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_F1FBF7"
+        android:layout_marginTop="2dp">
+
+        <com.tsinghuabigdata.edu.ddmath.module.message.view.MsgDetailView
+            android:id="@+id/message_detailview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"/>
+
+        <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+            android:id="@+id/loading_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+</LinearLayout>

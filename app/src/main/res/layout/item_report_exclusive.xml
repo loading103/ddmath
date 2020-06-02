@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="87dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/selector_item_report_exclusive"
+        android:gravity="center_vertical"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="5"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/color_32A3EA"
+            android:textSize="@dimen/text_large_xx"/>
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/color_999999"
+            android:textSize="20sp"
+            android:gravity="end"/>
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/color_999999"
+            android:textSize="20sp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_redpoint"
+        style="@style/report_item_redpoint"
+        android:contentDescription="@null"/>
+
+    <!-- 时间类型 -->
+    <ImageView
+        android:id="@+id/iv_praticetype"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:src="@drawable/icon_month"
+        android:contentDescription="@null"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>

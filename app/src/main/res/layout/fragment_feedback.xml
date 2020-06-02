@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="32dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="帮助中心"
+            android:textColor="#FF333333"
+            android:textSize="19sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp"
+            android:padding="20dp"
+            android:background="@drawable/shape_green_line"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:id="@+id/lin_question"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@drawable/shape_question"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="39dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_general_question"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="常见问题"
+                    android:textColor="#FF333333"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="23dp"
+                    android:textSize="23sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_function"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginLeft="25dp"
+                android:background="@drawable/shape_fuction"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="47dp"
+                    android:scaleType="centerCrop"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_function_instructions"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="功能使用说明"
+                    android:textColor="#FF333333"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="25dp"
+                    android:textSize="23sp" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="我要反馈"
+            android:textColor="#FF333333"
+            android:textSize="19sp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.67">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_green_line"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingTop="13dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="13dp">
+
+                <EditText
+                    android:id="@+id/edt_feedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginRight="22dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_white_line"
+                    android:gravity="start"
+                    android:hint="@string/feedback_hint"
+                    android:imeOptions="flagNoExtractUi"
+                    android:maxLength="200"
+                    android:paddingStart="14dp"
+                    android:paddingTop="9dp"
+                    android:paddingEnd="14dp"
+                    android:textSize="19sp" />
+
+                <Button
+                    android:id="@+id/btn_subbmit"
+                    android:layout_width="150dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_submit_button_no"
+                    android:text="提交"
+                    android:textColor="@color/white"
+                    android:textSize="23sp" />
+            </LinearLayout>
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="32dp"
+                android:visibility="gone"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_tag"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="12dp">
+
+            <ImageView
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:src="@drawable/ic_code"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/feedback_attention_wechat"
+                    android:textColor="#666666"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/feedback_to_wechat"
+                    android:textColor="#666666"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

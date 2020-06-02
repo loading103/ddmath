@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.WorkToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/color_F5FBFC">
+
+        <!-- 左边部分 -->
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="294"
+            android:layout_height="match_parent"
+            android:layout_margin="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!-- 提示信息 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:text="1"
+                        android:textSize="@dimen/text_large_x"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:background="@drawable/bg_rect_blue"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="请依次填写以下信息"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/text_large_x"
+                        android:layout_marginStart="4dp"/>
+
+                </LinearLayout>
+
+                <!-- 学段 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_primary"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_rect_white_r4">
+
+                        <ImageView
+                            android:id="@+id/img_primary"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/sel_school_primary_bg"
+                            android:contentDescription="@null"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_middle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="6dp"
+                        android:background="@drawable/bg_rect_white_r4">
+
+                        <ImageView
+                            android:id="@+id/img_middle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/sel_school_middle_bg"
+                            android:contentDescription="@null"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- 入学年份 -->
+                <TextView
+                    android:id="@+id/et_encrollyears"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/bg_rect_white_r4"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:drawableStart="@drawable/login_icon_grade"
+                    android:drawablePadding="16dp"
+                    android:gravity="center_vertical"
+                    android:hint="输入入学年份"
+                    android:maxLength="16"
+                    android:singleLine="true"
+                    android:textColorHint="@color/input_hint_text_color"
+                    android:textSize="@dimen/text_large_xx"
+                    android:layout_marginTop="6dp"/>
+
+                <!-- 城市 -->
+                <TextView
+                    android:id="@+id/et_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/bg_rect_white_r4"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:drawableStart="@drawable/ic_map"
+                    android:drawablePadding="16dp"
+                    android:gravity="center_vertical"
+                    android:hint="当前城市"
+                    android:maxLength="16"
+                    android:singleLine="true"
+                    android:textColorHint="@color/input_hint_text_color"
+                    android:textSize="@dimen/text_large_xx"
+                    android:layout_marginTop="10dp"/>
+
+                <!-- 搜索学校的关键词 -->
+                <TextView
+                    android:id="@+id/tv_search_school"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/bg_rect_white_r4"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:drawableStart="@drawable/ic_school"
+                    android:drawablePadding="16dp"
+                    android:gravity="center_vertical"
+                    android:hint="输入学校"
+                    android:maxLength="16"
+                    android:singleLine="true"
+                    android:textColorHint="@color/input_hint_text_color"
+                    android:textSize="@dimen/text_large_xx"
+                    android:layout_marginTop="9dp"/>
+
+            </LinearLayout>
+
+            <com.tsinghuabigdata.edu.ddmath.module.login.view.SchoolSelectView
+                android:id="@+id/school_select_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:background="@color/white"/>
+
+        </FrameLayout>
+
+        <!-- 右边边部分 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="373"
+            android:layout_height="match_parent"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="24dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <!-- 提示信息 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:text="2"
+                    android:textSize="@dimen/text_large_x"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:background="@drawable/bg_rect_blue"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择你要加入的班级"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/text_large_x"
+                    android:layout_marginStart="6dp"/>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- 没有数据 -->
+                <RelativeLayout
+                    android:id="@+id/layout_nodata"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_empty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="请先填写左侧信息～"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/text_large_x"
+                        android:layout_centerInParent="true"
+                        android:drawableStart="@drawable/path"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_doudoucloud"
+                        android:contentDescription="@null"
+                        android:layout_above="@id/tv_empty"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="18dp"/>
+
+                </RelativeLayout>
+
+                <!-- 班级列表 -->
+                <LinearLayout
+                    android:id="@+id/layout_class_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.tsinghuabigdata.edu.ddmath.module.mycenter.view.ClassSelectView
+                        android:id="@+id/classSelectView"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/usercenter_not_find_school"
+                            android:textColor="@color/color_999999"
+                            android:textSize="@dimen/text_large"/>
+
+                        <Button
+                            android:id="@+id/bt_join_class"
+                            android:layout_width="136dp"
+                            android:layout_height="42dp"
+                            android:layout_marginStart="12dp"
+                            android:text="@string/alert_positive"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_large_xx"
+                            android:background="@drawable/bg_studybean_topay_btn"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- 加载动画 -->
+                <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+                    android:id="@+id/loading_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

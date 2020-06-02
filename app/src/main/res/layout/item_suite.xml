@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_buy_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/seletor_item_suite"
+    android:orientation="vertical"
+    android:padding="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:paddingEnd="12dp"
+        android:paddingStart="12dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- 套餐价格 -->
+                <TextView
+                    android:id="@+id/tv_suite_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="XXX元"
+                    android:textColor="@color/bar_tint"
+                    android:textSize="24sp"/>
+
+
+                <!-- 套餐原价 -->
+                <TextView
+                    android:id="@+id/tv_suite_original_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="6dp"
+                    android:text="原价：XXX元"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/text_large_x"/>
+
+            </LinearLayout>
+
+            <!-- 使用期限 -->
+            <TextView
+                android:id="@+id/tv_usedate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:singleLine="true"
+                android:text="2018.04.04-2019.0X.0X"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/text_large_x"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_weight="1"
+            android:paddingTop="10dp"
+            android:paddingBottom="12dp">
+
+            <!-- 套餐名 -->
+            <TextView
+                android:id="@+id/tv_suite_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:layout_centerHorizontal="true"
+                android:text=""
+                android:textColor="@color/suite_name_text_color"
+                android:textSize="24sp"
+                android:layout_marginEnd="36dp"
+                android:gravity="center_horizontal"/>
+
+            <ImageView
+                android:id="@+id/im_user_memberlevel"
+                android:layout_width="57dp"
+                android:layout_height="27dp"
+                android:contentDescription="@null"
+                android:src="@drawable/svip_buy"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_buy"
+            android:layout_width="82dp"
+            android:layout_height="42dp"
+            android:background="@drawable/bg_itme_buy"
+            android:text="@string/buy"
+            android:textColor="@color/white"
+            android:textSize="22sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="75dp"
+        android:gravity="center_vertical"
+        android:background="@color/color_EDF8FF">
+
+
+        <!-- 套餐说明 -->
+        <cn.carbs.android.expandabletextview.library.ExpandableTextView
+            android:id="@+id/tv_suite_intro"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:text="智胜假期套餐是专门为成都的中学生提供的假期学习套餐，智胜假期套餐是专门为成都的中学生提供的假期学习套餐。"
+            android:textColor="@color/color_666666"
+            android:textSize="18sp"
+            android:padding="12dp"
+            app:etv_ToExpandHintShow="false"
+            app:etv_ToShrinkHintShow="false"/>
+
+        <LinearLayout
+            android:id="@+id/ll_look_privilege"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="@color/white"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_look_privilege"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查看特权"
+                android:textColor="@color/color_36C7D6"
+                android:textSize="18sp"/>
+
+
+            <CheckBox
+                android:id="@+id/cb_look_privilege"
+                android:layout_width="20dp"
+                android:layout_height="14dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/selector_look_privilege"
+                android:button="@null"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.tsinghuabigdata.edu.ddmath.module.mycenter.view.UserPrivilegeView
+        android:id="@+id/upv_user_priviledge_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:fromSuite="true"/>
+
+</LinearLayout>

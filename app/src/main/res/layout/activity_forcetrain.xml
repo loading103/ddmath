@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="false"
+    tools:context=".module.studycheat.ForceTrainActivity"
+    >
+
+    <!-- include layout="@layout/toolbar_layout"/ -->
+
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.WorkToolbar
+        android:id="@+id/work_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:fitsSystemWindows="true"
+        android:background="@color/color_F9F9F9">
+
+        <ScrollView
+            android:id="@+id/forcetrain_mainScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- 分割线 -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_back"
+                    />
+
+                <!-- 题干内容 -->
+                <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.QuestionTextView
+                    android:id="@+id/forcetrain_stemview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_364347"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"/>
+
+                <!-- 选择项列表 -->
+                <com.tsinghuabigdata.edu.ddmath.view.MultListView
+                    android:id="@+id/forcetrain_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:listSelector="@color/transparent"
+                    android:divider="@color/transparent"
+                    android:dividerHeight="16dp"
+                    android:layout_marginTop="30dp"
+                    />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+            android:id="@+id/progress_animationbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+</LinearLayout>

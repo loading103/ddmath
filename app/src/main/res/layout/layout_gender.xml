@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/ll_gender_container"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_rect_white_r4">
+
+        <RelativeLayout
+            android:id="@+id/ll_boy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/rb_boy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:src="@drawable/sel_gender_boy_bg"
+                android:contentDescription="@null"/>
+
+            <RadioButton
+                android:id="@+id/rb_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/has_classcode"
+                android:textSize="@dimen/text_large_x"
+                android:textColor="@color/color_999999"
+                android:button="@drawable/selector_sex_radiobtn"
+                android:paddingLeft="6dp"
+                android:visibility="gone"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_girl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/rb_girl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:src="@drawable/sel_gender_girl_bg"
+                android:contentDescription="@null"/>
+
+            <RadioButton
+                android:id="@+id/rb_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/has_classcode"
+                android:textSize="@dimen/text_large_x"
+                android:textColor="@color/color_999999"
+                android:visibility="gone"
+                android:button="@drawable/selector_sex_radiobtn"
+                android:paddingLeft="6dp"
+                />
+
+        </RelativeLayout>
+
+    </RadioGroup>
+</LinearLayout>

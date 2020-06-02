@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/common_green"
+    android:paddingLeft="6dp"
+    android:paddingRight="6dp"
+    >
+
+    <!-- 左边 返回 -->
+    <LinearLayout
+        android:id="@+id/toolbar_lefttitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/backimg"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ico_fanhui"
+            android:contentDescription="@null"/>
+
+        <TextView
+            android:id="@+id/backtext"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:text="@string/goback"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:visibility="visible"
+            />
+
+    </LinearLayout>
+
+    <!-- 中间标题-->
+    <TextView
+        android:id="@+id/toolbar_title"
+        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxEms="20"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        />
+
+    <!-- 右边按钮 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:gravity="center">
+
+        <!-- 网速监测 -->
+        <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.NetworkMonitorView
+            android:id="@+id/toolbar_networkmonitor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <!-- 去充值功能 -->
+        <LinearLayout
+            android:id="@+id/toolbar_rightexcharge_layuout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/go_recharge"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_small"
+                />
+
+            <TextView
+                android:id="@+id/toolbar_rightexcharge_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_small_xx"
+                />
+        </LinearLayout>
+
+        <!-- 普通按钮 -->
+        <LinearLayout
+            android:id="@+id/toolbar_righttitle_layuout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginStart="4dp">
+
+            <ImageView
+                android:id="@+id/toolbar_right_image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_add"
+                android:contentDescription="@null"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/toolbar_righttitle"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+

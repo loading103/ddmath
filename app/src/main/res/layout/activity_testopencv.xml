@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical"-->
+        <!--android:visibility="gone">-->
+
+        <!--<Button-->
+            <!--android:id="@+id/testbtn"-->
+            <!--android:layout_width="150dp"-->
+            <!--android:layout_height="60dp"-->
+            <!--android:text="灰度测试"/>-->
+
+        <!--<Button-->
+            <!--android:id="@+id/detectbtn"-->
+            <!--android:layout_width="150dp"-->
+            <!--android:layout_marginLeft="60dp"-->
+            <!--android:layout_height="60dp"-->
+            <!--android:text="定位识别"/>-->
+
+
+    <!--</LinearLayout>-->
+
+    <ImageView
+        android:id="@+id/testImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="visible"/>
+
+
+    <!--  模式 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <CheckBox
+            android:id="@+id/cancel_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:visibility="gone"/>
+
+        <CheckBox
+            android:id="@+id/old_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="原图"/>
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:background="@color/blue"/>
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/logbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="对数"/>
+
+            <RadioButton
+                android:id="@+id/expbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="指数"/>
+
+            <RadioButton
+                android:id="@+id/graybtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="灰度"/>
+            <RadioButton
+                android:id="@+id/hisbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="直方"/>
+            <RadioButton
+                android:id="@+id/gamabtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GAMA"/>
+        </RadioGroup>
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:background="@color/blue"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="膨胀"/>
+
+        <CheckBox
+            android:id="@+id/noise_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="去噪"/>
+
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="25"
+        android:visibility="gone"
+        />
+
+    <!-- 图片列表 -->
+    <com.tsinghuabigdata.edu.ddmath.view.HorizontalListView
+        android:id="@+id/imagelist"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        />
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="结果展示:\n"/>
+
+</LinearLayout>
+

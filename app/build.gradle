@@ -1,0 +1,228 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.mob.sdk'
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            println "path = " + getPath()
+            outputFileName = defaultConfig.applicationId + "-" + buildType.name + "-v" + defaultConfig.versionName + "-" + defaultConfig.versionCode +".apk"
+        }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+
+    defaultConfig {
+        applicationId "com.tsinghuabigdata.edu.ddmath"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+
+        multiDexEnabled true
+        resConfigs "zh"         //只保留中文资源
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : "com.tsinghuabigdata.edu.ddmath",
+                JPUSH_APPKEY : "9a0012dc2f241836d923f009", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+    }
+    signingConfigs {
+        certificateConfig {
+            storeFile file("certificate.jks")
+            keyAlias "zxyx"
+            storePassword "123456"
+            keyPassword "123456"
+        }
+    }
+
+    buildTypes {
+        // 线上环境
+        release {
+            signingConfig signingConfigs.certificateConfig
+            debuggable true
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        // 开发环境
+        debug {
+            signingConfig signingConfigs.certificateConfig
+            jniDebuggable true
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'lib/armeabi-v7a/librsjni.so'
+        exclude 'lib/armeabi-v7a/libRSSupport.so'
+        exclude 'lib/mips/librsjni.so'
+        exclude 'lib/mips/libRSSupport.so'
+        exclude 'lib/x86/librsjni.so'
+        exclude 'lib/x86/libRSSupport.so'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    useLibrary 'org.apache.http.legacy'
+}
+//分享功能
+MobSDK {
+    appKey "1d32fa5a43fc0"
+    appSecret "b163501a0e7acb3d537e88e520492e74"
+    //gui false
+
+    ShareSDK {
+        devInfo {
+
+            //微信好友
+            Wechat {
+                appId "wx33b5179ba509c8c2"
+                appSecret "4246f9f6bbcd8619fa5d8bab8f6d4448"
+            }
+            //微信朋友圈
+            WechatMoments {
+                appId "wx33b5179ba509c8c2"
+                appSecret "4246f9f6bbcd8619fa5d8bab8f6d4448"
+            }
+
+            //QQ好友
+            QQ {
+                appId "1106675811"
+                appKey "z5Zbf62sBRuIAol7"
+                shareByAppClient true
+            }
+            //QQ空间
+            QZone {
+                appId "1106675811"
+                appKey "z5Zbf62sBRuIAol7"
+                shareByAppClient true
+            }
+
+            //新浪微博
+            SinaWeibo {
+                appKey "1265849256"
+                appSecret "8ea6911f799ba12f7b707812e97d56c1"
+                callbackUri "http://www.doudoushuxue.com"
+                shareByAppClient true
+            }
+
+        }
+    }
+
+    repositories {
+        flatDir {
+            // 使用本地libs文件夹做为仓库
+            dirs "libs"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    // **********************android_commons依赖的*************************
+    // android依赖注入框架
+    implementation 'com.android.support:recyclerview-v7:29.0.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    // android json框架
+    implementation 'com.google.code.gson:gson:2.8.1'
+
+    // android http框架
+    implementation 'eu.the4thfloor.volley:com.android.volley:2015.05.13'
+    // android验证框架
+    implementation 'com.mobsandgeeks:android-saripaar:2.0.2'
+    //xutils框架
+    implementation 'org.xutils:xutils:3.3.4'
+
+    // IO公共类库
+    implementation 'commons-io:commons-io:2.4'
+    // 本地缓存
+    implementation 'com.jakewharton:disklrucache:2.0.2'
+    implementation 'com.facebook.stetho:stetho:1.1.0'
+    implementation 'com.facebook.stetho:stetho-okhttp:1.1.0'
+    // 沉侵模式菜单
+    implementation 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    // 友盟统计
+    implementation 'com.umeng.analytics:analytics:5.6.1'
+    // log4j
+    implementation 'de.mindpipe.android:android-logging-log4j:1.0.3'
+    implementation 'log4j:log4j:1.2.17-atlassian-1'
+    implementation('com.wang.avi:library:1.0.1') {
+        exclude module: 'appcompat-v7', group: 'com.android.support'
+    }
+    implementation 'com.github.android.library:viewPagerIndicator:2.4.1'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.alibaba:fastjson:1.2.28'
+
+    implementation 'com.google.firebase:firebase-appindexing:17.1.0'
+    //PDF预览
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+    // 本地依赖
+    implementation(name: 'android_commons_v1', ext: 'aar')
+    implementation(name: 'pulltorefresh_v1', ext: 'aar')
+    implementation(name: 'photoview-v1.3.1', ext: 'aar')
+    // 防微信或IOS侧滑销毁Activity
+    implementation 'me.imid.swipebacklayout.lib:library:1.0.0'
+    //热更新功能
+    implementation('com.aliyun.ams:alicloud-android-hotfix:3.2.7') {
+        exclude(module: 'alicloud-android-utdid')
+    }
+    //JPush
+    implementation 'cn.jiguang.sdk:jpush:3.0.3'
+    // 此处以JPush 3.0.3 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:1.1.1'
+    implementation 'com.xingliuhua:xlhratingbar_lib:1.0.1'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation(name: 'mpchartlib-v1', ext: 'aar')
+    //微信sdk
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    //二维码库
+    implementation 'com.google.zxing:core:3.3.2'
+    implementation 'org.tensorflow:tensorflow-android:+'
+    //Android 8.0 权限组管理
+    implementation 'com.yanzhenjie:permission:2.0.0-rc12'
+    //implementation(name:'andpermission-v1.0',ext:'aar')
+    //功能引导
+    implementation 'com.github.huburt-Hu:NewbieGuide:v2.4.0'
+    //可展开收缩的文本
+    implementation 'cn.carbs.android:ExpandableTextView:1.0.3'
+    //自定义日历
+    implementation 'com.haibin:calendarview:3.4.8'
+    implementation  'pl.droidsonroids.gif:android-gif-drawable:1.2.1'
+}

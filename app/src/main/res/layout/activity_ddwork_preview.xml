@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/zx70_black">
+
+        <RelativeLayout
+            android:id="@+id/ddwork_tips_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <!-- 提示-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:text="@string/ddwork_preview_tips"
+                android:gravity="center"
+                android:paddingTop="18dp"
+                android:paddingBottom="18dp"/>
+
+        </RelativeLayout>
+
+        <!-- 图片预览区域 -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <!-- 图片 -->
+            <ImageView
+                android:id="@+id/ddwork_preview_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:contentDescription="@null"/>
+
+            <!-- 作业分割层 -->
+            <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.WorkSplitView
+                android:id="@+id/ddwork_preview_splitview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="1dp"/>
+
+            <!-- 重拍 -->
+            <Button
+                android:id="@+id/ddwork_preview_redo"
+                android:layout_width="210dp"
+                android:layout_height="66dp"
+                android:background="@drawable/bg_buy_detail"
+                android:text="@string/recamera"
+                android:textColor="@color/color_59CBD7"
+                android:textSize="@dimen/text_large_xx"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="1dp"/>
+
+            <!-- 完成 -->
+            <Button
+                android:id="@+id/ddwork_preview_enter"
+                android:layout_width="210dp"
+                android:layout_height="66dp"
+                android:background="@drawable/bg_btn_finish"
+                android:text="@string/finished"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_large_xx"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="1dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 选择错题上传 -->
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.SelectErrorQuestionView
+        android:id="@+id/lm_selectErrorQuestionView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+</FrameLayout>
+
+

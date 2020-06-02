@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/color_FAFAFA">
+
+    <!-- Toolbar 状态条 -->
+    <!--<include layout="@layout/toolbar_layout"/>-->
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.WorkToolbar
+        android:id="@+id/work_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!--  左边 部分  -->
+            <com.handmark.pulltorefresh.library.PullToRefreshListView
+                android:id="@+id/message_msglist"
+                android:layout_width="418dp"
+                android:layout_height="match_parent"
+                android:divider="@color/color_D4EEFF"
+                android:dividerHeight="1px"
+                android:scrollbars="none"
+                android:listSelector="@color/transparent"
+                android:background="@color/color_E9F7FF"/>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/color_C5E1F5"/>
+
+            <!-- 右边 -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.tsinghuabigdata.edu.ddmath.module.message.view.MsgDetailView
+                    android:id="@+id/message_detailview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/font_size_xlarge"
+                    android:background="@color/white"/>
+
+                <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+                    android:id="@+id/detail_LoadingPager"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+        <!--  -->
+        <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+            android:id="@+id/loadingPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+</LinearLayout>
+
+
+

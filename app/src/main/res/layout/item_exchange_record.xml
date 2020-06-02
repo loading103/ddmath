@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_FEFFFF"
+    android:orientation="horizontal"
+    android:paddingStart="18dp"
+    android:paddingEnd="18dp"
+    android:gravity="center_vertical">
+
+    <!-- 图片展示 -->
+    <ImageView
+        android:id="@+id/iv_product_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:contentDescription="@null"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="18dp">
+
+        <!-- 名称 -->
+        <TextView
+            android:id="@+id/tv_product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_large_xx"
+            android:text=""
+            />
+
+        <!-- 兑换时间 -->
+        <TextView
+            android:id="@+id/tv_product_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_large_x"
+            android:layout_marginTop="4dp"
+            android:text=""
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="end">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_large_xx"
+            android:text="@string/exchange_success"
+            android:textColor="@color/color_50BDC9"/>
+
+        <TextView
+            android:id="@+id/tv_product_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_large_x"
+            android:text=""
+            />
+    </LinearLayout>
+
+</LinearLayout>

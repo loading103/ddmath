@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/color_FCFCFC"
+    android:orientation="vertical">
+
+    <!-- 状态栏 -->
+    <com.tsinghuabigdata.edu.ddmath.parent.view.ParentToolbar
+        android:id="@+id/worktoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="2dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_middle"
+            android:textColor="@color/color_888888"
+            android:text="@string/bind_phone_tips"
+            android:layout_marginTop="16dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_currphone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_middle"
+            android:textColor="@color/color_888888"
+            android:text=""
+            />
+
+        <!-- 新手机号 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_iphone"
+                />
+
+            <EditText
+                android:id="@+id/et_new_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_large"
+                android:textColor="@color/color_333333"
+                android:text=""
+                android:layout_marginStart="12dp"
+                android:hint="输入手机号码"
+                android:textColorHint="@color/color_999999"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:singleLine="true"
+                android:background="@null"
+                />
+
+        </LinearLayout>
+
+        <!-- 分割线 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_EAEAEA"/>
+
+        <!-- 新手机号 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_yanzhengma"
+                />
+
+            <EditText
+                android:id="@+id/et_verfy_code"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_large"
+                android:textColor="@color/color_333333"
+                android:text=""
+                android:layout_marginStart="12dp"
+                android:hint="输入验证码"
+                android:textColorHint="@color/color_999999"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="number"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:background="@null"
+                android:digits="@string/redeem_code_filter"
+                />
+            
+            <Button
+                android:id="@+id/btn_get_verifycode"
+                android:layout_width="160dp"
+                android:layout_height="36dp"
+                android:text="@string/usercenter_pw_getcode"
+                android:textSize="@dimen/text_middle"
+                android:textColor="@color/white"
+                android:enabled="false"
+                android:background="@drawable/selector_verify_code"/>
+            
+        </LinearLayout>
+
+        <!-- 分割线 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_EAEAEA"/>
+
+    </LinearLayout>
+
+    <!-- 退出登录-->
+    <Button
+        android:id="@+id/btn_finish"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/finished"
+        android:textSize="@dimen/text_large_x"
+        android:textColor="@color/white"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/selector_verify_code"/>
+
+</LinearLayout>

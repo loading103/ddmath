@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/rl_item_question_book"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp">
+
+    <ImageView
+        android:id="@+id/iv_corrected"
+        android:layout_width="96dp"
+        android:layout_height="102dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/img_correct"
+        android:visibility="gone"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginEnd="63dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_question_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选择题"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/text_large_x"
+                />
+
+            <View
+                style="@style/question_divide_view"/>
+
+            <com.tsinghuabigdata.edu.ddmath.view.PentacleView
+                android:id="@+id/pentacleView"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_marginStart="@dimen/question_item_margin"
+                />
+
+            <View
+                style="@style/question_divide_view"/>
+
+            <TextView
+                android:id="@+id/tv_total_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/question_item_margin"
+                android:text="做过X次"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/text_large_x"
+                />
+
+            <View
+                style="@style/question_divide_view"/>
+
+            <TextView
+                android:id="@+id/tv_wrong_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/question_item_margin"
+                android:text="错误X次"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/text_large_x"
+                />
+
+            <View
+                style="@style/question_divide_view"/>
+
+            <LinearLayout
+                android:id="@+id/ll_upload_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_question_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/question_item_margin"
+                    android:singleLine="true"
+                    android:text="标题"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/text_large_x"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_upload_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/question_item_margin"
+                    android:singleLine="true"
+                    android:text="2017-03-11 00:00上传"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/text_large_x"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.QuestionTextView
+            android:id="@+id/tv_stem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="63dp"
+            android:layout_marginTop="14dp"
+            android:textColor="@color/color_492A0E"
+            android:textSize="@dimen/text_large_xx"/>
+
+        <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.CorrectImage
+            android:id="@+id/correctImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="180dp"
+            android:layout_marginTop="10dp"
+            android:minHeight="30dp"
+            android:scaleType="fitXY"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="15dp">
+
+            <com.tsinghuabigdata.edu.ddmath.view.AskXiaoDouView
+                android:id="@+id/askXiaoDouView"
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                />
+
+            <CheckBox
+                android:id="@+id/cb_unfold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:button="@null"
+                android:drawablePadding="5dp"
+                android:drawableEnd="@drawable/selector_unfold_question"
+                android:text="展开"
+                android:textColor="@color/color_48B8FF"
+                android:textSize="@dimen/text_large_xx"
+                />
+
+            <!-- 错题订正入口 -->
+            <Button
+                android:id="@+id/btn_reviseErr"
+                android:layout_width="136dp"
+                android:layout_height="52dp"
+                android:layout_marginEnd="16dp"
+                android:layout_toStartOf="@id/cb_unfold"
+                android:background="@drawable/selector_correct_btnbg"
+                android:gravity="center"
+                android:text="@string/correct_question"
+                android:textColor="@color/white"
+                android:visibility="visible"/>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_extend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:visibility="visible">
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginStart="-10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/dashline"
+                android:layerType="software"/>
+
+            <!-- 错题订正答案 -->
+            <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.QuestionAnswerImageView
+                android:id="@+id/reviseanswerimage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"/>
+
+
+            <!-- 参考答案区域 -->
+            <LinearLayout
+                android:id="@+id/ll_model_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/item_ddwork_titleview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/ic_label"
+                    android:gravity="center_vertical"
+                    android:paddingStart="6dp"
+                    android:paddingEnd="6dp"
+                    android:text="@string/ddwork_standardanswer"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_middle"
+                    android:visibility="visible"/>
+
+
+                <!-- 参考答案 -->
+                <com.tsinghuabigdata.edu.ddmath.view.AnswerTextView
+                    android:id="@+id/tv_model_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+
+            <!-- 解题思路 -->
+            <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.QuestionItemView
+                android:id="@+id/think_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:textSize="14sp"/>
+
+
+            <!-- 错误知识点 -->
+            <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.QuestionItemView
+                android:id="@+id/knowledge_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:textSize="14sp"/>
+
+            <!-- 错误原因 -->
+            <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.QuestionItemView
+                android:id="@+id/errReasons_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                app:blockColor="#FFAF66"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

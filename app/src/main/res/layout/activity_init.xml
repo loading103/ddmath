@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_start"
+        android:visibility="visible"
+        android:contentDescription="@null"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="65"/>
+
+        <ImageView
+            android:id="@+id/iv_welcome"
+            android:layout_width="317dp"
+            android:layout_height="0dp"
+            android:layout_weight="195"
+            android:background="@drawable/image_welcome"
+            android:visibility="visible"
+            android:contentDescription="@null"/>
+
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="52"/>
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="36dp"
+            android:background="@drawable/doudou0"
+            android:scaleType="fitXY"
+            android:visibility="visible"
+            android:contentDescription="@null"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="30"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

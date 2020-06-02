@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_to_submit_title"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tv_to_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="待提交"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp"
+            />
+
+        <!-- 帮助 -->
+        <ImageView
+            android:id="@+id/iv_how_use"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="6dp"
+            android:layout_toEndOf="@id/tv_to_submit"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_howtouse_red"/>
+
+
+        <CheckBox
+            android:id="@+id/cb_to_submit_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:button="@null"
+            android:drawableLeft="@drawable/selector_to_submit_more"
+            android:text="更多"
+            android:textColor="#48B8FF"
+            android:textSize="14sp"
+            android:visibility="visible"
+            />
+
+        <CheckBox
+            android:id="@+id/cb_to_submit_overdue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="14dp"
+            android:layout_toLeftOf="@id/cb_to_submit_more"
+            android:button="@null"
+            android:drawableLeft="@drawable/selector_cb_overdue"
+            android:text="显示逾期15天作业/考试"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            android:visibility="visible"
+            />
+
+    </RelativeLayout>
+
+
+    <com.tsinghuabigdata.edu.ddmath.view.MultiGridView
+        android:id="@+id/gv_to_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="40dp"
+        android:listSelector="@color/transparent"
+        android:numColumns="2"
+        android:scrollbars="none"
+        android:verticalSpacing="15dp"></com.tsinghuabigdata.edu.ddmath.view.MultiGridView>
+
+
+</LinearLayout>

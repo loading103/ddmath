@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="121dp"
+        android:background="@drawable/bg_day_report_submited"
+        android:orientation="vertical"
+        android:paddingLeft="16dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="14dp"
+                android:lines="2"
+                android:ellipsize="end"
+                android:text="作业名称01作业名称01作业名称01作业名称01作业名称01作业名称01作业名称01作业名称01"
+                android:textColor="@color/color_333333"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="79dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_report_read_status"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="未阅读"
+                android:textColor="@color/report_read_text_color"
+                android:textSize="16sp"
+                android:visibility="visible"/>
+
+
+        </LinearLayout>
+
+
+        <!--<TextView
+            android:id="@+id/tv_title_short"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="68dp"
+            android:singleLine="true"
+            android:text="作业名称011"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp"/>-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tv_question_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:singleLine="true"
+                android:text="共X题"
+                android:textColor="@color/color_888888"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_correcting"
+                android:layout_width="56dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/bg_correcting_tag"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="批阅中"
+                android:textColor="#00A661"
+                android:textSize="14sp"/>
+
+            <LinearLayout
+                android:id="@+id/ll_question_count"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/right"
+                    android:contentDescription="@null"/>
+
+                <TextView
+                    android:id="@+id/tv_right_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:text="XX题"
+                    android:textColor="@color/color_888888"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:src="@drawable/wrong"
+                    android:contentDescription="@null"/>
+
+                <TextView
+                    android:id="@+id/tv_wrong_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:text="XX题"
+                    android:textColor="@color/color_888888"
+                    android:textSize="14sp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_question_score"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+
+                <TextView
+                    android:id="@+id/tv_student_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="XX分"
+                    android:textColor="#00A661"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="提交时间 2018-0X-XX XX:XX"
+                android:textColor="@color/color_888888"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_overdue"
+                android:layout_width="36dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/bg_overdue_tag"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="补交"
+                android:textColor="@color/color_48B8FF"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

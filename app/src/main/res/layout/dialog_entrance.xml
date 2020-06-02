@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="478dp"
+                android:layout_height="280dp">
+
+    <RelativeLayout
+        android:id="@+id/ll_entrance_return"
+        android:layout_width="match_parent"
+        android:layout_height="203dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_dialog_entrance"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="92dp"
+            android:layout_marginRight="92dp"
+            android:layout_marginTop="37dp"
+            android:gravity="center"
+            android:text="请联系学校老师到线下完成精准评测哦～"
+            android:textColor="@color/color_333333"
+            android:textSize="24sp"/>
+
+
+        <Button
+            android:id="@+id/btn_know"
+            android:layout_width="140dp"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="125dp"
+            android:background="@drawable/btn_know"
+            android:text="知道了"
+            android:textColor="#48B8FF"
+            android:textSize="20sp"/>
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/personalcenter_bg_popup_logout_icon_quit"
+            />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_title"
+        android:layout_width="88dp"
+        android:layout_height="94dp"
+        android:layout_marginLeft="132dp"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

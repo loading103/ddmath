@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="6dp"
+    >
+
+    <!-- 商品信息区 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- 商品名称 -->
+        <RelativeLayout
+            android:layout_width="111dp"
+            android:layout_height="28dp"
+            android:background="@drawable/biaoqiantiao">
+
+            <TextView
+                android:id="@+id/item_practice_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_small" />
+
+        </RelativeLayout>
+
+
+        <!-- 商品副标题 -->
+        <TextView
+            android:id="@+id/item_practice_assitname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text=""
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/text_middle" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <!-- 免费使用次数信息 -->
+        <com.tsinghuabigdata.edu.ddmath.module.exclusivepractice.view.FreeDroitView
+            android:id="@+id/item_practice_freedroitview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="2" />
+
+        <!-- 宝贝介绍 -->
+        <TextView
+            android:id="@+id/item_practice_introduce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:maxLines="1"
+            android:text="@string/product_introduce"
+            android:textColor="@color/color_1CC0D8"
+            android:textSize="@dimen/text_small" />
+
+        <!-- 报告 -->
+        <ImageView
+            android:id="@+id/item_practice_report"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_report" />
+
+        <!-- 使用说明 -->
+        <ImageView
+            android:id="@+id/item_practice_help"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_howtouse" />
+
+    </LinearLayout>
+
+    <!-- 套题列表 -->
+    <com.tsinghuabigdata.edu.ddmath.view.MultiGridView
+        android:id="@+id/item_practice_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:listSelector="@color/transparent"
+        android:verticalSpacing="4dp"
+        android:numColumns="2"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginTop="6dp"/>
+
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="@color/color_76D7EF"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:layout_marginStart="4dp"-->
+        <!--android:layout_marginEnd="4dp"/>-->
+
+</LinearLayout>

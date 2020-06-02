@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 教辅名称 -->
+    <TextView
+        android:id="@+id/item_ddwork_materialname"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:gravity="center"
+        android:background="@drawable/ic_board"
+        android:text=""
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_small"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:visibility="visible"
+        android:layout_marginTop="-8dp"
+        android:layout_marginBottom="-6dp"
+        />
+
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.PageItemView
+        android:id="@+id/item_ddwork_pageview"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"/>
+
+
+
+</LinearLayout>

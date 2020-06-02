@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/bg_zhuye">
+
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.WorkToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal">
+
+            <!-- 输入区域 -->
+            <LinearLayout
+                android:layout_width="540dp"
+                android:layout_height="64dp"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_rect_white"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/edittext"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:hint="@string/tips_classcode"
+                    android:textColorHint="@color/color_999999"
+                    android:textSize="@dimen/text_large_x"
+                    android:textColor="@color/color_666666"
+                    android:imeOptions="flagNoExtractUi"
+                    android:maxLength="6"
+                    android:singleLine="true"
+                    android:background="@null"
+                    android:layout_marginStart="24dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_cleardata"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/ic_delete_round"
+                    android:contentDescription="@null"
+                    android:visibility="gone"/>
+
+                <!-- 分割线 -->
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="24dp"
+                    android:background="@color/filtrate_theme"
+                    android:layout_marginStart="20dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/serach_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_found_blue"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginEnd="36dp"
+                    android:contentDescription="@null"/>
+
+            </LinearLayout>
+
+            <!-- 班级信息 -->
+            <LinearLayout
+                android:id="@+id/layout_classinfo"
+                android:layout_width="540dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/bg_rect_white_r4"
+                android:paddingTop="24dp"
+                android:paddingBottom="24dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/icon_class"
+                    android:contentDescription="@null"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"/>
+                
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- 学校名称 -->
+                    <TextView
+                        android:id="@+id/tv_schoolname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_large_x20"
+                        android:textColor="@color/color_4A4A4A"
+                        android:text="成都七中实验学校"/>
+
+                    <!-- 班级名称 -->
+                    <TextView
+                        android:id="@+id/tv_classname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_large_x20"
+                        android:textColor="@color/color_4A4A4A"
+                        android:text="@string/jionclass"/>
+
+                    <!-- 老师名称 -->
+                    <TextView
+                        android:id="@+id/tv_teachername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_large_x"
+                        android:textColor="@color/color_666666"
+                        android:text="老 师：张老师  李老师"
+                        android:layout_marginTop="24dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="12dp"
+                    android:gravity="center_horizontal">
+
+                    <!--  已有人数 -->
+                    <TextView
+                        android:id="@+id/tv_studentcount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_large"
+                        android:textColor="@color/color_999999"
+                        android:text="已加12人"/>
+
+                    <Button
+                        android:id="@+id/btn_jionclass"
+                        android:layout_width="150dp"
+                        android:layout_height="54dp"
+                        android:background="@drawable/bg_rect_blue_r36"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_large_xx"
+                        android:text="@string/jiontoclass"
+                        android:layout_marginTop="6dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 没有班级码入口 -->
+            <TextView
+                android:id="@+id/tv_select_jion_class"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/usercenter_nocode_join_class"
+                android:textSize="@dimen/text_large_xx"
+                android:layout_marginTop="45dp"
+                android:textColor="@color/bar_tint"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

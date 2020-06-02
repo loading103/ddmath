@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/color_FCFCFC"
+    android:orientation="vertical">
+
+    <!-- 状态栏 -->
+    <com.tsinghuabigdata.edu.ddmath.parent.view.ParentToolbar
+        android:id="@+id/worktoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <!-- 内容输入区域 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_F1FBF7">
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/message_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:divider="@color/transparent"
+            android:scrollbars="none"
+            android:fadeScrollbars="false"
+            android:listSelector="@color/transparent"/>
+
+        <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+            android:id="@+id/loading_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+</LinearLayout>

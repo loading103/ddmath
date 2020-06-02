@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/fl_guide_root"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/guide_bg1">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="120dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/guide1"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/guide_bg_new">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="120dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/guide2"/>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/guide_bg2">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="120dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/guide3"/>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/guide_bg3">
+
+        <ImageView
+            android:id="@+id/iv_guide"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="120dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/guide4"/>
+
+
+        <TextView
+            android:id="@+id/tv_experience"
+            android:layout_width="160dp"
+            android:layout_height="46dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/drawable_experience"
+            android:gravity="center"
+            android:text="@string/experience_immediately"
+            android:textColor="@color/white"
+            android:textSize="24sp"/>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

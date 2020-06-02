@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/color_FCFCFC"
+    android:orientation="vertical">
+
+    <!-- 状态栏 -->
+    <com.tsinghuabigdata.edu.ddmath.parent.view.ParentToolbar
+        android:id="@+id/worktoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <!-- 内容输入区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="12dp"
+        android:background="@color/color_F1FBF7">
+
+        <EditText
+            android:id="@+id/edt_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="start"
+            android:hint="@string/feedback_parent_hint"
+            android:imeOptions="flagNoExtractUi"
+            android:maxLength="200"
+            android:padding="12dp"
+            android:textSize="@dimen/text_large"
+            android:textColorHint="@color/color_888888"
+            />
+
+        <Button
+            android:id="@+id/btn_subbmit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="60dp"
+            android:enabled="false"
+            android:background="@drawable/bg_submit_button_parent"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_large_x"/>
+
+    </LinearLayout>
+
+    <!-- 二维码 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="18dp"
+        android:paddingBottom="18dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_code"
+            android:contentDescription="@null"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/feedback_parent_weixin"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_middle"
+            android:layout_marginStart="16dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

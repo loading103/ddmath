@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zx30_black"
+    >
+
+    <!-- 主要内容区  -->
+    <LinearLayout
+        android:id="@+id/dialog_revise_mainlayout"
+        android:layout_width="800dp"
+        android:layout_height="540dp"
+        android:background="@drawable/ic_frame"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:paddingBottom="16dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- 关闭按钮 -->
+            <ImageView
+                android:id="@+id/dialog_revise_closebtn"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_frame_cancle"/>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="16dp"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp"
+            >
+
+            <!-- 选择题 -->
+            <LinearLayout
+                android:id="@+id/dialog_revise_chooselayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_answer"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/text_large_x"/>
+
+                <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.ChooseAnswerView
+                    android:id="@+id/dialog_revise_chooseanswerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="16dp"/>
+
+            </LinearLayout>
+
+            <!-- 其他题 -->
+            <LinearLayout
+                android:id="@+id/dialog_revise_otherlayout"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/xbook_qtype_correct"
+                            android:textSize="@dimen/text_large_xx"
+                            android:textColor="@color/color_666666"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/revise_camera_tip"
+                            android:textSize="@dimen/text_large_x"
+                            android:textColor="@color/color_666666"
+                            android:layout_centerVertical="true"/>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/dialog_revise_cameraRebtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/revise_camera_redo"
+                        android:layout_alignParentEnd="true"
+                        android:textSize="22sp"
+                        android:paddingLeft="40dp"
+                        android:paddingRight="40dp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/bg_rect_revise_redo"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_marginTop="4dp">
+
+                    <!-- 订正答案图 -->
+                    <ImageView
+                        android:id="@+id/dialog_revise_cameraimage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:background="@drawable/bg_rect_revise_camera"
+                        android:contentDescription="@null"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+                        <LinearLayout
+                            android:id="@+id/dialog_revise_cameralayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_centerInParent="true">
+
+                            <ImageView
+                                android:id="@+id/image"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_camera"
+                                android:layout_gravity="center_horizontal"
+                                android:contentDescription="@null"
+                                android:gravity="center_horizontal"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/revise_camera_do"
+                                android:textColor="@color/white"
+                                android:textSize="18sp"
+                                android:layout_gravity="center_horizontal"
+                                />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <!-- 错原因 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_errreasons"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/text_large_x"/>
+
+            <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.ErrorReasonView
+                android:id="@+id/dialog_revise_reasonview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numColumns="3"
+                android:horizontalSpacing="16dp"
+                android:verticalSpacing="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <!-- 试用提示 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="2dp"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ontrial_tips"
+                android:textColor="@color/color_AC9C51"
+                android:textSize="@dimen/text_small"
+                android:layout_marginStart="2dp"
+                android:layout_gravity="center_vertical"
+                android:visibility="invisible"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/dialog_revise_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:gravity="center"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/text_small_x"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
+        <!-- 操作按钮 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="-8dp"
+            android:layout_marginBottom="22dp">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+            <!-- 取消按钮 -->
+            <Button
+                android:id="@+id/dialog_revise_cancelbtn"
+                android:layout_width="128dp"
+                android:layout_height="64dp"
+                android:background="@drawable/selector_cancel_btn"
+                />
+
+            <!-- 确定-->
+            <Button
+                android:id="@+id/dialog_revise_enterbtn"
+                android:layout_width="128dp"
+                android:layout_height="64dp"
+                android:background="@drawable/selector_enter_btn"
+                android:layout_marginStart="40dp"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

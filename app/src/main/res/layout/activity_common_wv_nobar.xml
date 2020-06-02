@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:orientation="vertical">
+
+    <com.tsinghuabigdata.edu.ddmath.view.ProgressWebView
+        android:id="@+id/progress_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.tsinghuabigdata.edu.ddmath.view.ProgressWebView>
+
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="45dp"
+        android:layout_height="43dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/reportcancel"/>
+
+    <ImageView
+        android:id="@+id/iv_share"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_toStartOf="@id/iv_delete"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_share"/>
+
+
+</RelativeLayout>

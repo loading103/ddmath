@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bg_tips"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
+
+        <!-- 上传状态文本 -->
+        <TextView
+            android:id="@+id/toast_upload_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上传成功!"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="24dp"
+            />
+
+        <!-- 失败 查看详情 -->
+        <TextView
+            android:id="@+id/toast_upload_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="查看详情"
+            android:textSize="18sp"
+            android:textColor="@color/color_48B8FF"
+            android:layout_marginRight="24dp"
+            android:visibility="gone"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/toast_upload_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="16dp"
+        />
+
+</RelativeLayout>

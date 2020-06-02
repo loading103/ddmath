@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/bg_zhuye">
+
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.WorkToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/usercenter_sel_join_class"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/color_999999"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:id="@+id/tv_school"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="@color/color_333333"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_marginStart="40dp"
+                    android:textColor="@color/color_333333"
+                    android:text="入学年份:"/>
+
+                <TextView
+                    android:id="@+id/tv_enrolYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/color_5DC1CD"
+                    android:drawablePadding="12dp"/>
+
+            </LinearLayout>
+
+            <com.tsinghuabigdata.edu.ddmath.module.mycenter.view.ClassSelectView
+                android:id="@+id/classSelectView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_jump"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#48B8FF"
+                    android:text="@string/jumpstep"
+                    android:textSize="20sp"/>
+
+                <View
+                    android:layout_weight="20"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/usercenter_not_find_school"
+                    android:textColor="@color/color_999999"
+                    android:textSize="20sp"/>
+
+                <View
+                    android:layout_weight="74"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"/>
+
+                <Button
+                    android:id="@+id/bt_join_class"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:text="@string/joinclass"
+                    android:textColor="@color/white"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="16sp"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:background="@drawable/bg_studybean_topay_btn"/>
+
+                <View
+                    android:layout_weight="20"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+            android:id="@+id/loading_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+</LinearLayout>

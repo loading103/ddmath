@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- 标题 -->
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.ItemTitleView
+        android:id="@+id/item_ddwork_answertitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:id="@+id/item_ddwork_answerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:minHeight="30dp"
+        android:orientation="horizontal"
+        android:paddingStart="8dp">
+
+        <!-- 用户答案图片 -->
+        <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.CorrectImage
+            android:id="@+id/item_ddwork_answerimage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"/>
+
+        <!-- 用户未拍照 默认图片-->
+        <RelativeLayout
+            android:id="@+id/item_ddwork_defaultimage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rect_nodeflaut"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/item_ddwork_nocamera_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_not_take_photo"/>
+
+            <ImageView
+                android:id="@+id/item_ddwork_deling_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_photo_dealing"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/item_ddwork_cheerimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/img_cheer_up"
+            android:visibility="invisible"
+            android:contentDescription="@null"/>
+
+    </LinearLayout>
+
+</LinearLayout>

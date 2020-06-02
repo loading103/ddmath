@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_my_world_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/main_nav_distance_phone">
+
+        <View
+            android:id="@+id/view_middle"
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_banner"
+            android:layout_width="439dp"
+            android:layout_height="106dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/banner_bg"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <com.tsinghuabigdata.edu.ddmath.view.RoundImageView
+                android:id="@+id/iv_adver"
+                android:layout_width="406dp"
+                android:layout_height="90dp"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                app:type="round"
+                app:borderRadius="10dp"/>
+
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="406dp"
+                android:layout_height="90dp"
+                android:layout_centerInParent="true">
+            </androidx.viewpager.widget.ViewPager>
+
+            <LinearLayout
+                android:id="@+id/indicator_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="96dp"
+                android:orientation="horizontal"/>
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_plane2"
+            android:layout_width="86dp"
+            android:layout_height="63dp"
+            android:layout_marginStart="162dp"
+            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@id/view_middle"
+            android:src="@drawable/airplane"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/iv_plane1"
+            android:layout_width="86dp"
+            android:layout_height="63dp"
+            android:layout_marginEnd="192dp"
+            android:layout_marginTop="12dp"
+            android:layout_toStartOf="@id/view_middle"
+            android:src="@drawable/airplane"
+            android:visibility="invisible"/>
+
+        <!-- 一键诊断 -->
+        <com.tsinghuabigdata.edu.ddmath.module.onekeydiagnose.view.KnowDiagnoseButtonView
+            android:id="@+id/kdbv_diagnoseview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentEnd="true"/>
+
+        <!-- 鲸鱼1 -->
+        <ImageView
+            android:layout_width="144dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="240dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_whale1"/>
+
+        <!-- 鲸鱼2 -->
+        <ImageView
+            android:layout_width="86dp"
+            android:layout_height="46dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="250dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_whale2"/>
+
+        <!-- 中间主要内容区域 -->
+        <com.tsinghuabigdata.edu.ddmath.module.first.view.UserModelNavView
+            android:id="@+id/umn_modelnav_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="80dp"
+            android:layout_marginTop="118dp"/>
+
+        <!-- 首页重要消息-->
+        <com.tsinghuabigdata.edu.ddmath.view.RollTextView
+            android:id="@+id/rtv_message"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="9dp"
+            android:layout_marginEnd="150dp"
+            android:layout_marginStart="60dp"
+            android:background="@drawable/bg_myworld_message"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="gone"/>
+
+        <!-- 提分秘籍潜水艇 -->
+        <ImageView
+            android:id="@+id/iv_studycheat"
+            android:layout_width="126dp"
+            android:layout_height="82dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/tifenmiji"
+            />
+
+    </RelativeLayout>
+
+    <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+        android:id="@+id/loading_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:visibility="visible"/>
+
+
+</RelativeLayout>

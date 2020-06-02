@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <!-- 预计时间: 分 -->
+    <TextView
+        android:id="@+id/cheattask_time_minuteview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_large"
+        android:layout_marginLeft="8dp"
+        />
+    <TextView
+        android:id="@+id/cheattask_time_minutelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="分"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_large"
+        android:layout_marginLeft="8dp"
+        />
+    <TextView
+        android:id="@+id/cheattask_time_secondview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_large"
+        android:layout_marginLeft="8dp"
+        />
+    <TextView
+        android:id="@+id/cheattask_time_secondlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="秒"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_large"
+        android:layout_marginLeft="8dp"
+        />
+</LinearLayout>
+

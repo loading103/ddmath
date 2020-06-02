@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.WorkToolbar
+        android:id="@+id/worktoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/activity_productexchange_maincontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/color_FFF9D7"
+            android:visibility="visible">
+
+            <!-- 兑换次数 界面 -->
+            <LinearLayout
+                android:id="@+id/activity_productexchange_mainlayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- 剩余次数 -->
+                    <TextView
+                        android:id="@+id/activity_productexchange_leavecount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="@dimen/text_large"
+                        android:textColor="@color/color_666666"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_centerVertical="true"/>
+
+                    <!-- 套餐提醒 -->
+                    <TextView
+                        android:id="@+id/activity_productexchange_suitetips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:textSize="@dimen/text_large_x"
+                        android:textStyle="bold"
+                        android:textColor="@color/color_E68300"
+                        android:text="@string/goto_suite_tips"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+
+                <!-- 兑换列表 -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <GridView
+                        android:id="@+id/activity_productexchange_grid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="80dp"
+                        android:layout_marginEnd="80dp"
+                        android:horizontalSpacing="40dp"
+                        android:verticalSpacing="40dp"
+                        android:numColumns="3"
+                        android:listSelector="@color/transparent"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!-- 假期作业 -->
+            <com.tsinghuabigdata.edu.ddmath.module.product.view.HolidayWorkView
+                android:id="@+id/activity_goodsdetail_holidayView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:visibility="gone"/>
+
+            <!-- 商品套餐 -->
+            <com.tsinghuabigdata.edu.ddmath.module.product.view.ProductSetMealView
+                android:id="@+id/activity_goodsdetail_setmeal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:visibility="gone"/>
+
+            <!-- 下面状态栏 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="#FFFFF9">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="55dp">
+
+                    <!-- 使用期限 -->
+                    <TextView
+                        android:id="@+id/activity_productexchange_usedate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/color_999999"
+                        android:textSize="@dimen/text_large" />
+
+                    <!-- 提示信息 -->
+                    <TextView
+                        android:id="@+id/activity_productexchange_cleantips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tips_of_buy"
+                        android:textColor="@color/color_999999"
+                        android:textSize="@dimen/text_large"
+                        android:layout_marginTop="8dp"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <!-- 确认兑换 -->
+                <TextView
+                    android:id="@+id/activity_productexchange_gorecharge"
+                    android:layout_width="140dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:layout_marginEnd="30dp"
+                    android:text="确认兑换"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_large_x"
+                    android:background="@drawable/bg_rect_blue_r24"/>
+
+                <!-- 剩余学豆 -->
+                <TextView
+                    android:id="@+id/activity_productexchange_leavelearndou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="55dp"
+                    android:layout_toStartOf="@id/activity_productexchange_gorecharge"
+                    android:text=""
+                    android:textColor="@color/color_AC9C51"
+                    android:textSize="@dimen/text_large"
+                    android:layout_marginEnd="20dp"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+            android:id="@+id/loadingPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+</LinearLayout>

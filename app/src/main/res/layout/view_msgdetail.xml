@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <!-- 普通网页 无跳转参数的消息 -->
+    <WebView
+        android:id="@+id/webView_msgdetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        />
+
+    <!-- 普通带参数的消息 -->
+    <ScrollView
+        android:id="@+id/sv_msgdetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:paddingTop="30dp">
+
+            <!-- 消息内容 -->
+            <TextView
+                android:id="@+id/view_msgdetail_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="8dp"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_large_x"
+                />
+
+            <!-- 可点击的跳转文本 -->
+            <LinearLayout
+                android:id="@+id/view_msgdetail_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/view_msgdetail_before"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_large_x"
+                    />
+
+                <TextView
+                    android:id="@+id/view_msgdetail_click"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_48B8FF"
+                    android:textSize="@dimen/text_large_x"
+                    />
+
+                <TextView
+                    android:id="@+id/view_msgdetail_after"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_large_x"
+                    />
+
+            </LinearLayout>
+
+            <!-- 定制学 提示 -->
+            <TextView
+                android:id="@+id/tv_customplan_tips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_large_x"
+                android:text="@string/msg_custom_tips"
+                android:gravity="center_horizontal"
+                android:visibility="visible"
+                />
+
+            <!-- 跳转到错题订正 -->
+            <TextView
+                android:id="@+id/tv_gorevise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_large_x"
+                android:text=""
+                android:gravity="center_horizontal"
+                android:visibility="gone"
+                />
+
+            <!-- 家长端使用: 同班多少用户已购买  -->
+            <LinearLayout
+                android:id="@+id/layout_parentbuyed"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_marginTop="26dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/wenzibg"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_buyed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/text_middle"
+                    android:text=""
+                    android:gravity="center_horizontal"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    />
+
+            </LinearLayout>
+
+            <!-- 增加积分提示信息 -->
+            <RelativeLayout
+                android:id="@+id/layout_gain_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_jifen"
+                    android:contentDescription="@null"/>
+
+                <TextView
+                    android:id="@+id/tv_add_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_large_xx"
+                    android:layout_centerInParent="true"
+                    android:text=""
+                    android:shadowColor="@color/color_D76304"
+                    android:shadowDx="0"
+                    android:shadowDy="4"
+                    android:shadowRadius="10"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 老师寄语 -->
+    <com.tsinghuabigdata.edu.ddmath.module.message.view.TeacherCommentView
+        android:id="@+id/view_teacher_comment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+</FrameLayout>

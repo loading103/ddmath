@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:res="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    android:paddingTop="10dp">
+
+    <com.tsinghuabigdata.edu.ddmath.view.CircleImageView
+        android:id="@+id/cir_teacherimg"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        res:border_width="3dp"
+        res:border_color="@color/transparent"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/zx_333333"
+        android:textSize="@dimen/text_middle"
+        tools:text="刘傻老师" />
+</LinearLayout>

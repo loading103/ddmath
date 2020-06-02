@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zx30_black"
+    >
+
+    <!-- 主要内容区  -->
+    <RelativeLayout
+        android:id="@+id/dialog_qreview_mainlayout"
+        android:layout_width="360dp"
+        android:layout_height="180dp"
+        android:background="@drawable/bg_rect_white"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp">
+
+        <!-- 关闭按钮 -->
+        <ImageView
+            android:id="@+id/dialog_custom_closebtn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/selector_dialog_close"
+            android:contentDescription="@null"/>
+
+        <!-- 普通dialog模式 -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:id="@+id/dialog_custom_commonlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <!-- 提示内容 -->
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingStart="30dp"
+                    android:minHeight="68dp"
+                    android:paddingEnd="30dp">
+                    <LinearLayout
+                        android:id="@+id/ll_down_tip"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tv_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:lineSpacingMultiplier="1.1"
+                            android:maxLines="3"
+                            android:ellipsize="end"
+                            android:textSize="@dimen/text_middle"
+                            android:textColor="@color/color_333333"
+                            android:text="@string/delete_allimage"/>
+                        <TextView
+                            android:id="@+id/tv_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_small"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/color_666666"
+                            android:text="@string/delete_allimage"/>
+                    </LinearLayout>
+                </RelativeLayout>
+                <!-- 按钮 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"/>
+                    <!-- 取消按钮 -->
+                    <Button
+                        android:id="@+id/dialog_custom_leftbtn"
+                        android:layout_width="120dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/bg_dialog_buy_r18"
+                        android:textSize="@dimen/text_middle"
+                        android:textColor="@color/white"
+                        android:text="@string/cancel"
+                        android:gravity="center"
+                        />
+                    <View
+                        android:id="@+id/dialog_custom_spaceview"
+                        android:layout_width="50dp"
+                        android:layout_height="1dp"/>
+                    <!-- 确定-->
+                    <Button
+                        android:id="@+id/dialog_custom_rightbtn"
+                        android:layout_width="120dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/bg_dialog_enter_r18"
+                        android:textSize="@dimen/text_middle"
+                        android:textColor="@color/white"
+                        android:text=""
+                        android:gravity="center" />
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

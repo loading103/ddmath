@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 展示层 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/zx30_black">
+
+    <!-- 提示区域 -->
+
+    <!-- 图片预览区域 -->
+    <RelativeLayout
+        android:id="@+id/lm_useradjust_mainlayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <!-- 图片 -->
+        <ImageView
+            android:id="@+id/lm_useradjust_photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            />
+
+        <!-- 自定义的截图View -->
+        <com.tsinghuabigdata.edu.ddmath.module.learnmaterial.view.UserAdjustView
+            android:id="@+id/lm_useradjust_captureview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_FB6900"
+            android:textSize="@dimen/text_large_xx"
+            android:layout_centerInParent="true"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:text="@string/lm_useradjust_tips"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/zx70_black"
+            android:visibility="gone">
+
+            <!-- 提示-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp"
+                android:text="@string/lm_useradjust_tips"
+                android:textColor="@color/color_FB6900"
+                android:textSize="@dimen/text_large_xx" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!-- 操作区域区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="12dp"
+        android:paddingTop="12dp"
+        android:background="@color/zx70_black"
+        android:orientation="horizontal"
+        >
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="1dp"/>
+
+        <!-- 重新拍照 -->
+        <TextView
+            android:id="@+id/lm_useradjust_recamera"
+            android:layout_width="140dp"
+            android:layout_height="44dp"
+            android:textColor="@color/color_61D5E6"
+            android:gravity="center"
+            android:textSize="@dimen/text_middle"
+            android:text="@string/recamera"
+            android:background="@drawable/bg_buy_detail"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="1dp"/>
+        <TextView
+            android:id="@+id/lm_useradjust_enter"
+            android:layout_width="140dp"
+            android:layout_height="44dp"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_middle"
+            android:text="@string/next_step"
+            android:background="@drawable/bg_btn_finish"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="1dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingStart="18dp"
+    android:paddingEnd="18dp"
+    android:paddingTop="9dp">
+
+    <!-- 提示区 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- 搜索 条件 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:hint="@string/create_time"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_large_x"/>
+
+        <com.tsinghuabigdata.edu.ddmath.view.TimeSpinnerView
+            android:id="@+id/timeSpinnerView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:hint="@string/date_type"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_large_x"/>
+
+        <com.tsinghuabigdata.edu.ddmath.view.TimeSpinnerView
+            android:id="@+id/kindSpinnerView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            app:questiontype="1"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/err_vartrain_tips"
+            android:textSize="@dimen/text_large_x"
+            android:layout_marginStart="30dp"
+            android:gravity="end"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/color_666666"/>
+
+        <!-- 查看报告 -->
+        <ImageView
+            android:id="@+id/ebook_report"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_report"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="@null"
+            />
+        <!-- 帮助 -->
+        <ImageView
+            android:id="@+id/ebook_help"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_howtouse"
+            android:contentDescription="@null"/>
+    </LinearLayout>
+
+    <!-- 显示内容区 -->
+    <FrameLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/ebook_vartrain_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/transparent"
+            android:dividerHeight="9dp"
+            android:listSelector="@color/transparent"
+            android:scrollbars="none"
+            android:showDividers="middle"
+            />
+
+        <!-- 没有数据 -->
+        <com.tsinghuabigdata.edu.ddmath.module.errorbook.view.NoDataTipsView
+            android:id="@+id/ndtv_nodata_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+    <com.tsinghuabigdata.edu.ddmath.view.QuestionPager
+        android:id="@+id/loading_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

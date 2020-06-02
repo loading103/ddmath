@@ -1,0 +1,124 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zx70_black"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="560dp"
+        android:layout_height="560dp"
+        android:background="@drawable/bg_rect_selectquestion"
+        android:orientation="vertical"
+        android:layout_marginBottom="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:padding="18dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/text_large_xx"
+                android:textStyle="bold"
+                android:text="@string/mark_error_question"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:id="@+id/iv_cancel"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_close_pdf"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_large_x"
+                android:textColor="@color/color_666666"
+                android:text="@string/goto_childquestion"
+                android:textStyle="bold"
+                />
+
+            <ImageView
+                android:id="@+id/iv_help"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_howtouse"
+                android:contentDescription="@null"
+                android:layout_marginStart="6dp"/>
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_listview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="@null"
+            android:layout_marginTop="18dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="6dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="1dp"/>
+
+            <Button
+                android:id="@+id/btn_all"
+                android:layout_width="180dp"
+                android:layout_height="54dp"
+                android:text="@string/page_all_right"
+                android:textSize="@dimen/text_large_xx"
+                android:textColor="@color/color_61D5E6"
+                android:background="@drawable/bg_buy_detail"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="1dp"/>
+
+            <Button
+                android:id="@+id/btn_enter"
+                android:layout_width="180dp"
+                android:layout_height="54dp"
+                android:text="@string/enter"
+                android:textSize="@dimen/text_large_xx"
+                android:textColor="@color/white"
+                android:background="@drawable/selector_errquestion_btn"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="1dp"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="547dp"
+                android:layout_height="367dp"
+                android:background="@drawable/ic_frame"
+                android:orientation="vertical">
+
+
+    <!-- 关闭按钮 -->
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_frame_cancle"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/ddwork_upload_title"
+        android:textColor="@color/color_B19A13"
+        android:textSize="20sp"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:layout_centerHorizontal="true"
+        >
+
+        <LinearLayout
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <!-- 直接上传 -->
+            <ImageView
+                android:id="@+id/iv_direct_upload"
+                android:layout_width="154dp"
+                android:layout_height="59dp"
+                android:src="@drawable/selector_directdiagnose"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/ddwork_direct_upload"
+                android:textColor="@color/color_AC9C51"
+                android:textSize="18sp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <!-- 自我诊断 -->
+            <ImageView
+                android:id="@+id/iv_give_and_upload"
+                android:layout_width="154dp"
+                android:layout_height="59dp"
+                android:src="@drawable/selfevaluation"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/ddwork_give_and_upload"
+                android:textColor="@color/color_AC9C51"
+                android:textSize="18sp"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

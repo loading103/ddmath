@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/bg_upgrade_dialog"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:paddingLeft="28dp"
+        android:paddingRight="28dp">
+
+        <TextView
+            android:id="@+id/tv_progress_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="正在下载"
+            android:textColor="#666666"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/btn_install"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_progress_title"
+            android:background="@drawable/bg_pay_finish"
+            android:text="立即安装"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_progress_percent"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="right"
+            android:text="0%"
+            android:textColor="#666666"
+            android:textSize="14sp"/>
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E6E6E6"/>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginTop="31dp"
+        android:max="100"
+        android:progressDrawable="@drawable/progressbar_color"
+        />
+
+    <!--android:progressDrawable="@drawable/common_progressdialog_progressbar_background"-->
+</LinearLayout>

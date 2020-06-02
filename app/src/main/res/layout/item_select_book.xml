@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="173dp"
+              android:background="@drawable/bg_select_book_item"
+              android:orientation="horizontal">
+
+
+    <!-- 封面图片 -->
+    <RelativeLayout
+        android:id="@+id/rl_book_cover"
+        android:layout_width="110dp"
+        android:layout_height="165dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="8dp">
+
+        <ImageView
+            android:id="@+id/iv_book_cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:contentDescription="@null"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_selected_mark"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/zx40_black"
+            android:visibility="invisible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_choosbook_selected"
+                android:contentDescription="@null"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="12dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp">
+
+            <TextView
+                android:id="@+id/tv_print_times"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:text="20XX年第X次印刷"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/text_middle"
+                />
+
+            <TextView
+                android:id="@+id/tv_book_version"
+                android:layout_width="116dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_choosebook_banben"
+                android:gravity="center_vertical|right"
+                android:paddingLeft="4dp"
+                android:paddingRight="2dp"
+                android:maxLines="1"
+                android:text="教辅版本X"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_large"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_book_name"
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.2"
+            android:maxLines="2"
+            android:text="教辅名XXXXXXXXXXXXXXXXXXXXX"
+            android:textColor="#353535"
+            android:textSize="20sp"
+            />
+
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_create_times"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:singleLine="true"-->
+            <!--android:text="创建过X次作业"-->
+            <!--android:textColor="@color/color_888888"-->
+            <!--android:textSize="16sp"-->
+            <!--/>-->
+        <TextView
+            android:id="@+id/tv_hot_usetimes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:maxLines="1"
+            android:text="10000+人次在使用该教辅"
+            android:textColor="@color/color_0CC9DC"
+            android:textSize="@dimen/text_middle"
+            />
+
+        <TextView
+            android:id="@+id/tv_modify_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:maxLines="1"
+            android:text="上次使用时间：20xx.xx.xx"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_middle"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:clipToPadding="true"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <!-- Toolbar 状态条 -->
+    <!--<include layout="@layout/toolbar_layout_mobile"/>-->
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.WorkToolbar
+        android:id="@+id/work_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+            android:id="@+id/loading_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+        <ScrollView
+            android:id="@+id/sv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ll_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp">
+
+                <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.QuestionTextView
+                    android:id="@+id/tv_stem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="14sp"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_model_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="14dp"
+                        android:background="#66C1FF"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:gravity="center"
+                        android:text="参考答案"
+                        android:textColor="#66C1FF"
+                        android:textSize="14sp"
+                        />
+
+                </LinearLayout>
+
+
+                <com.tsinghuabigdata.edu.ddmath.view.AnswerTextView
+                    android:id="@+id/tv_model_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="9dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="14sp"/>
+
+
+                <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.QuestionItemView
+                    android:id="@+id/knowledge_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="9dp"
+                    android:textSize="14sp"
+                    app:blockColor="#91DD95"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </FrameLayout>
+
+
+</LinearLayout>
+
+
+

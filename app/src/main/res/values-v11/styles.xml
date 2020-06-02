@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--<style name="Theme.Custom.AppCompat" parent="@style/Theme.AppCompat.Light">
+        <item name="android:actionBarSize">@dimen/action_bar_height</item>
+        <item name="android:actionBarStyle">@style/bc</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="bc" parent="@style/Widget.AppCompat.ActionBar">
+        <item name="background">@color/bar_tint</item>
+        <item name="contentInsetStart">0dp</item>
+        <item name="contentInsetEnd">0dp</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+    <style name="VAppTheme" parent="AppTheme.NoTitleBar.Fullscreen">
+        &lt;!&ndash;<item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>&ndash;&gt;
+        <item name="android:windowBackground">@color/bar_tint</item>
+        &lt;!&ndash; All customizations that are NOT specific to a particular API-level can go here. &ndash;&gt;
+    </style>-->
+</resources>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <!-- 加载动画 -->
+    <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+        android:id="@+id/loadingPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <!-- 主要内容 -->
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="24dp">
+
+        <!-- 积分信息 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp">
+
+            <TextView
+                android:id="@+id/tv_myscore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_large_x"
+                android:textColor="@color/color_666666"
+                android:text="@string/myscore"/>
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:contentDescription="@null"
+                android:src="@drawable/bonus"
+                android:layout_toStartOf="@id/tv_myscore"
+                android:layout_marginEnd="4dp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal">
+
+                <!-- 总积分-->
+                <TextView
+                    android:id="@+id/tv_tatol_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="44sp"
+                    android:textColor="@color/color_FFA12A"
+                    android:text="1560"/>
+
+                <!-- 今日积分 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_large"
+                        android:textColor="@color/color_666666"
+                        android:text="@string/todayscore"/>
+
+                    <TextView
+                        android:id="@+id/tv_today_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_large"
+                        android:textColor="@color/color_FFA12A"
+                        android:text="+10"
+                        android:layout_marginStart="8dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 积分兑换 -->
+            <Button
+                android:id="@+id/btn_score_exchange"
+                android:layout_width="128dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/bg_buy_detail"
+                android:text="@string/score_exchange"
+                android:textColor="@color/color_59CBD7"
+                android:textSize="@dimen/text_large_x20"/>
+
+        </RelativeLayout>
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/lv_score_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:scrollbars="none"
+            android:divider="@color/transparent"
+            android:dividerHeight="12dp"/>
+
+    </LinearLayout>
+</FrameLayout>

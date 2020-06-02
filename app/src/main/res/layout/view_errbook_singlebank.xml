@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="57dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <!--  View宽度  是 飞机的宽度 -->
+
+    <!-- 头像 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:gravity="center_horizontal"
+        >
+
+        <!-- 我的 -->
+        <com.tsinghuabigdata.edu.ddmath.module.errorbook.view.UserHeaderView
+            android:id="@+id/userbank_myheadimg"
+            android:layout_width="54dp"
+            android:layout_height="72dp"
+            android:contentDescription="@null"
+            android:visibility="gone"
+            />
+
+        <!--  第一 -->
+        <ImageView
+            android:id="@+id/userbank_firstheadimg"
+            android:layout_width="54dp"
+            android:layout_height="72dp"
+            android:src="@drawable/ic_weekincerase_medal"
+            android:contentDescription="@null"
+            android:visibility="gone"
+            />
+
+        <!-- 其他人 -->
+        <com.tsinghuabigdata.edu.ddmath.view.CircleImageView
+            android:id="@+id/userbank_otherheadimg"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:contentDescription="@null"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <!-- 进度点 及 火箭-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp">
+
+        <!-- 红点 -->
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/bg_rect_redpoint"
+            android:layout_gravity="center"/>
+
+        <!-- 飞机  -->
+        <ImageView
+            android:id="@+id/userbank_plane"
+            android:layout_width="57dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_weekincerase_rocket"
+            android:contentDescription="@null"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+    <!-- 掌握度值 -->
+    <TextView
+        android:id="@+id/userbank_rate"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:text=""
+        android:textSize="@dimen/text_large"
+        android:textColor="@color/color_0E8FC6">
+
+    </TextView>
+
+</LinearLayout>

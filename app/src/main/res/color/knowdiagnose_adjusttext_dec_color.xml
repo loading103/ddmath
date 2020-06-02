@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:color="#AA4A4A" android:state_selected="true"/>
+
+    <!-- 下降-->
+    <item android:color="#EA4A4A"/>
+
+</selector>

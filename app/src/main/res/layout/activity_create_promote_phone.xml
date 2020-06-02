@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.WorkToolbar
+        android:id="@+id/worktoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_F3FEFF">
+
+        <RelativeLayout
+            android:id="@+id/rl_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="26dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_tishi"
+                    android:contentDescription="@null"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:text="@string/limit_one_day"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/text_small"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="16dp"
+                android:paddingTop="24dp">
+
+                <LinearLayout
+                    android:layout_width="440dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="共选择了"
+                        android:textColor="@color/color_666666"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_knowledge_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginStart="4dp"
+                        android:text="XX"
+                        android:textColor="@color/color_48B8FF"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="个知识点"
+                        android:textColor="@color/color_666666"
+                        android:textSize="16sp"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="440dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_error_refine"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="4"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_create_promote_item"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/cb_error_refine"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="26dp"
+                                android:background="@drawable/selector_select_knowledge"
+                                android:button="@null"
+                                android:clickable="false"/>
+
+                            <TextView
+                                android:id="@+id/tv_error_refine"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="13dp"
+                                android:text=""
+                                android:textColor="@color/select_knowledge_text_color"
+                                android:textSize="14sp"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/self_create_refine_tips"
+                            android:textColor="@color/color_999999"
+                            android:textSize="@dimen/text_small"
+                            android:layout_marginStart="61dp"
+                            android:layout_marginTop="2dp"/>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_variant_training"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="4"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_create_promote_item"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/cb_variant_training"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="26dp"
+                                android:background="@drawable/selector_select_knowledge"
+                                android:button="@null"
+                                android:clickable="false"/>
+
+                            <TextView
+                                android:id="@+id/tv_variant_training"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="13dp"
+                                android:text=""
+                                android:textColor="@color/select_knowledge_text_color"
+                                android:textSize="14sp"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/self_create_variant_tips"
+                            android:textColor="@color/color_999999"
+                            android:textSize="@dimen/text_small"
+                            android:layout_marginStart="61dp"
+                            android:layout_marginTop="2dp"/>
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_error_book"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="4"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_create_promote_item"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/cb_error_book"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="26dp"
+                                android:background="@drawable/selector_select_knowledge"
+                                android:button="@null"
+                                android:clickable="false"/>
+
+                            <TextView
+                                android:id="@+id/tv_error_book"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:text=""
+                                android:textColor="@color/select_knowledge_text_color"
+                                android:textSize="14sp"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/self_create_errbook_tips"
+                            android:textColor="@color/color_999999"
+                            android:textSize="@dimen/text_small"
+                            android:layout_marginStart="61dp"
+                            android:layout_marginTop="2dp"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/btn_sure"
+                    android:layout_width="180dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/selector_create_promote"
+                    android:text="@string/sure_and_produce"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/produce_tip"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/text_small"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+            android:id="@+id/loadingPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+
+</LinearLayout>

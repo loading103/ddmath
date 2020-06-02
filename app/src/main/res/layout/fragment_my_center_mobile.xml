@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:fitsSystemWindows="true">
+
+    <!-- 未登录处理 -->
+    <LinearLayout
+        android:id="@+id/ll_unLogin"
+        android:layout_width="336dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="137dp"
+            android:src="@drawable/ic_doudou"
+            android:contentDescription="@null"/>
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@drawable/btn_login"
+            android:gravity="center"
+            android:text="@string/register_ddmath"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_middle"/>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/btn_register"
+            android:gravity="center"
+            android:text="@string/login_ddmath"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_middle"/>
+
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:textColor="#058FF5"
+            android:textSize="12sp"
+            />
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/container_my_center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"/>
+
+</FrameLayout>

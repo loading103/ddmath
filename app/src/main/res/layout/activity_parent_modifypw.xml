@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/color_FCFCFC"
+    android:orientation="vertical">
+
+    <!-- 状态栏 -->
+    <com.tsinghuabigdata.edu.ddmath.parent.view.ParentToolbar
+        android:id="@+id/worktoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="2dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <EditText
+            android:id="@+id/et_old_passwd"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@null"
+            android:drawableStart="@drawable/icon_psd_original"
+            android:drawablePadding="32dp"
+            android:hint="@string/input_orginal_pw"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:textColorHint="@color/color_999999"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_middle" />
+
+        <!-- 分割线 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_EAEAEA"/>
+
+        <EditText
+            android:id="@+id/et_new_passwd"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@null"
+            android:drawableStart="@drawable/login_icon_password"
+            android:drawablePadding="32dp"
+            android:hint="@string/input_new_pw"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:textColorHint="@color/color_999999"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_middle" />
+
+
+        <!-- 分割线 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_EAEAEA"/>
+
+        <EditText
+            android:id="@+id/et_confirm_passwd"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@null"
+            android:drawableStart="@drawable/login_icon_password"
+            android:drawablePadding="32dp"
+            android:hint="@string/input_new_pw_angin"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:textColorHint="@color/color_999999"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_middle" />
+
+
+        <!-- 分割线 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_EAEAEA"/>
+
+    </LinearLayout>
+
+    <!-- 退出登录-->
+    <Button
+        android:id="@+id/btn_finish"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/finished"
+        android:textSize="@dimen/text_large_x"
+        android:textColor="@color/white"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/selector_verify_code"/>
+
+</LinearLayout>

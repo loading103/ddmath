@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="180dp"
+    android:layout_height="216dp">
+
+    <!-- 预计时间 -->
+    <LinearLayout
+        android:id="@+id/cheattask_time_layout"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical|right"
+        android:paddingRight="20dp"
+        android:paddingTop="4dp"
+        android:background="@drawable/ic_time_green">
+
+        <TextView
+            android:id="@+id/cheattask_time_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="预计时间"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_small_x"
+            android:gravity="center"
+            />
+
+        <com.tsinghuabigdata.edu.ddmath.module.studycheat.view.TimeView
+            android:id="@+id/cheattask_time_timeview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_small_x"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/cheattask_time_layout"
+        android:background="@drawable/ic_training"
+        android:layout_marginBottom="-10dp">
+
+        <!-- 预计学力值 -->
+        <LinearLayout
+            android:id="@+id/cheattask_abilityvalue_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true">
+
+            <TextView
+                android:id="@+id/cheattask_abilityvalue_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+12"
+                android:textSize="24sp"
+                android:textColor="@color/color_64BD2F"
+                android:gravity="center"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="8dp">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/ic_study_bean"
+                    android:contentDescription="@null"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="学力"
+                    android:textSize="@dimen/text_small"
+                    android:textColor="@color/color_313131"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 开始按钮 -->
+        <ImageView
+            android:id="@+id/cheattask_startbtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_start_right"
+            android:layout_above="@id/cheattask_abilityvalue_layout"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="-10dp"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_vertical"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/ll_diagnosing"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="诊断中"
+            android:textColor="@color/color_333333"
+            android:textSize="20sp"
+            />
+
+        <!-- 帮助 -->
+        <ImageView
+            android:id="@+id/iv_how_use"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_howtouse"/>
+
+    </LinearLayout>
+
+
+    <com.tsinghuabigdata.edu.ddmath.view.MultiGridView
+        android:id="@+id/gv_diagnosing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:horizontalSpacing="20dp"
+        android:listSelector="@color/transparent"
+        android:numColumns="2"
+        android:scrollbars="none"
+        android:verticalSpacing="15dp"/>
+
+
+</LinearLayout>

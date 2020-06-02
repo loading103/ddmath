@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/main_bottom_distance"
+    android:paddingEnd="@dimen/main_end_distance"
+    android:paddingStart="@dimen/main_nav_distance"
+    android:paddingTop="@dimen/main_top_distance">
+
+
+    <!-- 布局内容 -->
+    <LinearLayout
+        android:background="@drawable/bg_diagnose_testreport"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <!-- 功能按钮 -->
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- 错题周题练 -->
+                <ImageView
+                    android:id="@+id/ebook_modelbtn_weektrain"
+                    android:layout_width="210dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/selector_ebook_weektrain"
+                    android:contentDescription="@null"
+                    android:layout_marginStart="10dp"
+                    />
+
+                <!-- 变式训练 -->
+                <ImageView
+                    android:id="@+id/ebook_modelbtn_vartrain"
+                    android:layout_width="210dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/selector_ebook_vartrain"
+                    android:contentDescription="@null"
+                    />
+
+                <!-- 精品套题 -->
+                <ImageView
+                    android:id="@+id/ebook_modelbtn_pratice"
+                    android:layout_width="210dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/selector_ebook_pratice"
+                    android:contentDescription="@null"
+                    />
+
+                <!-- 错题本下载  -->
+                <ImageView
+                    android:id="@+id/ebook_modelbtn_errbook"
+                    android:layout_width="210dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/selector_ebook_stagereview"
+                    android:contentDescription="@null"
+                    android:layout_marginStart="10dp"
+                    />
+
+                <!-- 错题浏览 -->
+                <!--<ImageView-->
+                    <!--android:id="@+id/ebook_modelbtn_brower"-->
+                    <!--android:layout_width="210dp"-->
+                    <!--android:layout_height="72dp"-->
+                    <!--android:src="@drawable/selector_ebook_errview"-->
+                    <!--android:contentDescription="@null"-->
+                    <!--android:layout_marginStart="10dp"-->
+                    <!--/>-->
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+
+                <!--<TextView-->
+                <!--android:id="@+id/ebook_reportbtn"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/report_dayclean"-->
+                <!--android:layout_marginEnd="20dp"-->
+                <!--android:textSize="@dimen/text_large"-->
+                <!--android:textColor="@color/bar_tint"-->
+                <!--android:visibility="gone"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--/>-->
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <!-- 主要内容 -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <!-- 未登录处理 -->
+            <com.tsinghuabigdata.edu.ddmath.view.UnLoginView
+                android:id="@+id/unLoginView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

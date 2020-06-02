@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/network_status"
+        android:textColor="@color/color_663D18"
+        android:textSize="@dimen/text_middle"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/network_sttaus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_net"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="@string/network_speed"
+        android:textColor="@color/color_663D18"
+        android:textSize="@dimen/text_middle"
+        android:layout_marginStart="100dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_monitor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text=""
+        android:layout_marginStart="10dp"
+        android:textColor="@color/color_663D18"
+        android:textSize="@dimen/text_middle"
+        android:visibility="gone"/>
+
+</LinearLayout>

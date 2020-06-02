@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 选中 -->
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="2dp"
+                android:color="@color/color_FFF9C9" />
+            <size android:height="1dp"/>
+            <corners android:radius="4dp"/>
+            <solid android:color="@color/color_FFF9C9"/>
+        </shape>
+    </item>
+
+    <!-- 不能点击灰色框 -->
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="2dp"
+                android:color="@color/submit_font_3pfcolor" />
+            <size android:height="1dp"/>
+            <corners android:radius="4dp"/>
+            <solid android:color="@color/white"/>
+        </shape>
+    </item>
+
+    <!-- 默认灰色框 -->
+    <item>
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="2dp"
+                android:color="@color/color_E6E6E6" />
+            <size android:height="1dp"/>
+            <corners android:radius="4dp"/>
+            <solid android:color="@color/color_E6E6E6"/>
+        </shape>
+    </item>
+</selector>
+
+
+

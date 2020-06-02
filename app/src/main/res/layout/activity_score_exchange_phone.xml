@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.WorkToolbar
+        android:id="@+id/worktoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg">
+
+        <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+            android:id="@+id/loadingPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/myscore_maohao"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_middle"
+                    android:drawablePadding="4dp"
+                    android:drawableStart="@drawable/bonus"/>
+
+                <TextView
+                    android:id="@+id/tv_myscore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_large_x"
+                    android:textColor="@color/color_FFA12A"
+                    android:text=""/>
+
+            </LinearLayout>
+
+            <com.handmark.pulltorefresh.library.PullToRefreshGridView
+                android:id="@+id/girdview_product"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:numColumns="4"
+                android:scrollbars="none"
+                android:gravity="center"
+                android:listSelector="@color/transparent"
+                android:verticalSpacing="16dp"
+                android:horizontalSpacing="16dp"
+                android:layout_marginTop="8dp"
+                />
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

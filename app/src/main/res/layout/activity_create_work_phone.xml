@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.WorkToolbar
+        android:id="@+id/worktoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <FrameLayout
+        android:background="@drawable/bg_zhuye"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+            android:id="@+id/loadingPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"/>
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="visible">
+            <LinearLayout
+                android:id="@+id/ll_iv_switch_book"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:background="#E6F6F7"
+                android:paddingRight="10dp">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="38"/>
+                <!--<ImageView-->
+                    <!--android:id="@+id/iv_book_cover"-->
+                    <!--android:layout_width="82dp"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="116"-->
+                    <!--android:src="@drawable/myjiaofu"-->
+                    <!--android:scaleType="centerCrop"-->
+                    <!--android:layout_gravity="center_horizontal"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--/>-->
+                <RelativeLayout
+                    android:layout_width="88dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="116">
+
+                    <ImageView
+                        android:id="@+id/iv_book_cover"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/myjiaofu" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="14dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/icon_xuanzhong" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="177"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_book_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="教辅名"
+                        android:textColor="#492A0E"
+                        android:textSize="14sp"
+                        android:layout_marginTop="16dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" />
+                    <Button
+                        android:id="@+id/bt_switch_book"
+                        android:layout_width="108dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/bg_buy_detail"
+                        android:text="@string/switchbook"
+                        android:textColor="@color/color_61D5E6"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="30dp"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:paddingLeft="26dp"
+                    android:paddingRight="26dp">
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_book_name"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="选择你要拍照上传的页码"
+                            android:textColor="@color/color_666666"
+                            android:textSize="12sp"/>
+
+                    </LinearLayout>
+                    <ImageView
+                        android:id="@+id/iv_switch_book"
+                        android:layout_width="94dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="2dp"
+                        android:visibility="invisible"
+                        android:src="@drawable/selector_switch_book"/>
+
+
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:id="@+id/fl_selected"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/ll_book_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingLeft="26dp"
+                        android:paddingRight="26dp">
+
+
+
+                        <ListView
+                            android:id="@+id/lv_book_chapter"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:divider="@color/transparent"
+                            android:dividerHeight="10dp"
+                            android:listSelector="@color/transparent"/>
+
+                        <ImageView
+                            android:id="@+id/iv_confirm_select"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/selector_confirm_select"
+                            android:contentDescription="@null"/>
+
+
+                    </LinearLayout>
+
+                    <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+                        android:id="@+id/loadingPager_catalog"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_guide"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_gudie"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:id="@+id/iv_gudie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/doudou_portrait_chosen"
+                    android:contentDescription="@null"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="13dp">
+                    <LinearLayout
+                        android:layout_width="132dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="13dp"
+                        android:orientation="vertical">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+                        <Button
+                            android:id="@+id/bt_switch_books"
+                            android:layout_width="108dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/bg_buy_detail"
+                            android:text="@string/choosebook"
+                            android:textColor="@color/color_61D5E6"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="30dp"/>
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_gudie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="选择需诊断的作业来源（教辅）"
+                        android:textColor="@color/color_666666"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="12sp"/>
+
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="56dp"
+                        android:layout_toLeftOf="@id/tv_gudie"
+                        android:src="@drawable/icon_yindao"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zx30_black"
+    >
+
+    <!-- 主要内容区  -->
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:minHeight="140dp"
+        android:background="@drawable/bg_rect_white"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp">
+
+        <!-- 关闭按钮 -->
+        <ImageView
+            android:id="@+id/dialog_custom_closebtn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/selector_dialog_close"
+            android:contentDescription="@null"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="-16dp"
+            android:visibility="visible"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/svip_big"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buy_success"
+                android:textSize="@dimen/text_middle"
+                android:textColor="@color/color_F5A623"/>
+
+            <!-- 提示内容 -->
+            <TextView
+                android:id="@+id/tv_dialog_tipstext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_small"
+                android:gravity="center"
+                android:textColor="@color/color_888888"
+                android:text="@string/delete_allimage"/>
+
+            <!-- 按钮 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+
+                <!-- 确定-->
+                <Button
+                    android:id="@+id/dialog_custom_rightbtn"
+                    android:layout_width="120dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/bg_dialog_enter_r18"
+                    android:textSize="@dimen/text_middle"
+                    android:textColor="@color/white"
+                    android:text="@string/alert_positive"
+                    android:gravity="center" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_membergrade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/svip_big"
+        android:layout_above="@id/main_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-80dp"/>
+
+</RelativeLayout>

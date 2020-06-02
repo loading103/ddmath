@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_title"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_parent_shadow_bottom"
+            android:paddingTop="13dp">
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+
+            <TextView
+                android:id="@+id/tv_day_report"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="每日报告"
+                android:textColor="@color/parent_main_text_color"
+                android:textSize="18sp"/>
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+
+            <TextView
+                android:id="@+id/tv_week_report"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="每周报告"
+                android:textColor="@color/parent_main_text_color"
+                android:textSize="18sp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginTop="41dp">
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+
+            <View
+                android:id="@+id/slider"
+                android:layout_width="66dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_13D182"/>
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+
+            <View
+                android:id="@+id/slider2"
+                android:layout_width="66dp"
+                android:layout_height="match_parent"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- 重要消息 跑马灯 -->
+    <com.tsinghuabigdata.edu.ddmath.view.RollTextView
+        android:id="@+id/marqueTextView"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/color_D0FAEA"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        />
+
+    <!--android:textSize="@dimen/text_middle"-->
+    <!--android:textColor="@color/color_08C274"-->
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_F1FBF7"
+        />
+
+</LinearLayout>

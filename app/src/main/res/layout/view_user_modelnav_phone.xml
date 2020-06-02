@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical">
+
+    <!-- 上面部分 按钮 及提示框 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- ################################################### -->
+
+        <!-- 定制学 功能图标 -->
+        <ImageView
+            android:id="@+id/iv_function_customplan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_personal"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- 交作业 功能图标 -->
+        <ImageView
+            android:id="@+id/iv_function_submitwork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@id/iv_function_customplan"
+            android:src="@drawable/ic_homework"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- 自由练 功能图标 -->
+        <ImageView
+            android:id="@+id/iv_function_freetrain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_practice"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@id/iv_function_customplan"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- ################################################### -->
+        <!-- 指示箭头 交作业-》定制学 -->
+        <ImageView
+            android:id="@+id/iv_arrow_submitwork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_l"
+            android:contentDescription="@null"
+            android:layout_above="@id/iv_function_submitwork"
+            />
+
+        <!-- 指示箭头 自由练-》定制学 -->
+        <ImageView
+            android:id="@+id/iv_arrow_freetrain"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_arrow_r"
+            android:contentDescription="@null"
+            android:layout_below="@id/iv_function_freetrain"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="-50dp"
+            />
+
+        <!-- ################################################### -->
+        <!-- 定制学 提示气泡 -->
+        <RelativeLayout
+            android:id="@+id/layout_bubble_customplan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/iv_function_customplan"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ic_tips_personal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_bubbletips_customplan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_8B572A"
+                android:textSize="@dimen/text_small"
+                android:text=""/>
+
+        </RelativeLayout>
+
+        <!-- 定制学 小提示 错题订正 -->
+        <ImageView
+            android:id="@+id/iv_customplan_smalltips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:layout_above="@id/iv_function_customplan"
+            android:src="@drawable/ic_tips_personal_little"
+            android:layout_alignEnd="@id/iv_function_customplan"
+            android:visibility="gone"/>
+
+        <!-- 交作业 提示气泡 -->
+        <RelativeLayout
+            android:id="@+id/layout_bubble_submitwork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/iv_function_submitwork"
+            android:background="@drawable/bg_tips_homework"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_bubbletips_submitwork"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_8B572A"
+                android:textSize="@dimen/text_small"
+                android:text=""/>
+
+        </RelativeLayout>
+
+        <!-- 自由练 提示气泡 -->
+        <RelativeLayout
+            android:id="@+id/layout_bubble_freetrain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@id/iv_function_freetrain"
+            android:background="@drawable/ic_tips_practice"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_bubbletips_freetrain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_8B572A"
+                android:textSize="@dimen/text_small"
+                android:text=""/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!-- 提示文本信息 分别居中显示 -->
+    <LinearLayout
+        android:id="@+id/layout_function_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <!-- 交作业 -->
+        <TextView
+            android:id="@+id/tv_modeame_submit"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/submit_teacher_work"
+            android:textSize="@dimen/text_small"
+            android:gravity="center"
+            android:textColor="@color/color_0A8B9A"/>
+
+        <!-- 定制学 -->
+        <TextView
+            android:id="@+id/tv_modeame_custom"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/person_sorce_plan"
+            android:textSize="@dimen/text_small"
+            android:gravity="center"
+            android:textColor="@color/color_0A8B9A"/>
+
+        <!-- 自由练 -->
+        <TextView
+            android:id="@+id/tv_modeame_freetrain"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/whole_page_collecterr"
+            android:textSize="@dimen/text_small"
+            android:gravity="center"
+            android:textColor="@color/color_0A8B9A"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+
+

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/selector_item_waitimage_phone"
+        android:layout_marginLeft="@dimen/workitem_leftright_margin_phone"
+        android:layout_marginRight="@dimen/workitem_leftright_margin_phone"
+        android:layout_marginTop="@dimen/workitem_space_phone">
+
+        <!-- 状态信息 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_gravity="center_vertical">
+
+            <!-- 上传时间-->
+            <TextView
+                android:id="@+id/mylearn_work_uploadtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18:21"
+                android:textSize="16sp"
+                android:textColor="@color/color_333333"
+                />
+
+            <!-- 上传-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上传"
+                android:textSize="12sp"
+                android:textColor="@color/color_151515"
+                />
+
+            <!-- 批阅状态 -->
+            <TextView
+                android:id="@+id/mylearn_work_correctstatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="批阅中"
+                android:textSize="14sp"
+                android:textColor="@color/color_F09823"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:background="@drawable/bg_rect_correting"
+                android:gravity="center"
+                android:layout_marginLeft="12dp"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+            <!-- 批阅结果 -->
+            <LinearLayout
+                android:id="@+id/mylearn_work_correctedlayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical">
+
+                <!-- 正确数量 -->
+                <TextView
+                    android:id="@+id/mylearn_work_rightcount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_333333"
+                    android:drawableLeft="@drawable/ic_correct"
+                    android:drawablePadding="8dp"
+                    android:gravity="center"
+                    />
+                <!-- 半对数量 -->
+                <TextView
+                    android:id="@+id/mylearn_work_halfcount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_333333"
+                    android:drawableLeft="@drawable/ic_semi_correct"
+                    android:layout_marginLeft="8dp"
+                    android:drawablePadding="8dp"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    />
+                <!-- 错误数量 -->
+                <TextView
+                    android:id="@+id/mylearn_work_wrongcount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_333333"
+                    android:drawableLeft="@drawable/ic_wrong_question"
+                    android:layout_marginLeft="8dp"
+                    android:drawablePadding="8dp"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+
+            <!-- 总题数量 -->
+            <TextView
+                android:id="@+id/mylearn_work_allcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="共8题"
+                android:textSize="14sp"
+                android:textColor="@color/color_333333"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_gravity="center_vertical"
+                />
+
+        </LinearLayout>
+
+        <!-- 分割线 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_cccccc"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <!-- 图片列表 -->
+        <com.tsinghuabigdata.edu.ddmath.view.MultiGridView
+            android:id="@+id/mylearn_work_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:listSelector="@android:color/transparent"
+            android:divider="@color/transparent"
+            android:layout_margin="10dp"
+            android:numColumns="3"
+            />
+
+    </LinearLayout>
+
+</FrameLayout>
+

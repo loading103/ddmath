@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_submit_month"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="20XX年X月"
+        android:textColor="@color/color_666666"
+        android:textSize="14sp"/>
+
+    <com.tsinghuabigdata.edu.ddmath.view.MultiGridView
+        android:id="@+id/gv_submited"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:horizontalSpacing="20dp"
+        android:listSelector="@color/transparent"
+        android:numColumns="2"
+        android:scrollbars="none"
+        android:verticalSpacing="15dp"></com.tsinghuabigdata.edu.ddmath.view.MultiGridView>
+
+</LinearLayout>

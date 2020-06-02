@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.WorkToolbar
+        android:id="@+id/worktoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+
+    <FrameLayout
+        android:background="@drawable/bg_zhuye"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+            android:id="@+id/loadingPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"/>
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+            <LinearLayout
+                android:id="@+id/ll_iv_switch_book"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:background="#E6F6F7"
+                android:paddingRight="16dp">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="38"/>
+                <RelativeLayout
+                    android:layout_width="180dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="116"
+                    android:layout_gravity="center_horizontal">
+                    <ImageView
+                        android:id="@+id/iv_book_cover"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/myjiaofu"
+                        android:scaleType="centerCrop"
+                        android:layout_gravity="center_horizontal" />
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/icon_xuanzhong"
+                       android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="177"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_book_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="教辅名"
+                        android:textColor="#492A0E"
+                        android:textSize="20sp"
+                        android:layout_marginTop="22dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp" />
+                    <ImageView
+                        android:id="@+id/iv_switch_book"
+                        android:layout_width="@dimen/button_large_width"
+                        android:layout_height="@dimen/button_large_height"
+                        android:src="@drawable/selector_switch_book"
+                        android:layout_centerHorizontal="true"
+                        android:visibility="invisible"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="40dp"/>
+
+                    <Button
+                        android:id="@+id/bt_switch_book"
+                        android:layout_width="155dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/bg_buy_detail"
+                        android:text="@string/switchbook"
+                        android:textColor="@color/color_61D5E6"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="40dp"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:paddingLeft="36dp"
+                    android:paddingRight="36dp">
+                    <LinearLayout
+                        android:id="@+id/ll_book_name"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_fu"
+                            android:visibility="gone"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:singleLine="true"
+                            android:text="教辅名"
+                            android:textColor="#492A0E"
+                            android:visibility="gone"
+                            android:textSize="20sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="26dp"
+                            android:text="选择你要拍照上传的页码"
+                            android:textColor="@color/color_666666"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <FrameLayout
+                    android:id="@+id/fl_selected"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/ll_book_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingLeft="36dp"
+                        android:paddingRight="36dp"
+                        >
+
+
+
+                        <ListView
+                            android:id="@+id/lv_book_chapter"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:divider="@color/transparent"
+                            android:dividerHeight="10dp"
+                            android:listSelector="@color/transparent"/>
+
+                        <ImageView
+                            android:id="@+id/iv_confirm_select"
+                            android:layout_width="137dp"
+                            android:layout_height="59dp"
+                            android:layout_gravity="right"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginTop="16dp"
+                            android:src="@drawable/selector_confirm_select"/>
+
+
+                    </LinearLayout>
+
+                    <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+                        android:id="@+id/loadingPager_catalog"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_guide"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_gudie"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:id="@+id/iv_gudie"
+                    android:layout_width="130dp"
+                    android:layout_height="142dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/doudou_portrait_chosen"
+                    android:contentDescription="@null"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="17dp">
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="17dp"
+                        android:orientation="vertical">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+                        <Button
+                            android:id="@+id/bt_switch_books"
+                            android:layout_width="155dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/bg_buy_detail"
+                            android:text="@string/choosebook"
+                            android:textColor="@color/color_61D5E6"
+                            android:textSize="20sp"
+                            android:layout_gravity="center"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="30dp"/>
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_gudie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="选择需诊断的作业来源（教辅）"
+                        android:textColor="@color/color_666666"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="18sp"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="100dp"
+                        android:layout_toLeftOf="@id/tv_gudie"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/icon_yindao"
+                        android:layout_marginLeft="150dp"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>

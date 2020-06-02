@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/color_F1FBF7"
+    android:orientation="vertical">
+
+    <!-- 状态栏 -->
+    <com.tsinghuabigdata.edu.ddmath.parent.view.ParentToolbar
+        android:id="@+id/worktoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="2dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <!-- 家长昵称-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_large"
+                android:textColor="@color/color_333333"
+                android:text="家长昵称"
+                android:layout_centerVertical="true"
+                />
+
+            <TextView
+                android:id="@+id/iv_children_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_large"
+                android:textColor="@color/color_888888"
+                android:text=""
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                />
+
+        </RelativeLayout>
+
+        <!-- 分割线 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_EAEAEA"/>
+
+        <!-- 家长头像-->
+        <LinearLayout
+            android:id="@+id/layout_parent_headimage"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_large"
+                android:textColor="@color/color_333333"
+                android:text="家长头像"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <com.tsinghuabigdata.edu.ddmath.view.CircleImageView
+                android:id="@+id/iv_children_headimage"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@null"
+                />
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:contentDescription="@null"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/aboutme_next"
+                />
+
+        </LinearLayout>
+        <!-- 分割线 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_EAEAEA"/>
+
+        <!-- 绑定手机 -->
+        <LinearLayout
+            android:id="@+id/layout_parent_bindphone"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_large"
+                android:textColor="@color/color_333333"
+                android:text="绑定手机"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/iv_binding_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_large"
+                android:textColor="@color/color_333333"
+                android:text=""
+                />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:contentDescription="@null"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/aboutme_next"
+                />
+
+        </LinearLayout>
+
+        <!-- 分割线 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_EAEAEA"/>
+
+        <!-- 修改密码-->
+        <LinearLayout
+            android:id="@+id/layout_parent_pw"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_large"
+                android:textColor="@color/color_333333"
+                android:text="修改密码"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:contentDescription="@null"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/aboutme_next"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- 退出登录-->
+    <Button
+        android:id="@+id/btn_quit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/quit_login"
+        android:textSize="@dimen/text_large_x"
+        android:textColor="@color/white"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/bg_rect_red_r20"/>
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:clipToPadding="true"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <!-- Toolbar 状态条 -->
+    <!--<include layout="@layout/toolbar_layout_mobile"/>-->
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.WorkToolbar
+        android:id="@+id/work_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_qa"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <FrameLayout
+            android:id="@+id/fl_stem"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:visibility="gone">
+
+            <ScrollView
+                android:id="@+id/sv_stem"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/draw_qa_stem_background"
+                android:padding="5dp">
+                <!--<com.tsinghuabigdata.edu.ddmath.view.LatexWebView
+               android:id="@+id/tv_latex"
+               android:textColor="@color/black"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"/>-->
+
+                <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.QuestionTextView
+                    android:id="@+id/tv_stem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="14dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="14sp"/>
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/tv_loadfail"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/page_back"
+                android:gravity="center"/>
+        </FrameLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+
+

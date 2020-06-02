@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/btn_exchange_record"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="18dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_buy_detail"
+        android:text="@string/card_exchange_record"
+        android:textColor="@color/color_59CBD7"
+        android:textSize="20sp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_exchange_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_FF6C6C"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/edt_card_code"
+            android:layout_width="380dp"
+            android:layout_height="66dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/bg_rect_input_vip_code"
+            android:digits="@string/card_code_filter"
+            android:hint="@string/input_card_code"
+            android:imeOptions="flagNoExtractUi"
+            android:maxLength="8"
+            android:paddingEnd="18dp"
+            android:paddingStart="18dp"
+            android:textColor="@color/color_999999"
+            android:textColorHint="@color/color_cccccc"
+            android:textSize="23sp"/>
+
+        <TextView
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/card_exchange_input_tips"
+            android:textColor="@color/color_999999"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/btn_exchange"
+            android:layout_width="174dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/selector_confirm_exchange"
+            android:gravity="center"
+            android:text="@string/enter_exchange"
+            android:textColor="@color/white"
+            android:textSize="22sp"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_exchange_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="18dp"
+        android:text="@string/card_exchange_intro"
+        android:textColor="@color/color_48B8FF"
+        android:textSize="20sp"/>
+
+
+</RelativeLayout>

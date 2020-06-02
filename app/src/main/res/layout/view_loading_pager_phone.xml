@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <!-- 服务器异常 -->
+    <LinearLayout
+        android:id="@+id/fault_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_fault"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_noservice"
+            android:contentDescription="@null"/>
+
+        <TextView
+            android:id="@+id/tv_fault"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/fault_server"
+            android:textColor="@color/color_666666"
+            android:textSize="14sp"/>
+
+        <Button
+            android:id="@+id/btn_retry"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="240dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_loading_retry"
+            android:text="@string/retry_load"
+            android:textColor="@color/white"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <!-- 没有数据 -->
+    <LinearLayout
+        android:id="@+id/empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pic_nodata"
+            android:contentDescription="@null"/>
+
+        <TextView
+            android:id="@+id/tv_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/nofinddata"
+            android:textColor="@color/color_666666"
+            android:textSize="14sp"
+            android:gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+    <!-- 加载中 -->
+    <LinearLayout
+        android:id="@+id/loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+
+        <ImageView
+            android:id="@+id/giv_loading"
+            android:layout_width="80dp"
+            android:layout_height="128dp"
+            android:src="@drawable/loading_anim"
+            android:contentDescription="@null"/>
+
+        <TextView
+            android:id="@+id/tv_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/loading_wait"
+            android:textColor="@color/color_666666"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/bg_rect_white_myprivileage_r4">
+
+        <!-- 标题栏 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="16dp"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="18dp"
+                    android:background="@color/color_D8D8D8"/>
+
+                <TextView
+                    android:id="@+id/tv_title_priviledge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_333333"
+                    android:text="@string/my_learn_priviledge"
+                    android:textSize="@dimen/text_large_x"
+                    android:layout_marginStart="6dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_has_privileageCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/text_large"
+                    android:layout_marginStart="18dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_buy_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_large"
+                android:textColor="@color/color_FF6400"
+                android:layout_centerInParent="true"
+                android:text="购买后升级为超级VIP会员"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+                android:id="@+id/loadingPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <com.tsinghuabigdata.edu.ddmath.view.AutoGridView
+                android:id="@+id/grid_priviledge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:listSelector="@color/transparent"
+                android:layout_gravity="center_horizontal"
+                android:numColumns="@integer/auto_clomu"
+                android:stretchMode="columnWidth"
+                android:gravity="center_horizontal"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_exclusive_tips"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:contentDescription="@null"
+            android:src="@drawable/pic_unique"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <com.tsinghuabigdata.edu.ddmath.view.NoClassView
+        android:id="@+id/noClassView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        />
+</FrameLayout>
+
+
+

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 诊断作业 -->
+    <RelativeLayout
+        android:id="@+id/layout_zdzy_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <!-- 有作业 提示文本 -->
+        <TextView
+            android:id="@+id/tv_diagnose"
+            android:layout_width="400dp"
+            android:layout_height="120dp"
+            android:background="@drawable/duihuakuangzhenduan"
+            android:maxLines="2"
+            android:paddingEnd="24dp"
+            android:paddingStart="24dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="24dp"
+            android:text=""
+            android:textColor="@color/color_47A1AC"
+            android:textSize="24sp"
+            android:visibility="gone"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="-32dp"
+            android:ellipsize="end"
+            android:layout_marginStart="60dp"/>
+
+        <!-- 作业状态 -->
+        <ImageView
+            android:id="@+id/iv_diagnose_workstatus"
+            android:layout_width="320dp"
+            android:layout_height="292dp"
+            android:src="@drawable/zhenduanzuoye_weibuzhi"
+            android:visibility="visible"
+            android:contentDescription="@null"
+            android:layout_below="@id/tv_diagnose"
+            android:scaleType="fitXY"/>
+
+    </RelativeLayout>
+
+    <!-- 收集错题 -->
+    <RelativeLayout
+        android:id="@+id/layout_college_err"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center">
+
+        <!-- 有作业提示 -->
+        <TextView
+            android:id="@+id/tv_college_errtip"
+            android:layout_width="400dp"
+            android:layout_height="120dp"
+            android:background="@drawable/duihuakuangshouji"
+            android:maxLines="2"
+            android:paddingEnd="24dp"
+            android:paddingStart="24dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="24dp"
+            android:text=""
+            android:textColor="@color/color_47A1AC"
+            android:textSize="24sp"
+            android:visibility="gone"
+            android:layout_marginBottom="-60dp"
+            android:layout_marginStart="24dp"
+            android:gravity="center_vertical"
+            android:ellipsize="end"
+            />
+
+        <ImageView
+            android:id="@+id/iv_college_err"
+            android:layout_width="192dp"
+            android:layout_height="175dp"
+            android:src="@drawable/shoujicuoti_weibuzhi"
+            android:visibility="visible"
+            android:contentDescription="@null"
+            android:layout_below="@id/tv_college_errtip"
+            android:scaleType="fitXY"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
+

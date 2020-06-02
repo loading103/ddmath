@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_page"
+              android:layout_width="70dp"
+              android:layout_height="70dp"
+              android:background="@drawable/selector_page_bg"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="155"
+        android:textColor="@color/page_text_color"
+        android:textSize="22sp"/>
+
+</LinearLayout>

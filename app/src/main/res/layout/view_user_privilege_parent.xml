@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--  -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:paddingBottom="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_333333"
+                android:textStyle="bold"
+                android:text="@string/my_learn_priviledge"
+                android:textSize="@dimen/text_large"
+                android:layout_marginStart="8dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_has_privileageCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_middle"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.tsinghuabigdata.edu.ddmath.view.AutoGridView
+                android:id="@+id/grid_priviledge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:listSelector="@color/transparent"
+                android:layout_gravity="center_horizontal"
+                android:numColumns="@integer/auto_clomu"
+                android:stretchMode="columnWidth"
+                android:background="@drawable/shangpinhuizhang_bg"/>
+
+            <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+                android:id="@+id/loadingPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <com.tsinghuabigdata.edu.ddmath.view.NoClassView
+        android:id="@+id/noClassView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        />
+</FrameLayout>

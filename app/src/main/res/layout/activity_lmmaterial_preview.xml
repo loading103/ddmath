@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <!-- 展示层 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/zx70_black">
+
+        <!-- 提示区域 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/zx40_black"
+            >
+
+            <!-- 提示-->
+            <TextView
+                android:id="@+id/lm_preview_tipsview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_centerInParent="true"
+                android:paddingTop="18dp"
+                android:paddingBottom="18dp"
+                android:gravity="center_horizontal"
+                android:text="@string/lm_priview_tips"/>
+
+        </RelativeLayout>
+
+        <!-- 图片预览区域 -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <!-- 图片预览区域 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <!-- 图片 -->
+                <ImageView
+                    android:id="@+id/lm_preview_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:background="@color/gray"
+                    android:contentDescription="@null"
+                    />
+
+                <!-- 作业分割层 -->
+                <com.tsinghuabigdata.edu.ddmath.module.learnmaterial.view.AnswerSplitView
+                    android:id="@+id/lm_preview_answersplitview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </RelativeLayout>
+
+            <!-- 左侧 题目列表  -->
+            <LinearLayout
+                android:id="@+id/lm_lmanswer_layout"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/click_select"
+                    android:textSize="@dimen/text_middle"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="16dp"
+                    android:visibility="gone"
+                    />
+
+                <ListView
+                    android:id="@+id/lm_lmanswer_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:listSelector="@color/transparent"
+                    android:divider="@color/transparent"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:scrollbars="none"
+                    android:fadeScrollbars="false"
+                    />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <!-- 操作区域区域 -->
+        <LinearLayout
+            android:id="@+id/lm_preview_oplayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:background="@color/zx70_black"
+            >
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="1dp"/>
+            <!-- 重新拍照 -->
+            <TextView
+                android:id="@+id/lm_preview_recamera"
+                android:layout_width="210dp"
+                android:layout_height="66dp"
+                android:textColor="@color/color_48B8FF"
+                android:gravity="center"
+                android:layout_marginStart="60dp"
+                android:textSize="18sp"
+                android:text="@string/recamera"
+                android:background="@drawable/bg_buy_detail"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="1dp"/>
+            <TextView
+                android:id="@+id/lm_preview_enter"
+                android:layout_width="210dp"
+                android:layout_height="66dp"
+                android:layout_marginEnd="60dp"
+                android:gravity="center"
+                android:layout_alignParentEnd="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_large_x20"
+                android:text="@string/finished"
+                android:background="@drawable/bg_btn_finish"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="1dp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!-- 编辑层 -->
+    <RelativeLayout
+        android:id="@+id/lm_preview_handlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/zx30_black"
+        android:visibility="gone"
+        >
+
+        <com.tsinghuabigdata.edu.ddmath.module.learnmaterial.view.HandleImageView
+            android:id="@+id/lm_preview_handleimageview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+    <!-- 选择错题上传 -->
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.SelectErrorQuestionView
+        android:id="@+id/lm_selectErrorQuestionView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+</FrameLayout>
+
+
+
+
+

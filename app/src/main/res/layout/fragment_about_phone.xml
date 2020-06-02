@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="20dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_width="93dp"
+            android:layout_height="93dp"
+            android:src="@drawable/ic_launcher"
+            android:contentDescription="@null"/>
+
+        <TextView
+            android:id="@+id/iv_about_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#666666"
+            android:textSize="16sp"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="客服邮箱："
+                android:textColor="#666666"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/iv_email_adress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:singleLine="true"
+                android:text="@string/usercenter_email"
+                android:textColor="#48B8FF"
+                android:textSize="14sp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="客服热线："
+                android:textColor="#666666"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:id="@+id/iv_phone"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_callphone"/>
+
+            <TextView
+                android:id="@+id/iv_phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:singleLine="true"
+                android:text="@string/contactphone"
+                android:textColor="#48B8FF"
+                android:textSize="14sp"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

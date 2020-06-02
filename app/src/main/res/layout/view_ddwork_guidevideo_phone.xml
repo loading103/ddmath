@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="@drawable/bg_rect_guidevideo">
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textColor="@color/color_492A0E"-->
+        <!--android:textSize="@dimen/text_large"-->
+        <!--android:text="本次作业"-->
+        <!--/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/view_knowledges"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="@dimen/text_large"-->
+            <!--android:text=""-->
+            <!--/>-->
+        <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.QuestionTextView
+            android:id="@+id/view_knowledges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_middle" />
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textColor="@color/color_492A0E"-->
+        <!--android:textSize="@dimen/text_large"-->
+        <!--android:text="还需提高，快去观看"-->
+        <!--/>-->
+        <!--<ImageView-->
+        <!--android:id="@+id/view_videoimage"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@drawable/ic_about"/>-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textColor="@color/color_492A0E"-->
+        <!--android:textSize="@dimen/text_large"-->
+        <!--android:text="，快速提高吧！"-->
+        <!--/>-->
+
+    </LinearLayout>
+
+</RelativeLayout>
+

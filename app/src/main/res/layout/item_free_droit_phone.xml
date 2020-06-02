@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    >
+
+    <TextView
+        android:id="@+id/tv_droit_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:maxLines="1"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/text_small"
+        />
+
+    <TextView
+        android:id="@+id/tv_droit_times"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:maxLines="1"
+        android:textColor="@color/color_65B72D"
+        android:textSize="@dimen/text_small"
+        android:layout_marginStart="10dp"
+        />
+
+</LinearLayout>

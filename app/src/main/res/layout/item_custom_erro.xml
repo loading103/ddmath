@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="100dp"
+    android:layout_height="158dp"
+    android:id="@+id/ll_correcting"
+    android:orientation="horizontal"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/btn_graid_yellow">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="29"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="88dp">
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2018-11-21 周三错题订正"
+                android:textColor="@color/color_D37A27"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textSize="24dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="23dp"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_correct_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="待订正 0 题"
+            android:textColor="@color/color_D37A27"
+            android:textSize="16dp"
+            android:layout_marginLeft="23dp"/>
+        <LinearLayout
+            android:id="@+id/ll_correct_ed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_correct_ed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已订正20题"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/color_D37A27"
+                android:textSize="16dp"
+                android:layout_marginLeft="23dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:gravity="center"
+                android:text="("
+                android:textColor="@color/color_D37A27"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:src="@drawable/wrongicon" />
+            <TextView
+                android:id="@+id/tv_correct_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="4dp"
+                android:gravity="center"
+                android:text="2题，"
+                android:textColor="@color/color_D37A27"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:src="@drawable/righticon" />
+
+            <TextView
+                android:id="@+id/tv_correct_wrong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="6题）"
+                android:textColor="@color/color_D37A27"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_weight="12"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/bt_correction"
+            android:layout_width="164dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_rect_white_r24"
+            android:textColor="@color/color_D37A27"
+            android:textSize="20sp"
+            android:layout_marginRight="23dp"
+            android:layout_centerInParent="true"
+            android:text="继续订正" />
+        <TextView
+            android:id="@+id/tv_correction_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="逾期"
+            android:textColor="@color/color_D37A27"
+            android:textSize="16dp"
+            android:layout_below="@+id/bt_correction"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="23dp"/>
+        <ImageView
+            android:id="@+id/iv_state"
+            android:layout_width="75dp"
+            android:layout_height="64dp"
+            android:visibility="invisible"
+            android:src="@drawable/icon_yidingzheng"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</LinearLayout>

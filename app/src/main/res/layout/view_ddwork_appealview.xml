@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="160dp"
+    android:layout_height="60dp"
+    android:orientation="horizontal">
+
+    <!-- 我要申诉功能 -->
+    <RelativeLayout
+        android:id="@+id/layout_ddwork_correctErrorBtn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/selector_correct_btnbg"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/item_ddwork_correctErrorBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ddwork_correcterror"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_large_x"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ddwork_correcterror_tips"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_small"
+            android:layout_below="@id/item_ddwork_correctErrorBtn"
+            android:layout_centerHorizontal="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_ddwork_correctErrorStatus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@drawable/selector_correct_btnbg_gray"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/item_ddwork_correctErrorStatus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/ddwork_correctapply"
+            android:textColor="@color/color_B7B7B7"
+            android:textSize="@dimen/text_large_x"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+</LinearLayout>

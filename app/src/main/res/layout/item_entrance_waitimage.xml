@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/mylearn_waitwork_mainlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/selector_item_waitimage"
+        android:layout_marginLeft="@dimen/workitem_leftright_margin"
+        android:layout_marginRight="@dimen/workitem_leftright_margin"
+        android:layout_marginTop="@dimen/workitem_space">
+
+        <!-- 状态信息 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:gravity="center_vertical">
+
+            <!-- 上传状态 -->
+            <TextView
+                android:id="@+id/mylearn_waitwork_uploadstatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未上传"
+                android:textSize="20sp"
+                android:textColor="@color/color_48B8FF"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:paddingBottom="6dp"
+                android:paddingTop="6dp"
+                android:background="@drawable/bg_rect_unupload"
+                android:gravity="center"
+                />
+
+            <!-- 预估数量 -->
+            <TextView
+                android:id="@+id/mylearn_waitwork_estimateCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="24sp"
+                android:textColor="@color/color_333333"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:visibility="gone"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+
+            <!-- 未上传 按钮 -->
+            <LinearLayout
+                android:id="@+id/mylearn_waitwork_unuploadlayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                android:visibility="visible">
+
+                <!-- 编辑 -->
+                <TextView
+                    android:id="@+id/mylearn_waitwork_editbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="编辑"
+                    android:textSize="24sp"
+                    android:textColor="@color/color_48B8FF"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    />
+
+                <!-- 上传 -->
+                <TextView
+                    android:id="@+id/mylearn_waitwork_uploadbtn"
+                    android:layout_width="128dp"
+                    android:layout_height="44dp"
+                    android:text="上传"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:drawableLeft="@drawable/ic_upload"
+                    android:layout_marginLeft="40dp"
+                    android:drawablePadding="8dp"
+                    android:background="@drawable/bg_rect_blue"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="20dp"
+                    />
+            </LinearLayout>
+
+            <!-- 上传失败 按钮 -->
+            <LinearLayout
+                android:id="@+id/mylearn_waitwork_uploadfaillayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                android:visibility="gone">
+
+                <!-- 全部删除 -->
+                <TextView
+                    android:id="@+id/mylearn_waitwork_deletebtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="全部删除"
+                    android:textSize="24sp"
+                    android:textColor="@color/color_48B8FF"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    />
+
+                <!-- 上传 -->
+                <TextView
+                    android:id="@+id/mylearn_waitwork_reuploadbtn"
+                    android:layout_width="128dp"
+                    android:layout_height="44dp"
+                    android:text="继续上传"
+                    android:textSize="24sp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_rect_blue"
+                    android:gravity="center"
+                    android:layout_marginLeft="40dp"
+                    />
+            </LinearLayout>
+
+            <!-- 编辑 -->
+            <LinearLayout
+                android:id="@+id/mylearn_waitwork_editlayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                android:visibility="gone">
+
+                <!-- 全部删除 -->
+                <TextView
+                    android:id="@+id/mylearn_waitwork_finishbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="完成"
+                    android:textSize="24sp"
+                    android:textColor="@color/color_48B8FF"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    />
+
+            </LinearLayout>
+
+            <!-- 上传中  -->
+            <LinearLayout
+                android:id="@+id/mylearn_waitwork_uploadinglayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                android:visibility="gone">
+
+                <!-- 全部删除 -->
+                <com.tsinghuabigdata.edu.ddmath.view.NetworkStatusView
+                    android:id="@+id/mylearn_waitwork_networkstatusview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 分割线 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_cccccc"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"/>
+
+        <!-- 图片列表 -->
+        <com.tsinghuabigdata.edu.ddmath.view.DragGridView
+            android:id="@+id/mylearn_waitwork_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:listSelector="@android:color/transparent"
+            android:divider="@color/transparent"
+            android:layout_margin="20dp"
+            android:numColumns="4"
+            />
+
+    </LinearLayout>
+
+    <!-- 编辑提示 -->
+    <RelativeLayout
+        android:id="@+id/mylearn_waitwork_editTipsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_tips"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/ic_info"
+            android:layout_marginTop="48dp"
+            android:drawablePadding="8dp"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
+            android:background="@drawable/bg_rect_gray"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+
+    <!-- 上传成功提示 -->
+    <RelativeLayout
+        android:id="@+id/mylearn_waitwork_uploadsucclayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/zx39_white"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/workitem_leftright_margin"
+        android:layout_marginRight="@dimen/workitem_leftright_margin"
+        android:layout_marginTop="@dimen/workitem_space"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingLeft="46dp"
+            android:paddingRight="46dp"
+            android:background="@drawable/bg_rect_uploadsuccess">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_upload_success_white"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/upload_success"
+                    android:textSize="24sp"
+                    android:textColor="@color/white"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/look_tips"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="12dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</FrameLayout>
+

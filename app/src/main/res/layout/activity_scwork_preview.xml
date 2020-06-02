@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_333333">
+
+    <!-- 图片预览区域 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp">
+
+        <ImageView
+            android:id="@+id/mylearn_preview_photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitEnd"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <!-- 按钮区 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:gravity="center_horizontal"
+        android:background="@color/zx_666666"
+        >
+
+        <!-- 重拍 -->
+        <!--<TextView-->
+            <!--android:id="@+id/mylearn_preview_redo"-->
+            <!--android:layout_width="80dp"-->
+            <!--android:layout_height="80dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="25dp"-->
+            <!--android:textColor="@android:color/white"-->
+            <!--android:gravity="center"-->
+            <!--android:textSize="24sp"-->
+            <!--android:text="返回"-->
+            <!--android:background="@drawable/xbook_circle_background"/>-->
+
+        <RelativeLayout
+            android:id="@+id/mylearn_preview_redo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/xbook_circle_background">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back1"
+                />
+
+        </RelativeLayout>
+
+        <!-- 再拍一张 -->
+        <TextView
+            android:id="@+id/mylearn_nextbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:text="保存 | 拍下一页"
+            android:background="@drawable/bg_rect_blue"
+            android:layout_centerInParent="true"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            />
+
+        <!-- 结束拍照 -->
+        <TextView
+            android:id="@+id/mylearn_finishbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:textColor="@color/color_48B8FF"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:layout_marginRight="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="保存 | 结束拍照"
+            android:background="@drawable/bg_rect_white"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+
+

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zx30_black"
+    >
+
+    <!-- 主要内容区  -->
+    <LinearLayout
+        android:id="@+id/dialog_qreview_mainlayout"
+        android:layout_width="480dp"
+        android:layout_height="wrap_content"
+        android:minHeight="180dp"
+        android:background="@drawable/ico_window"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <!-- 信息提示模式 -->
+        <RelativeLayout
+            android:id="@+id/dialog_qreview_tiplayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="44dp"
+            android:layout_marginTop="30dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/dialog_qreview_tiptext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingLeft="60dp"
+                android:paddingRight="60dp"
+                android:lineSpacingMultiplier="1.5"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/text_large_x"
+                android:textColor="@color/color_364347"
+                android:text="@string/forcetrain_quit"/>
+
+        </RelativeLayout>
+
+        <!-- 答错模式 -->
+        <LinearLayout
+            android:id="@+id/dialog_qreview_errlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/dialog_qreview_errtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_large_x"
+                android:textColor="@color/color_333333"
+                android:text="@string/forcetrain_answer_error"
+                android:gravity="center"
+                />
+
+
+            <LinearLayout
+                android:id="@+id/dialog_qreview_errprogresslayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="24dp">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 能力显示模式 -->
+        <LinearLayout
+            android:id="@+id/dialog_qreview_abilitylayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_ribbon"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp">
+
+                <TextView
+                    android:id="@+id/dialog_qreview_leranability"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="学力 +24"
+                    android:textSize="@dimen/text_size24"
+                    android:textColor="@color/color_FFF4A7"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+            <!-- 能力增加-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/dialog_qreview_powertext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_heart_v"
+                        android:drawablePadding="8dp"
+                        android:text="+12"
+                        android:textColor="@color/color_364347"
+                        android:textSize="@dimen/text_middle"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/dialog_qreview_speedtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_flash"
+                        android:drawablePadding="8dp"
+                        android:text="+12"
+                        android:textColor="@color/color_364347"
+                        android:textSize="@dimen/text_middle"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/dialog_qreview_attacktext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_sword"
+                        android:drawablePadding="8dp"
+                        android:text="+12"
+                        android:textColor="@color/color_364347"
+                        android:textSize="@dimen/text_middle"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/dialog_qreview_forcetext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_bomb"
+                        android:drawablePadding="8dp"
+                        android:text="+12"
+                        android:textColor="@color/color_364347"
+                        android:textSize="@dimen/text_middle"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/dialog_qreview_leavetext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:text="今日还剩12题"
+                android:textSize="@dimen/text_large_x"
+                android:textColor="@color/color_999999"
+                />
+
+        </LinearLayout>
+
+        <!-- 操作按钮 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dialog_qreview_mainlayout"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/dialog_qreview_leftbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_rect_blue_r24white"
+                android:textSize="@dimen/text_large_x20"
+                android:text="休息一下"
+                android:paddingLeft="45dp"
+                android:paddingRight="45dp"
+                android:textColor="@color/color_48B8FF"
+                />
+            <View
+                android:id="@+id/dialog_qreview_spaceview"
+                android:layout_width="32dp"
+                android:layout_height="1dp"/>
+
+            <Button
+                android:id="@+id/dialog_qreview_rightbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_rect_blue_r24"
+                android:paddingLeft="45dp"
+                android:paddingRight="45dp"
+                android:textSize="@dimen/text_large_x20"
+                android:textColor="@color/white"
+                android:text="再来一题"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 提示 图标 -->
+    <ImageView
+        android:id="@+id/dialog_qreview_tipimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/dialog_qreview_mainlayout"
+        android:layout_marginBottom="-16dp"
+        android:layout_centerHorizontal="true"
+        android:paddingRight="160dp"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

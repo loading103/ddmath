@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp"
+    android:paddingTop="6dp"
+    android:orientation="vertical">
+
+    <!-- 提示区 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="6dp">
+
+        <!-- 搜索 条件 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:hint="@string/create_time"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_small"/>
+
+        <com.tsinghuabigdata.edu.ddmath.view.TimeSpinnerView
+            android:id="@+id/timeSpinnerView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:hint="@string/date_type"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_small"/>
+
+        <com.tsinghuabigdata.edu.ddmath.view.TimeSpinnerView
+            android:id="@+id/kindSpinnerView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            app:questiontype="1"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/err_stagedw_tips"
+            android:textSize="@dimen/text_small"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:lines="1"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:textColor="@color/color_666666"/>
+        <!-- 帮助 -->
+        <ImageView
+            android:id="@+id/ebook_help"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_howtouse"
+            android:contentDescription="@null"/>
+    </LinearLayout>
+
+    <!-- 显示内容区 -->
+    <FrameLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/ebook_stagereview_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/transparent"
+            android:dividerHeight="6dp"
+            android:listSelector="@color/transparent"
+            android:scrollbars="none"
+            android:showDividers="middle"
+            />
+
+        <!-- 没有数据 -->
+        <com.tsinghuabigdata.edu.ddmath.module.errorbook.view.NoDataTipsView
+            android:id="@+id/ndtv_nodata_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+    <com.tsinghuabigdata.edu.ddmath.view.QuestionPager
+        android:id="@+id/loading_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

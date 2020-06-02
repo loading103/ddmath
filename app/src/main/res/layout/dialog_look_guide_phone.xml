@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="345dp"
+                android:layout_height="223dp"
+                android:background="@drawable/ic_frame"
+                android:orientation="vertical">
+
+
+    <!-- 关闭按钮 -->
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_frame_cancle"
+        />
+
+    <ImageView
+        android:id="@+id/iv_knowledge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="66dp"
+        android:src="@drawable/knowledge"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="135dp"
+        >
+
+        <ImageView
+            android:id="@+id/iv_work_report"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/report"/>
+
+        <ImageView
+            android:id="@+id/iv_work_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/details"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

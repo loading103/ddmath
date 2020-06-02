@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/bg_upgrade_dialog"
+              android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="143dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_new_version"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="35dp">
+
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:text="1.第一条更新信息，像这样\n1.第二条更新信息，像这样像这样\n1.第三条更新信息，像这样像这样像这样"
+            android:textColor="#666666"
+            android:textSize="18sp"/>
+
+
+    </ScrollView>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D3D3D3"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_now"
+            android:layout_width="203dp"
+            android:layout_height="60dp"
+            android:background="@drawable/bg_upgrade_now"
+            android:text="马上更新"
+            android:textColor="@color/white"
+            android:textSize="24sp"/>
+
+
+        <Button
+            android:id="@+id/btn_after"
+            android:layout_width="203dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="82dp"
+            android:background="@drawable/bg_upgrade_after"
+            android:text="稍后再说"
+            android:textColor="#FFAE55"
+            android:textSize="24sp"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

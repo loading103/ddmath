@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.WorkToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- -->
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/color_ECF9FA"
+        android:padding="8dp">
+
+        <!-- 头像挂件信息 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="40"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/bg_rect_white_userinfo_r4">
+
+            <FrameLayout
+                android:id="@+id/fl_head"
+                android:layout_width="94dp"
+                android:layout_height="94dp"
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center_horizontal">
+
+                <com.tsinghuabigdata.edu.ddmath.view.BaseHeadView
+                    android:id="@+id/civ_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    app:showPendant="true"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_profile_photo" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/color_F0F0F0"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/text_small"
+                    android:text="@string/head_pendant"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/color_F0F0F0"/>
+
+
+            </LinearLayout>
+
+            <GridView
+                android:id="@+id/gv_pandent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                android:listSelector="@color/transparent"
+                android:numColumns="3"
+                />
+
+        </LinearLayout>
+
+        <!-- 用户信息 -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="55"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="40dp"
+            android:background="@drawable/bg_rect_white_userinfo_r4">
+
+            <View
+                android:id="@+id/center"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:layout_centerInParent="true"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:id="@+id/ll_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/center"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="昵        称"
+                    android:textColor="@color/zx_999999"
+                    android:textSize="@dimen/text_small" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="@string/member_grade"
+                    android:textColor="@color/zx_999999"
+                    android:textSize="@dimen/text_small" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="性       别"
+                    android:textColor="@color/zx_999999"
+                    android:textSize="@dimen/text_small" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="姓        名"
+                    android:textColor="@color/zx_999999"
+                    android:textSize="@dimen/text_small" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="@string/enter_year"
+                    android:textColor="@color/zx_999999"
+                    android:textSize="@dimen/text_small" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="考        号"
+                    android:textColor="@color/zx_999999"
+                    android:textSize="@dimen/text_small" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="@string/mail_addr"
+                    android:textColor="@color/zx_999999"
+                    android:textSize="@dimen/text_small" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_info_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/ll_title"
+                android:layout_toEndOf="@id/ll_title"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="start|center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_small"/>
+
+                <TextView
+                    android:id="@+id/tv_usergrade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="start|center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_small"/>
+
+                <TextView
+                    android:id="@+id/tv_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="start|center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_small"/>
+
+                <TextView
+                    android:id="@+id/tv_really_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="start|center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_small"/>
+
+                <TextView
+                    android:id="@+id/tv_enter_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:singleLine="true"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_small"/>
+
+                <TextView
+                    android:id="@+id/tv_exam_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:singleLine="true"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_small"/>
+
+                <TextView
+                    android:id="@+id/tv_mail_adress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:lines="2"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_small"/>
+
+            </LinearLayout>
+
+            <!-- 操作部分 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/layout_info_detail"
+                android:layout_marginTop="30dp">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/tv_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edit_person_info"
+                    android:textColor="@color/blue_text_color"
+                    android:textSize="@dimen/text_small" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/tv_modify_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/modify_pw"
+                    android:textColor="@color/blue_text_color"
+                    android:textSize="@dimen/text_small" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_quit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="30dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/bg_rect_red_solid"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/quit_login"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_middle" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

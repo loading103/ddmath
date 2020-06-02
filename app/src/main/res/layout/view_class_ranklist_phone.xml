@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 内容 -->
+    <LinearLayout
+        android:id="@+id/ll_class"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--  头部 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:background="@drawable/bg_class_rank_top"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.tsinghuabigdata.edu.ddmath.view.BaseHeadView
+                android:id="@+id/iv_my_head_class"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                app:border_color="@color/white"
+                app:border_width="0dp"
+                app:showPendant="true"
+                app:showGrade="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="我的排名"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_middle"/>
+
+            <TextView
+                android:id="@+id/tv_my_rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="XX"
+                android:textColor="@color/color_F5A623"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="34dp"
+                android:text="平均正确率"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_middle"/>
+
+            <TextView
+                android:id="@+id/tv_average_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="XX%"
+                android:textColor="@color/color_F5A623"
+                android:textSize="20sp"/>
+
+
+        </LinearLayout>
+
+        <!-- listview 头 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="9dp"
+            android:background="@color/color_F7F7F7"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="排名"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/text_small"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="姓名"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/text_small"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="平均正确率"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/text_small"/>
+
+        </LinearLayout>
+
+
+        <!-- 数据列表 -->
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/lv_class"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/color_EBEBEB"
+            android:dividerHeight="1dp"
+            android:listSelector="@color/transparent"
+            android:scrollbars="none"/>
+
+    </LinearLayout>
+
+    <!-- 加载动画 -->
+    <com.tsinghuabigdata.edu.ddmath.view.HonourDialogLoadingPager
+        android:id="@+id/loadingPager_class"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"/>
+
+</FrameLayout>

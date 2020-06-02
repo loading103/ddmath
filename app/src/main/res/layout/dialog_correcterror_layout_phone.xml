@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zx30_black"
+    >
+
+    <RelativeLayout
+        android:layout_width="480dp"
+        android:layout_height="320dp"
+        android:background="@drawable/ic_frame"
+        android:layout_centerInParent="true">
+
+        <!-- 关闭按钮 -->
+        <ImageView
+            android:id="@+id/dialog_custom_closebtn"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_frame_cancle"
+            android:contentDescription="@null"/>
+
+         主要内容区
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="48dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:visibility="visible"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/color_666666"
+                android:text="@string/ddwork_correct_title"/>
+
+            <TextView
+                android:id="@+id/dialog_custom_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:lineSpacingMultiplier="1.5"
+                android:maxLines="2"
+                android:textSize="14sp"
+                android:textColor="@color/color_666666"
+                android:text="一、解答题 第 1 题"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择申述原因："
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/text_large"/>
+
+                <!--申述原因-->
+                <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.CorrectReasonView
+                    android:id="@+id/correctReasonView"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+
+                </com.tsinghuabigdata.edu.ddmath.module.ddwork.view.CorrectReasonView>
+
+                <!--<com.tsinghuabigdata.edu.ddmath.module.ddwork.view.CorrectErrorReasonView-->
+                    <!--android:id="@+id/dialog_correct_reasonview"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:numColumns="2"-->
+                    <!--android:horizontalSpacing="1dp"-->
+                    <!--android:verticalSpacing="2dp"-->
+                    <!--android:layout_marginStart="8dp"-->
+                    <!--android:layout_marginTop="4dp"-->
+                    <!--/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textSize="12sp"-->
+                    <!--android:textColor="@color/color_48B8FF"-->
+                    <!--android:text="@string/ddwork_correct_des"/>-->
+
+                <!--<EditText-->
+                    <!--android:id="@+id/dialog_custom_edittext"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:paddingTop="10dp"-->
+                    <!--android:lines="4"-->
+                    <!--android:gravity="top|left"-->
+                    <!--android:textSize="12sp"-->
+                    <!--android:textColor="@color/color_333333"-->
+                    <!--android:textColorHint="@color/color_999999"-->
+                    <!--android:hint="@string/ddwork_correct_tips"-->
+                    <!--android:background="@null"-->
+                    <!--android:imeOptions="flagNoExtractUi"/>-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:layout_gravity="right"-->
+                    <!--android:paddingTop="8dp">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/dialog_custom_workcount"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:textColor="@color/color_48B8FF"-->
+                        <!--android:text="0"/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:textColor="@color/color_999999"-->
+                        <!--android:text="/100"/>-->
+                <!--</LinearLayout>-->
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+
+                <!-- 取消按钮 -->
+                <Button
+                    android:id="@+id/dialog_custom_leftbtn"
+                    android:layout_width="98dp"
+                    android:layout_height="42dp"
+                    android:background="@drawable/selector_cancel_btn"
+                    android:gravity="center"
+                    />
+
+                <!-- 确定-->
+                <Button
+                    android:id="@+id/dialog_custom_rightbtn"
+                    android:layout_width="98dp"
+                    android:layout_height="42dp"
+                    android:background="@drawable/selector_enter_btn"
+                    android:layout_marginLeft="16dp"
+                    android:gravity="center"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <!-- 提交状态 -->
+            <TextView
+                android:id="@+id/dialog_custom_submitstatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="20dp"
+                android:text="提交中..."
+                android:textSize="12sp"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_pay_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_large"
+        android:textColor="@color/color_333333"
+        android:text="支付宝支付"
+        android:drawableStart="@drawable/zhifubaozhifu"
+        android:drawablePadding="16dp"
+        android:gravity="center_vertical"/>
+
+    <ImageView
+        android:id="@+id/iv_pay_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/selector_zhifu_select"
+        android:contentDescription="@null"
+        android:layout_alignParentEnd="true"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="144dp"
+                android:background="@drawable/bg_famous_video_item">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="6dp">
+
+        <TextView
+            android:id="@+id/tv_video_name"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:text="第1章 有理数 1.1正数与负数名字很长很长很长很长显示很长很长很长很长显示"
+            android:textColor="@color/color_3DA4BD"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="84dp">
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                >
+
+                <View
+                    android:id="@+id/view_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#E8F6FF"/>
+
+                <ImageView
+                    android:id="@+id/iv_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:visibility="invisible"/>
+
+                <ImageView
+                    android:id="@+id/iv_play_big"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/iconvideo"/>
+
+
+                <ImageView
+                    android:id="@+id/iv_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_play"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/tv_play_times"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="次数：已播放XXX次"
+                    android:textColor="@color/color_999999"
+                    android:textSize="12sp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_grade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:singleLine="true"
+                    android:text="年级：X年级"
+                    android:textColor="@color/color_999999"
+                    android:textSize="12sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:singleLine="true"
+                    android:text="时长：X分X秒"
+                    android:textColor="@color/color_999999"
+                    android:textSize="12sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="52dp"
+                    android:layout_height="18dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/bg_famous_price"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="XX学豆"
+                    android:textColor="@color/color_38AAF2"
+                    android:textSize="12sp"
+                    android:visibility="invisible"
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_exchanged"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/usablebig_xuexirenwu"/>
+
+
+</RelativeLayout>

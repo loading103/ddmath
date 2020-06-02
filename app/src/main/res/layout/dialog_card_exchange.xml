@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="615dp"
+                android:layout_height="402dp"
+                android:background="@drawable/ic_frame"
+                android:orientation="vertical">
+
+
+    <!-- 关闭按钮 -->
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_frame_cancle"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="70dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="你的VIP卡已兑换成功。"
+            android:textColor="@color/color_FF8B00"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_suite_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="恭喜你可以使用你的专属提分服务了！"
+            android:textColor="@color/color_FF8B00"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_suite_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="8dp"
+            android:text="使用有效期：2018.05.XX-2019.05.XX"
+            android:textColor="@color/color_999999"
+            android:textSize="22sp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="144dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingEnd="14dp"
+            android:paddingStart="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:text="包含套餐功能："
+                android:textColor="@color/color_333333"
+                android:textSize="20sp"/>
+
+            <!-- 选择项列表 -->
+            <ListView
+                android:id="@+id/lv_product"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:divider="@color/transparent"
+                android:dividerHeight="2dp"
+                android:listSelector="@color/transparent"
+                />
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="9dp"
+                android:text="可在兑换记录中查询兑换详情"
+                android:textColor="@color/color_999999"
+                android:textSize="22sp"/>
+
+            <!-- 知道了 -->
+            <ImageView
+                android:id="@+id/iv_know"
+                android:layout_width="145dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_btn_know"/>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <!-- <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="142dp"
+         android:layout_marginTop="30dp"
+         android:gravity="center_vertical"
+         android:orientation="vertical"
+         android:paddingLeft="24dp"
+         android:paddingRight="24dp"
+         android:visibility="visible">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="使用说明:"
+             android:textColor="@color/color_AC9C51"
+             android:textSize="14sp"
+             android:textStyle="bold"/>
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="2dp"
+             android:lineSpacingMultiplier="1.2"
+             android:text="@string/create_work_intro"
+             android:textColor="@color/color_AC9C51"
+             android:textSize="14sp"/>
+
+
+     </LinearLayout>-->
+
+
+</RelativeLayout>

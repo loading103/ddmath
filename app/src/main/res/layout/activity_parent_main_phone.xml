@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/container_fl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:id="@+id/ll_team"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <LinearLayout
+            android:id="@+id/ll_report"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="30dp"
+                android:layout_height="30dp">
+
+                <ImageView
+                    android:id="@+id/iv_report"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/selector_report"
+                    android:contentDescription="@null"/>
+
+                <ImageView
+                    android:id="@+id/iv_report_message"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/shape_head_redpoint_phone"
+                    android:visibility="invisible"
+                    android:contentDescription="@null"/>
+
+
+            </RelativeLayout>
+
+            <!--<ImageView
+                android:id="@+id/iv_report"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/selector_first"/>-->
+
+            <TextView
+                android:id="@+id/tv_report"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="报告"
+                android:textColor="@color/parent_main_text_color"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_community"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="30dp"
+                android:layout_height="30dp">
+
+                <ImageView
+                    android:id="@+id/iv_community"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/selector_community"
+                    android:contentDescription="@null"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_community"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="社区"
+                android:textColor="@color/parent_main_text_color"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="44dp"
+                android:layout_height="30dp">
+
+                <ImageView
+                    android:id="@+id/iv_center"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/selector_center"
+                    android:contentDescription="@null"/>
+
+
+                <TextView
+                    android:id="@+id/tv_center_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/shape_message_redpoint_phone"
+                    android:gravity="center"
+                    android:minWidth="16dp"
+                    android:paddingEnd="2dp"
+                    android:paddingStart="2dp"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    android:visibility="invisible"/>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我"
+                android:textColor="@color/parent_main_text_color"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

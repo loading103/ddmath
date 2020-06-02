@@ -1,0 +1,51 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="action_bar_height">44dp</dimen>
+    <dimen name="action_bar_height_mobile">32dp</dimen>
+    <dimen name="font_size_large">14sp</dimen>
+    <dimen name="font_size_xlarge">18sp</dimen>
+
+    <!-- 主界面 屋檐高度 手机版-->
+
+    <!-- 主界面 右边内容到左边导航栏距离-->
+    <dimen name="main_nav_distance">10dp</dimen>
+    <dimen name="main_nav_distance_phone">10dp</dimen>
+
+    <!-- 三大模块 上下空白距离-->
+    <dimen name="main_top_distance">10dp</dimen>
+    <dimen name="main_top_distance_phone">4dp</dimen>
+    <dimen name="main_bottom_distance">10dp</dimen>
+    <dimen name="main_bottom_distance_phone">4dp</dimen>
+    <dimen name="main_end_distance">10dp</dimen>
+    <dimen name="main_end_distance_phone">4dp</dimen>
+
+
+    <dimen name="text_small_xx">8sp</dimen>
+    <dimen name="text_small_x">10sp</dimen>
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="text_middle">14sp</dimen>
+    <dimen name="text_large">16sp</dimen>
+    <dimen name="text_large_x">18sp</dimen>
+    <dimen name="text_large_x20">20sp</dimen>
+    <dimen name="text_large_x24">24sp</dimen>
+    <dimen name="text_large_x30">30sp</dimen>
+    <dimen name="text_large_xx">22sp</dimen>
+    <dimen name="text_large_big">48sp</dimen>
+    <dimen name="text_size24">24sp</dimen>
+
+    <dimen name="workitem_leftright_margin">50dp</dimen>
+    <dimen name="workitem_space">30dp</dimen>
+    <dimen name="workitem_leftright_margin_phone">12dp</dimen>
+    <dimen name="workitem_space_phone">12dp</dimen>
+    <dimen name="question_item_margin">4dp</dimen>
+
+    <dimen name="camera_btn_wh_phone">44dp</dimen>
+
+    <!--通用按钮-->
+    <dimen name="button_large_width">132dp</dimen>
+    <dimen name="button_large_height">49dp</dimen>
+
+    <!--服务中心条目间距-->
+    <dimen name="center_time_dis_phone">6dp</dimen>
+
+</resources>

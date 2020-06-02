@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_time"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal">
+
+    <TextView
+        android:layout_marginLeft="0dp"
+        android:id="@+id/tv_time1"
+        style="@style/Time_Pick_TextView_Phone"
+        android:text="最近一周"
+        />
+
+    <TextView
+        android:id="@+id/tv_time2"
+        style="@style/Time_Pick_TextView_Phone"
+        android:text="最近两周"
+        />
+
+    <TextView
+        android:id="@+id/tv_time3"
+        style="@style/Time_Pick_TextView_Phone"
+        android:text="最近一月"
+        />
+
+    <TextView
+        android:id="@+id/tv_time4"
+        style="@style/Time_Pick_TextView_Phone"
+        android:text="最近两月"
+        />
+
+    <TextView
+        android:id="@+id/tv_time5"
+        style="@style/Time_Pick_TextView_Phone"
+        android:text="全部"
+        />
+
+</LinearLayout>

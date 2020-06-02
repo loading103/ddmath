@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <!-- 标题类型  -->
+    <RelativeLayout
+        android:id="@+id/layout_type_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+
+        <TextView
+            android:id="@+id/tv_type_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_large_x"
+            android:text="@string/recommand_score"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_type_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_large_x"
+            android:text="@string/more_score_tips"
+            android:layout_marginStart="8dp"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <!-- 积分模式 -->
+    <LinearLayout
+        android:id="@+id/layout_score_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:background="@drawable/bg_rect_white_r4"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/iv_event_image"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:contentDescription="@null"
+            android:layout_gravity="center_vertical"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp">
+
+            <TextView
+                android:id="@+id/tv_event_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_large_x20"
+                android:textColor="@color/color_333333"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/tv_event_rule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_large"
+                android:textColor="@color/color_999999"
+                android:text=""/>
+
+        </LinearLayout>
+
+        <!-- 操作按钮 -->
+        <Button
+            android:id="@+id/btn_go_getscore"
+            android:layout_width="80dp"
+            android:layout_height="36dp"
+            android:background="@drawable/btn_state_bluebg"
+            android:text="@string/gofinish"
+            android:textSize="@dimen/text_large_x"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            />
+
+        <!-- 获得的积分 -->
+        <TextView
+            android:id="@+id/tv_gain_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_large_xx"
+            android:textColor="@color/color_333333"
+            android:text=""
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <!-- 没有获得积分 -->
+    <LinearLayout
+        android:id="@+id/layout_emptydata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp">
+
+        <ImageView
+            android:layout_width="144dp"
+            android:layout_height="100dp"
+            android:src="@drawable/pic_nodata"
+            android:contentDescription="@null"/>
+
+        <TextView
+            android:id="@+id/tv_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/no_gain_score"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/text_large_x"
+            android:gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 提示区 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="6dp">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_wrongbook_exclusive"
+                android:contentDescription="@null"/>
+
+            <TextView
+                android:id="@+id/ebook_dayclean_useconut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="@dimen/text_small"
+                android:textColor="@color/color_666666"
+                android:layout_marginStart="4dp"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/ebook_dayclean_exchangebtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/color_1CC0D8"
+                android:textSize="@dimen/text_small"
+                android:visibility="gone"
+                />
+
+            <!-- 免费次数 -->
+            <com.tsinghuabigdata.edu.ddmath.module.exclusivepractice.view.FreeDroitView
+                android:id="@+id/ebook_freedroit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/err_dayclean_tips"
+                android:textSize="@dimen/text_small"
+                android:textColor="@color/color_666666"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/ebook_productintro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/product_introduce"
+                android:textColor="@color/color_1CC0D8"
+                android:textSize="@dimen/text_small"
+                android:layout_marginEnd="8dp"
+                />
+
+            <!-- 查看报告 -->
+            <ImageView
+                android:id="@+id/ebook_report"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_report"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="@null"
+                />
+
+            <!-- 帮助 -->
+            <ImageView
+                android:id="@+id/ebook_help"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_howtouse"
+                android:contentDescription="@null"/>
+
+        </LinearLayout>
+
+        <!-- 列表 -->
+        <com.handmark.pulltorefresh.library.PullToRefreshGridView
+            android:id="@+id/ebook_dayclean_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:listSelector="@color/transparent"
+            android:verticalSpacing="4dp"
+            android:numColumns="2"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginTop="6dp"/>
+
+    </LinearLayout>
+
+    <com.tsinghuabigdata.edu.ddmath.view.QuestionPager
+        android:id="@+id/loading_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+</FrameLayout>

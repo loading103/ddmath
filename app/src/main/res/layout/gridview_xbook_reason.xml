@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2016. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  ~ Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
+  ~ Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
+  ~ Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
+  ~ Vestibulum commodo. Ut rhoncus gravida arcu.
+  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/xbook_list_reason_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/xbook_reason_item"
+        >
+
+        <TextView
+            android:id="@+id/xbook_list_reason_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="审题错误"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="@color/color_666666"
+            android:layout_margin="2dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"/>
+
+        <ImageView
+            android:id="@+id/xbook_list_reason_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_choosed"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:scaleType="centerCrop"
+            android:visibility="gone"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

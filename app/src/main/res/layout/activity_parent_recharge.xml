@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/color_F1FBF7"
+    android:orientation="vertical">
+
+    <!-- 状态栏 -->
+    <com.tsinghuabigdata.edu.ddmath.parent.view.ParentToolbar
+        android:id="@+id/worktoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/layout_main_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="2dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <!--  -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_large"
+                    android:textColor="@color/color_333333"
+                    android:text="@string/usable_xuedou"
+                    android:gravity="center_horizontal"
+                    />
+
+                <!-- 可用学豆 -->
+                <TextView
+                    android:id="@+id/tv_usable_xuedou"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_large"
+                    android:textColor="@color/color_13D182"
+                    android:textStyle="bold"
+                    android:text=""
+                    android:gravity="center_horizontal"
+                    android:layout_marginStart="12dp"
+                    />
+
+            </LinearLayout>
+
+            <!--  -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_middle"
+                android:textColor="@color/color_666666"
+                android:text="@string/recharge_tips"
+                android:layout_marginTop="14dp"
+                />
+
+            <!-- 套餐列表 -->
+            <GridView
+                android:id="@+id/gv_bean"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:listSelector="@color/transparent"
+                android:numColumns="2"
+                android:scrollbars="none"
+                android:verticalSpacing="20dp"
+                android:horizontalSpacing="12dp"
+                android:layout_marginTop="16dp"/>
+
+            <Button
+                android:id="@+id/btn_to_pay"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/bg_parent_btn"
+                android:text="@string/to_pay"
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+
+
+        </LinearLayout>
+
+        <!-- -->
+        <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+            android:id="@+id/loadingPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+</LinearLayout>

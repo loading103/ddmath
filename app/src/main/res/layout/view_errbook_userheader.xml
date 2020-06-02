@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="54dp"
+    android:layout_height="72dp"
+    android:background="@drawable/ic_weekincerase_location">
+
+    <com.tsinghuabigdata.edu.ddmath.view.CircleImageView
+        android:id="@+id/userbank_headerimg"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:contentDescription="@null"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"/>
+
+</RelativeLayout>

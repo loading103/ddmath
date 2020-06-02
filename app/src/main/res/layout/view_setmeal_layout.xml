@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="70dp"
+    android:paddingRight="70dp"
+    android:orientation="vertical"
+    android:background="#FFF9D7"
+    >
+
+    <!-- 商品名称 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:background="@drawable/bg_rect_blue"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:id="@+id/item_setmeal_productname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_large_xx"
+            android:text="精品套餐"
+            />
+
+    </LinearLayout>
+
+    <!-- 支持的教辅列表 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_large"
+            android:text="该套餐包含以下宝贝："
+            android:background="@drawable/bg_material_list"
+            android:paddingStart="10dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            />
+
+        <ListView
+            android:id="@+id/item_setmeal_listview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:listSelector="@color/transparent"
+            android:divider="@color/transparent"
+            android:background="@color/white"
+            android:layout_marginBottom="10dp"
+            />
+
+        <TextView
+            android:id="@+id/item_setmeal_lerandou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_48B8FF"
+            android:textSize="@dimen/text_large"
+            android:text="需学豆：3990"
+            android:textStyle="bold"
+            android:layout_gravity="end"
+            android:layout_marginEnd="64dp"
+            android:layout_marginBottom="16dp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

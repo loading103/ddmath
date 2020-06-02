@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_buy_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/seletor_item_suite_parent"
+    android:orientation="vertical"
+    android:paddingTop="12dp"
+    android:paddingBottom="2dp">
+
+    <!-- 第一部分 基本信息 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
+
+        <!-- 套餐信息 区-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- 套餐名 -->
+            <TextView
+                android:id="@+id/tv_suite_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="XX套餐标题套餐标题"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_large"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- 套餐价格 -->
+                <TextView
+                    android:id="@+id/tv_suite_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:singleLine="true"
+                    android:text="XXX元"
+                    android:textColor="@color/bar_tint"
+                    android:textSize="@dimen/text_large_x"/>
+
+                <!-- 套餐原价 -->
+                <TextView
+                    android:id="@+id/tv_suite_original_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="6dp"
+                    android:text="原价：XXX元"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/text_middle"/>
+
+            </LinearLayout>
+
+            <!-- 使用期限 -->
+            <TextView
+                android:id="@+id/tv_usedate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="2018.04.04-2019.0X.0X"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/text_middle"/>
+
+        </LinearLayout>
+
+        <!-- 操作区 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="20dp">
+
+            <Button
+                android:id="@+id/btn_buy"
+                android:layout_width="74dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_itme_buy_parent"
+                android:text="@string/buy"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_middle"/>
+
+            <LinearLayout
+                android:id="@+id/ll_look_privilege"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_look_privilege"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查看详情"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/text_middle"/>
+
+                <CheckBox
+                    android:id="@+id/cb_look_privilege"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center_vertical"
+                    android:drawablePadding="4dp"
+                    android:background="@drawable/selector_look_privilege_parent"
+                    android:button="@null"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 扩展信息 区-->
+    <LinearLayout
+        android:id="@+id/layout_expand_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:background="@color/color_F6FAFD">
+
+        <!-- 套餐说明 -->
+        <cn.carbs.android.expandabletextview.library.ExpandableTextView
+            android:id="@+id/tv_suite_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="智胜假期套餐是专门为成都的中学生提供的假期学习套餐，智胜假期套餐是专门为成都的中学生提供的假期学习套餐。"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/text_middle"
+            app:etv_ToExpandHintShow="false"
+            app:etv_ToShrinkHintShow="false"/>
+
+        <!-- 分割线 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/suite_divide_line"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_middle"
+            android:textColor="@color/color_666666"
+            android:text="@string/privilege_list"/>
+
+        <com.tsinghuabigdata.edu.ddmath.view.MultiGridView
+            android:id="@+id/gv_use_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:listSelector="@color/transparent"
+            android:layout_marginTop="4dp"
+            android:numColumns="2"
+            android:scrollbars="none"
+            android:verticalSpacing="4dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

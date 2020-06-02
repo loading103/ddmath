@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <View
+        android:id="@+id/ddwork_camera_leftedge"
+        android:layout_width="5dp"
+        android:layout_height="match_parent"
+        android:background="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/ddwork_camera_topedge"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/black"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            >
+
+            <!-- 取景层 -->
+            <SurfaceView
+                android:id="@+id/ddwork_camera_preview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!-- 相机图 -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:id="@+id/ddwork_mainLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="50dp"
+                        android:padding="4dp"
+                        android:background="@drawable/bg_rectborder_white">
+
+                        <!-- 聚焦效果 -->
+                        <com.tsinghuabigdata.edu.ddmath.module.mylearn.view.MoveImageView
+                            android:id="@+id/ddwork_iv_focusimg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ico_focus"
+                            android:visibility="invisible"/>
+
+                        <!-- -->
+                        <TextView
+                            android:id="@+id/ddwork_iv_dealimg"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/camera_dealtips"
+                            android:textColor="@color/color_FB6900"
+                            android:gravity="center"
+                            android:textSize="26dp"
+                            android:visibility="gone"/>
+
+                    </RelativeLayout>
+
+                    <!-- 左上角定位点 -->
+                    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.FixedPiontView
+                        android:id="@+id/ddwork_lefttop_fixpointview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        app:type="left"/>
+
+                    <!-- 右上角定位点 -->
+                    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.FixedPiontView
+                        android:id="@+id/ddwork_righttop_fixpointview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        app:type="right"/>
+
+                    <!-- 左下角定位点 -->
+                    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.FixedPiontView
+                        android:id="@+id/ddwork_leftbottom_fixpointview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        app:type="left"/>
+
+                    <!-- 右下角定位点 -->
+                    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.FixedPiontView
+                        android:id="@+id/ddwork_rightbottom_fixpointview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        app:type="right"/>
+
+                </RelativeLayout>
+
+                <!-- 工具层 -->
+                <RelativeLayout
+                    android:id="@+id/ddwork_tips_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:background="@color/zx30_black">
+                    <!--android:background="@color/color_B9B2A2">-->
+
+                    <!-- 提示-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingTop="13dp"
+                        android:paddingBottom="13dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#FFFFFF"
+                            android:text="@string/ddwork_camera_tips"
+                            android:textSize="18sp"
+                            android:gravity="center_horizontal"/>
+
+                    </LinearLayout>
+
+                    <!-- 闪光灯 -->
+                    <RelativeLayout
+                        android:id="@+id/ddwork_layout_cameraledbtn"
+                        android:layout_height="60dp"
+                        android:layout_width="60dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:background="@drawable/xbook_circle_background">
+
+                        <ImageView
+                            android:id="@+id/ddwork_camera_flashimg"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/xbook_light"/>
+
+                    </RelativeLayout>
+
+                    <!--取消 -->
+                    <RelativeLayout
+                        android:id="@+id/ddwork_layout_cameracancel"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="30dp"
+                        android:background="@drawable/xbook_circle_background">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_close_rect"
+                            />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!-- 对焦 -->
+            <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.FocusTipsView
+                android:id="@+id/ddwork_camera_focustiplayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+
+        </FrameLayout>
+
+        <View
+            android:id="@+id/ddwork_camera_bottomedge"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/black"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/ddwork_camera_rightedge"
+        android:layout_width="5dp"
+        android:layout_height="match_parent"
+        android:background="@color/black"/>
+
+</LinearLayout>
+
+
+

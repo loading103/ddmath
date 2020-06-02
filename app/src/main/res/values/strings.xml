@@ -1,0 +1,588 @@
+<resources>
+    <string name="channelId">8R7S6</string>
+    <string name="app_name">豆豆数学</string>
+    <string name="alert_title">@string/app_name</string>
+    <string name="alert_neutral">取消</string>
+    <string name="alert_positive">确定</string>
+    <string name="enter">确认</string>
+    <string name="goback">返回</string>
+    <string name="finished">完成</string>
+    <string name="gofinish">去完成</string>
+    <string name="hasfinished">已完成</string>
+
+    <!--通用-->
+    <string name="param_error">参数错误</string>
+
+    <!--网络字串-->
+    <string name="server_error">数据获取失败，请稍后重试</string>
+    <!--<string name="no_connection">你没有网络了，无法正常使用！</string>-->
+    <string name="no_connection">当前网络不可用，请检查你的网络设置</string>
+    <string name="submit_server_exception">数据获取失败，请稍后重试</string>
+    <string name="submit_request_exception">你的网络堵塞了，请尝试使用更好的网络，或切换至3G/4G网络上传！</string>
+    <string name="upload_failure_tips">上传失败\n网络状态不好，请稍后重试</string>
+    <string name="upload_failure_tips2">上传失败\n服务器繁忙，请稍后重试</string>
+    <string name="upload_server_norun">服务器维护中，暂时无法上传\n如需更多信息，请联系客服</string>
+    <string name="network_status">网络状态</string>
+    <string name="network_speed">上传速度</string>
+
+    <!--加载失败——三种异常界面-->
+    <!--<string name="fault_nonet">未连接到网络，请连接后重试</string>-->
+    <string name="fault_nonet">当前网络不可用，请检查你的网络设置</string>
+    <string name="fault_timeout">连接超时，请重新加载试试</string>
+    <string name="fault_server">暂时无法打开页面，请稍后重试</string>
+
+    <!--<string name="retry_load">点击按钮，重新加载</string>-->
+    <string name="retry_load">重新加载</string>
+    <string name="loading_wait">加载中，请耐心等待哦！</string>
+    <string name="page_all_right">本页全对</string>
+
+    <!-- 注册 -->
+    <string name="register_ddmath">注册豆豆数学</string>
+    <string name="login_ddmath">登录豆豆数学</string>
+    <string name="register_count">已有%d人次使用豆豆数学</string>
+    <string name="register_give_bean">新用户注册赠送%1$d学豆，填写推荐人手机号码多赠送%2$d学豆</string>
+    <string name="verify_intro">为了您的账号安全和给您提供更好的服务，请输入你的手机号并验证</string>
+    <string name="verify_intro_bottom">＊如果长时间未收到验证码信息，请尝试联系豆豆客服：400-9928-918</string>
+    <string name="jump">跳过</string>
+    <string name="experience_immediately">立即体验</string>
+    <string name="create_time">生成时间:</string>
+    <string name="date_type">类型:</string>
+    <string name="invite_friend">长按二维码图片，然后直接发送给你的小伙伴，识别二维码便可注册</string>
+
+    <string name="regisiter_tips">请联系你的任课老师获取学生注册的二维码，进行扫码注册，以免影响正常使用。确无注册二维码的新用户，可使用他人分享的注册二维码进行注册或联系豆豆老师400-9928-918。</string>
+
+    <!--验证码-->
+    <string name="resend_verifycode">%d秒后重新获取</string>
+    <string name="send_verifycode">获取验证码</string>
+
+    <!--主页-->
+    <string name="module_usercenter">我的</string>
+    <string name="module_myworld">首页</string>
+    <string name="module_studytask">学习</string>
+    <string name="module_capturebook">提升</string>
+    <string name="module_diagnosticreport">报告</string>
+
+    <string name="submit_teacher_work">提交老师布置的作业</string>
+    <string name="person_sorce_plan">个人专属提分方案</string>
+    <string name="whole_page_collecterr">整页收集错题</string>
+
+    <string name="scanwx_jion_gzh">扫码关注“豆豆数学”家长微信服务号</string>
+    <string name="scanwx_tips">随时掌握一线升学资讯，孩子成长有您陪伴！</string>
+
+    <!--我的世界-->
+    <string name="one_look">一键诊断</string>
+    <string name="look_work_detail">查看作业/考试</string>
+    <string name="everyday_error_correct">每日错题订正</string>
+    <string name="everyweek_error_practice">每周错题再练本</string>
+    <string name="everyweek_train_excellent">每周变式训练本</string>
+    <string name="error_revise_count">今日还有%d道错题待订正，快去完成任务吧</string>
+    <string name="week_practice_count">你有%d份新的周错题再练本，快去下载看看吧</string>
+    <string name="week_train_excellent_count">你有%d份新的周变式训练本，快去下载看看吧</string>
+
+    <!--我的世界-->
+    <string name="knowledge_diagnosis">知识诊断</string>
+    <string name="create_promote_tips">点击按钮，快速创建全部等级知识点的提升练习</string>
+    <string name="create_promote_practice">创建提升练习</string>
+    <string name="class_rank">排行榜</string>
+    <string name="gradle_rank">年级榜</string>
+    <string name="distribute_diagram">分布图</string>
+    <string name="look_graph">知识图谱</string>
+    <string name="sure_and_produce">确定并生成</string>
+    <string name="produce_tip">平台每周根据个人薄弱知识点自动生成的错题再练本和变式训练本进行练习，养成周练月结的好习惯。</string>
+    <string name="create_error_book">创建错题本下载（约%d题）</string>
+    <string name="no_knowledges_tips">该时间段内没有学习数据</string>
+    <string name="no_display_knowledges">没有可显示的知识点～</string>
+
+
+    <!--商品模块-->
+    <string name="no_video">暂时还没有视频哦～</string>
+    <string name="no_exchanged_video">暂时还没有可使用的的视频哦～</string>
+    <string name="no_product">暂时还没有宝贝哦～</string>
+    <string name="no_product_set">暂时还没有套餐～\n可咨询任课老师或联系豆豆老师：400-9928-918</string>
+    <string name="no_knowledge_video">豆豆暂时未找到视频，你可以到学习任务-名师精讲中自己找找看！</string>
+    <string name="buy_success">购买成功!</string>
+
+    <!-- 豆豆作业 -->
+    <string name="ddwork_camera_tips"> 将题单上4个定位符放入对应的框内\n拍照较慢时，请点击屏幕手动对焦</string>
+    <string name="ddwork_preview_tips">调整方框高度，确保选出每道题的作答区域。</string>
+    <string name="lm_preview_tips">若每题方框偏差较大,可点击方框调整</string>
+    <string name="ddwork_commit_tips">请确认题干和拍照的答案相匹配</string>
+    <string name="ddwork_commitfail_tips">提交失败\n网络状态不好，请稍后重试</string>
+    <string name="ddwork_commitslow_tips">网络上传速度太低了，\n请切换网络，保持网络通畅！</string>
+    <string name="ddwork_revokework">老师已撤回本次作业，\n如有疑问请与老师联系～</string>
+    <string name="ddwork_revokework1">老师已撤回本次作业，如有疑问请与老师联系～</string>
+    <string name="ddwork_upload_title">拍照/扫描教辅作业，即得诊断结果</string>
+    <string name="ddwork_direct_upload">老师已在豆豆平台上布置作业了，快去上传作业吧！</string>
+    <string name="ddwork_give_and_upload">快来上传需要自我诊断的作业吧！</string>
+    <string name="teacher_scan_upload">老师扫描上传，无需拍照</string>
+    <string name="corrected_upload">请拍照上传老师的批阅结果</string>
+    <string name="page_count_taked">已拍%1$d页，共%2$d页 </string>
+    <string name="work_submite_count">已有%d人提交</string>
+    <string name="upload_correct">请拍照上传老师的批阅结果</string>
+
+    <!-- 原版教辅 -->
+    <string name="create_work_intro">1. 先选择你想要上传作业的教辅和题目所在页；\n2. 手机平行对着完成的教辅作业拍照，选择需要上传的题目；\n3. 完成创建。</string>
+    <string name="select_book_intro">如果没有搜索到您想使用的教辅，可以联系豆豆客服寻求帮助\n电话：400-9928-918</string>
+
+    <!-- 消息 -->
+    <string name="msg_last7day">只保留最近7天的消息</string>
+    <string name="jxcommand">精选推荐</string>
+
+    <!-- 入学评测 -->
+    <string name="eval_waitupload_title">待上传的考试或作业</string>
+    <string name="eval_uploaded_title">我的知识分析</string>
+
+    <!-- 学习任务 -->
+    <string name="camera_tips">请竖屏拍照，文字尽量与参考线平行</string>
+    <string name="camera_tips4">文字尽量与参考线平行</string>
+    <string name="camera_tips2">可拍照整页题目</string>
+    <string name="camera_tips3">请拍照题目和答案</string>
+    <string name="camera_dealtips">\n\n\n\n\n\n\n\n正在拍照,请保持手机稳定...</string>
+    <string name="lmcamera_dealtips">请将书页靠近四个红角内\n然后点击拍照按钮进行拍照</string>
+    <string name="lmcamera_dealtips1">请点击右侧按钮进行拍照</string>
+
+    <string name="lmcamera_handtips">正在拍照,请保持手机平稳</string>
+
+    <string name="crop_tips">调整方框，选择给老师批阅的所有题目</string>
+    <string name="many_image">不能继续拍照\n未上传图片不能超过12张哦~</string>
+    <string name="edit_tips">长按图片拖动可调整顺序</string>
+    <string name="delete_allimage">确定要删除该组全部照片吗？</string>
+    <string name="delete_image">确定删除该图吗？</string>
+    <string name="enter_count">请输入上传图片中的题目数量</string>
+    <string name="filter_vcode">0123456789</string>
+    <string name="upload_success">上传成功</string>
+    <string name="look_tips">你可以在今日图册里查看呦～</string>
+    <string name="editing_noquit">有正在编辑的图片，完成后才能返回</string>
+    <string name="uploadedit_noquit">你还未更新修改的内容，确定要退出吗？</string>
+    <string name="uploading_quittips">有正在上传的图片，完成后才能返回</string>
+    <string name="cancel">取消</string>
+
+    <string name="edit_person_info">编辑个人信息</string>
+    <string name="modify_pw">修改密码</string>
+    <string name="more_user_info">查看更多个人资料></string>
+    <string name="classcode_tips">若有班级码请输入班级码自动加班，没有则点击“没有班级码”。</string>
+
+    <string name="xbook_crop_tips">调整方框和分隔线，分隔题干和答案</string>
+    <string name="xbook_crop_tips1">调整方框，裁剪所需区域</string>
+
+    <string name="xbook_qtype_correct">订正</string>
+
+    <string name="ddwork_correcterror">我要申诉</string>
+    <string name="ddwork_correcterror_tips">批错了?可申诉</string>
+    <string name="ddwork_correctapply">已申诉</string>
+    <string name="ddwork_corrected">已重新批阅</string>
+    <string name="ddwork_standardanswer">参考答案</string>
+    <string name="ddwork_correct_title">我对批阅有疑问</string>
+    <string name="diagios_history">我的练习</string>
+
+    <!-- 名师精讲 -->
+    <string name="search_video_tips">默认本年级视频，按章节搜索更多</string>
+    <string name="show_exchanged_videos">只显示我可使用的视频</string>
+    <string name="video_play_times">次数：已播放%d次</string>
+    <string name="query_times_failure">查询使用次数失败，请重试</string>
+    <string name="look_more_class">更多班级请查看详细资料>></string>
+    <string name="user_priviledge">学习特权</string>
+
+
+    <string name="forcetrain_answer_error"> (`Д´*) 嗷~~好像答错了。\n再来一次吧！相信自己，你没问题的！</string>
+    <string name="forcetrain_answer_errpart">┗|｀O′|┛ 嗷~~好像答错了。不要灰心，有x%的同学也答错了。</string>
+    <string name="forcetrain_answer_errall">┗|｀O′|┛ ┗|｀O′|┛ 嗷~~好像答错了。继续努力哦。</string>
+    <string name="forcetrain_quit">放弃本次强化训练吗？到手的奖励就溜走了哦～</string>
+    <string name="errreview_quit">放弃本次错题回顾吗？到手的奖励就溜走了哦～</string>
+    <string name="wait_submit">正在提交,请稍候...</string>
+    <string name="nodata_question_review">今天的错题回顾已经用完啦!</string>
+    <string name="nodata_question_review_know">小豆没有找到错题!</string>
+    <string name="nodata_froce_train">今天的强化练习已经用完啦!</string>
+
+    <string name="cheat_allfinish_tips_2">已有%d个童鞋完成了今天的任务，\n加油赶上他们吧～</string>
+    <string name="cheat_onefinish_tips_2">已有%d个童鞋完成了今天的任务，\n加油赶上他吧～</string>
+    <string name="cheat_nofinish_tips">还没有人完成今天的任务，赶快来\n抢占第一名的位置吧！</string>
+
+    <string name="cheat_no_task">今天没有任务，可以好好休息一下哦～</string>
+    <string name="cheat_finish_success">太棒了，今天的任务完成啦！</string>
+    <string name="cheat_submit_success">作业提交成功！</string>
+    <string name="cheat_submit_tips1">越努力越幸运，你是最棒的～</string>
+    <string name="cheat_submit_tips2">你是全班第%d个提交作业的，棒棒哒～</string>
+
+    <!-- 错题订正 -->
+    <string name="select_answer">请选择答案:</string>
+    <string name="select_errreasons">选择错误原因:</string>
+    <string name="revise_camera_tip">请拍照上传订正答案，注意答案必须在一页内</string>
+    <string name="revise_camera_redo">重拍</string>
+    <string name="revise_camera_do">点击竖屏拍照</string>
+    <string name="revise_total">已有%s人次在使用</string>
+
+    <string name="goto_childquestion">精确到题目小问</string>
+
+    <!-- 精品套题 -->
+    <string name="search_pratice_keyword">输入套题名称关键字</string>
+    <string name="cheat_tips">提分秘籍仅限选择题，如需做解答题，请前往错题精练本、变式训练本、精品套题页面。</string>
+
+    <!--支付-->
+    <string name="replace_pay_tips">提示:请在两个小时内完成支付，如果未支付，抵扣的学豆两个小时后将自动返回到你的账户。</string>
+
+    <!--个人中心-->
+    <string name="feedback_hint">来吧，勇敢地告诉程序猿哥哥你所有的建议与需求！！</string>
+    <string name="feedback_attention_wechat"> 微信扫码或手动搜索“豆豆数学”，关注公众号</string>
+    <string name="feedback_to_wechat">有意见或建议请反馈给公众号，让豆豆老师处理吧！</string>
+    <string name="usercenter_email">service-fw@tsinghuabigdata.com</string>
+    <string name="cannot_dial">无法拨出电话，请使用其他设备联系客服</string>
+
+    <string name="usercenter_pw_second">再次输入新的密码</string>
+    <string name="usercenter_pw_input">密码 6-16位字符</string>
+    <string name="usercenter_pw_getcode">获取验证码</string>
+    <string name="usercenter_pw_incode">输入验证码</string>
+    <string name="usercenter_input_phone">手机号</string>
+    <string name="usercenter_input_nickname">昵称</string>
+    <string name="sex">性别</string>
+    <string name="user_name">姓名</string>
+    <string name="enter_year">入学年份</string>
+    <string name="exam_num">考号</string>
+    <string name="usercenter_input_recommend_num">推荐人手机号码(选填)</string>
+    <string name="usercenter_register_success">注册成功！填写更多信息获取定制服务</string>
+    <string name="usercenter_input_real_name">输入真实姓名，方便老师和小伙伴们找到你</string>
+    <string name="usercenter_confirm_info_right">请确认以上信息填写无误，注册成功后将不能修改。</string>
+    <string name="usercenter_not_find_school">如果没有找到你的班级，可以联系豆豆客服寻求帮助，电话：400-9928-918</string>
+    <string name="usercenter_sel_join_class">选择你要加入的班级</string>
+    <string name="password_filter">0123456789qazwsxedcrfvtgbyhnujmikolpQAZWSXEDCRFVTGBYHNUJMIKOLP~!@#$%^&amp;*()_+`-=[]{}:"|;'\,./&lt;&gt;?</string>
+    <string name="select_school">输入关键词搜索所在学校</string>
+    <string name="usercenter_nocode_join_class">没有班级码，可以自主选择学校班级 > </string>
+    <string name="msg_custom_tips">也可在“定制学”中一键下载整套周个人专属提分方案～</string>
+
+    <string name="guide_enter_usercenter">进入“个人中心”，点击</string>
+    <string name="guide_add_phonetips">添加你的手机号码，\n以便豆豆为你提供更多帮助：）</string>
+    <string name="ontrial_tips">限时免费中</string>
+    <string name="correct_question">错题订正</string>
+    <string name="exchange_code">学豆兑换码</string>
+    <string name="recharge_bean">学豆充值</string>
+    <string name="useable_bean">可用学豆</string>
+    <string name="to_pay">去付款</string>
+    <string name="buy">购买</string>
+    <string name="buy_detail">购买详情</string>
+    <string name="i_will_buy">我要购买</string>
+    <string name="card_exchange_record">VIP卡兑换记录</string>
+    <string name="card_exchange_input_tips">请正确输入兑换码（字母不区分大小写），当天输入错误超过6次将不能继续兑换。</string>
+    <string name="card_exchange_intro">VIP卡兑换说明</string>
+
+    <!-- 错题本 -->
+
+    <string name="ebook_finishcorrect">已订正%d道（</string>
+    <string name="ebook_waitcorrect">待订正%d道。</string>
+    <string name="ebook_rightcorrect">%d道,</string>
+    <string name="ebook_wrongcorrect">%d道</string>
+    <string name="ebook_lastcorrecttime">上次订正时间 </string>
+
+    <string name="ebook_allcount">共%d题</string>
+    <string name="ebook_showcorrect">不显示已订正的题目</string>
+    <string name="ebook_dayclean_tips">已有%s人次在使用</string>
+    <string name="ebook_weektrain_tips">已有%s人次在使用</string>
+    <string name="ebook_stagereview_tips">已有%s人次在使用</string>
+    <string name="ebook_stage_master">已掌握%d道，</string>
+    <string name="ebook_stage_unmaster">未掌握%d道</string>
+    <string name="ebook_stage_allcount">（%d道题）</string>
+    <string name="ebook_major_kwpoint">主要知识点: </string>
+    <string name="ebook_mastre_kwpoint">掌握度：</string>
+
+    <string name="vip_card_tisp">VIP卡兑换码是通过线上或者线下渠道获取VIP卡后，卡面上标注的可供用户使用的兑换套餐凭证，用户可在有效期内兑换豆豆数学APP中的相应套餐功能。</string>
+    <string name="enter_dd_world">进入豆豆数学的世界</string>
+    <string name="mark_error_question">点击题号标记错题并核对</string>
+    <string name="btn_mark_errq">标记错题</string>
+
+    <!--我的学豆-->
+    <string name="input_redeem_code">请输入您手机收到的淘宝网验证码</string>
+    <string name="what_redeem_code">什么是兑换码？</string>
+    <string name="redeem_code_is">兑换码是 App 外兑换豆豆数学平台学豆的凭证，用户凭兑换码在 App 内兑换数值的学豆。</string>
+    <string name="what_look_redeem_code">兑换码是什么样的？</string>
+    <string name="redeem_code_look">兑换码是一串字母或数字的组合。</string>
+    <string name="how_to_use_code">兑换码如何使用？</string>
+    <string name="use_coed_1">1.在兑换页面输入正确的兑换码，点击“确认兑换”按钮即可兑换相应数值的学豆。</string>
+    <string name="use_coed_2">2.每个兑换码只可兑换一次，兑换成功后即失效。</string>
+    <string name="how_to_check_code">如何查看兑换的学豆？</string>
+    <string name="check_code">兑换成功后学豆会自动添加，在 App 内“个人中心”首页即可查看。</string>
+    <string name="redeem_code_filter">0123456789qazwsxedcrfvtgbyhnujmikolpQAZWSXEDCRFVTGBYHNUJMIKOLP</string>
+    <string name="card_code_filter">0123456789qazwsxedcrfvtgbyhnujmikolpQAZWSXEDCRFVTGBYHNUJMIKOLP</string>
+    <string name="goto_taobao">跳转到淘宝获取兑换码</string>
+    <string name="taobao_excode_intro">兑换码说明</string>
+    <string name="enter_exchange">确认兑换</string>
+    <string name="input_card_code">请输入您的VIP卡兑换码</string>
+
+    <string name="product_introduce">宝贝介绍</string>
+    <string name="epractice_free_count">%d次使用机会</string>
+    <!-- string name="epractice_free_date">（截止日期：%s至%s）</string -->
+    <string name="relogin">请重新登录</string>
+    <string name="print_errquestion">请在\"错题本下载 \"中下载错题</string>
+    <string name="share_after_buy">请先购买再分享并下载</string>
+    <string name="nofind_practice">未找到对应的习题</string>
+    <string name="tips_of_buy">请按需购买，超过使用期限次数将被清零。</string>
+    <string name="go_recharge">去充值</string>
+    <string name="nofind_product_usage">暂无使用说明</string>
+    <string name="nofind_product">查不到商品</string>
+    <string name="product_no_relate">该宝贝还未绑定内容，请稍后再试或联系客服询问</string>
+    <string name="jionclass">请先加入班级</string>
+    <string name="jiontoclass">加入该班</string>
+    <string name="has_classcode">有班级码</string>
+    <string name="no_classcode">没有班级码</string>
+    <string name="nolearn_tips">您的学豆不足，请及时充值。</string>
+    <string name="goto_suite_tips">豆豆提醒：购买套餐观看同步微课更划算哦。</string>
+
+
+    <string name="lm_camera_tips">请将书页靠近四个红角内</string>
+
+    <string name="lm_priview_tips">点击左侧按钮选择你要上传的题目</string>
+    <string name="lm_priview_tipsdown">点击下方按钮选择你要上传的题目</string>
+    <string name="lm_useradjust_tips">请调整四点到书页的四角</string>
+    <string name="click_select">点击选择</string>
+    <string name="camera">拍照</string>
+    <string name="recamera">重新拍照</string>
+    <string name="recamera_mulline">重新\n拍照</string>
+    <string name="lm_adjust_tips">按住边缘拖动可以调整外框大小</string>
+    <string name="uploadfail_tip">提交失败，请尝试再次提交或重新拍照上传。\n重新拍照会先清除之前拍照的内容。</string>
+    <string name="startcamera">开始拍照</string>
+    <string name="contactphone">400-9928-918</string>
+    <string name="camera_lmtips">请把书页四边放到虚线框外</string>
+
+    <string name="register_btn">注册学生账号</string>
+    <string name="create_correct_work">开始诊断练习</string>
+    <string name="upload_corrected_work">开始收集错题</string>
+    <string name="ai_diagnose">智能诊断</string>
+    <string name="collect_errqustion">收集错题</string>
+    <string name="create_know_tips">点击左侧扇区选择等级后，创建提升练习～</string>
+
+    <!-- 分享 -->
+    <string name="share_to">分享到  </string>
+    <string name="share_title">豆豆数学</string>
+
+    <string name="only_show_errq">在作业界面只查看错题</string>
+    <string name="slide_left">左滑查看题号</string>
+    <string name="slide_right">右滑收起题号</string>
+    <string name="honor_tips">荣耀值是对所有知识点掌握情况的综合评分。</string>
+    <string name="camerawork_tips">拍照小tips</string>
+    <string name="nofinddata">什么数据都没有发现</string>
+    <string name="current_nodata">暂时还没有内容哦～</string>
+    <string name="no_find_work">豆豆在等你上传作业</string>
+
+    <string name="diagnose_nodata_tips">你还没有上传过作业，现在上传开始诊断吧。</string>
+
+    <array name="cartoon_dd_bubble">
+        <!-- 通用提示语-->
+        <item>0##自从用了豆豆，妈妈再也不担心我的作业了！</item>
+        <item>0##作业任意拍，诊断马上出，错题当晚订正，科学学习轻松提分。</item>
+        <item>0##自从用了豆豆，妈妈再也不担心我的作业了！</item>
+
+        <!-- 专用界面提示语 -->
+        <!-- 我的世界  主页-->
+        <item>1#main#及时订正错题，考试轻松提分!</item>
+        <!-- 错题订正 -->
+        <item>1#revise#不要放过一个错题哦</item>
+
+        <!-- 错题周题练 -->
+        <item>1#revise#每周都完成错题，考试不再怕!</item>
+
+    </array>
+
+    <string name="classicpratice_tips">想知道排名吗？下载套题并答完上传，即可参与全网PK哦！</string>
+    <string name="hint_search_book">输入常用教辅名称或年级关键字搜索，如：“状元”、“八”</string>
+    <string name="err_dayclean_tips">每日诊断出来的错题，可以在这里订正哦。</string>
+    <string name="err_weektrain_tips">下载错题再练本并打印，答完上传即可诊断</string>
+    <string name="err_vartrain_tips">下载中考的变式题，答完上传即可诊断</string>
+    <string name="err_stagedw_tips">下载按知识点出错频率汇总的错题笔迹并打印，可随时翻阅</string>
+    <string name="report_knowchart">精准跟踪所有学习数据，智能生成动态知识图谱，实时更新成绩进步轨迹。</string>
+
+    <string name="help">帮助</string>
+    <string name="except">敬请期待</string>
+    <string name="noteacher">该班暂无老师</string>
+    <string name="jumpstep">跳过这一步</string>
+    <string name="joinclass">加入班级</string>
+    <string name="choosebook">选择教辅</string>
+    <string name="switchbook">切换教辅</string>
+    <string name="hint_mailaddr">输入 xx省  xx市 xx区 xx街道 楼牌号等详细邮寄地址</string>
+    <string name="bigdatacenter">清华大学苏研院大数据处理中心</string>
+    <string name="companyname">成都准星云学科技有限公司</string>
+    <string name="next_step">下一步</string>
+    <string name="student_login">开启豆豆数学的提分之旅</string>
+    <string name="login">登录</string>
+    <string name="mail_addr">邮寄地址</string>
+
+    <!-- 家长端 -->
+    <string name="feedback_parent_weixin">微信扫描或手动搜索“豆豆数学”，关注公众号，有意见或建议反馈给公众号，我们会及时处理的！</string>
+    <string name="feedback_parent_hint">请在这里写下您的意见或建议，我们将不断进步，为您和您的孩子做得更好！</string>
+    <string name="children_info_tips">孩子信息不可以修改，如需修改，请前往学生端</string>
+    <string name="quit_login">退出登录</string>
+    <string name="bind_phone_tips">更换手机号码后，下次登录使用新的手机号码。</string>
+    <string name="input_orginal_pw">输入您的原密码</string>
+    <string name="input_new_pw">输入新的密码</string>
+    <string name="input_new_pw_angin">再次输入您的新密码</string>
+    <string name="im_invite_friend">立即邀请好友</string>
+    <string name="im_share_tips">分享快乐，赶快行动吧！</string>
+    <string name="rules_of_activity">*活动规则*</string>
+    <string name="pics_from">相册选择</string>
+    <string name="student_login_hint">学生手机号码／学生账号</string>
+    <string name="student_pw_hint">学生密码</string>
+    <string name="parent_login_hint">家长手机号码（初始号码与学生注册的手机号码一致）</string>
+    <string name="parent_pw_hint">家长密码（初始密码与学生注册的密码一致）</string>
+    <string name="parent_product_tips">在此处购买后，不用在学生端重复购买。</string>
+    <string name="usable_xuedou">可用学豆</string>
+    <string name="recharge_tips">请选择充值金额</string>
+
+    <string name="user_procotol">《用户隐私与使用协议》</string>
+    <string name="user_agree">点击确认支付，即表示您已同意豆豆数学</string>
+    <string name="tips_classcode">请输入老师提供的6位班级码，如6DDSXY</string>
+    <string name="tips_classcode1">输入班级码 自动匹配班级</string>
+    <string name="join_classcode">请输入6位班级码</string>
+    <string name="search">搜索</string>
+    <string name="generating">生成中…</string>
+    <string name="moreto">更多></string>
+    <string name="recharge_xuedou">学豆充值</string>
+    <string name="enter_pay">确认支付</string>
+    <string name="atonce_pay">立即支付</string>
+    <string name="privilege_list">特权如下:</string>
+    <string name="tj_nobuy_tips">北教豆豆暂不支持在线购买，请联系客服！</string>
+
+    <string name="message_permission_always_failed">请在手机设置-》应用里面打开以下权限:\n\n%1$s</string>
+    <string name="message_permission_rationale">豆豆数学需要获得以下权限:\n\n%1$s</string>
+    <!-- 学情反馈 -->
+
+    <string name="buy_to_member">开通VIP／SVIP会员</string>
+
+    <!-- 我的积分 -->
+    <string name="svip_member">超级VIP会员</string>
+    <string name="vip_member">VIP会员</string>
+    <string name="normal_member">"普通会员"</string>
+    <string name="my_learn_priviledge">我的学习特权</string>
+    <string name="myscore">我的积分</string>
+    <string name="myscore_maohao">我的积分：</string>
+    <string name="todayscore">今日积分：</string>
+    <string name="score_exchange">积分兑换</string>
+    <string name="recommand_score">推荐积分：</string>
+    <string name="gained_score">已得积分：</string>
+    <string name="more_score_tips">更多积分在学习过程中获得～</string>
+    <string name="gained_score_tips">仅显示3日内的积分记录哦～</string>
+    <string name="no_exchange_product">已兑换完</string>
+    <string name="exchange_success">兑换成功</string>
+    <string name="exchange_product">兑换礼品</string>
+    <string name="leave_times">剩余次数</string>
+    <string name="deduction_score">抵扣积分</string>
+    <string name="product_describe">礼品描述</string>
+    <string name="atonce_exchange">马上兑换</string>
+    <string name="no_gain_score">近3日内未获得积分</string>
+
+    <string name="member_grade">会员等级</string>
+    <string name="head_pendant">头像挂件</string>
+    <string name="city_ranklist">全市同年级学生知识点平均正确率分布图</string>
+    <string name="city_user_count">参与统计学生总数：--人</string>
+    <string name="person_know_rate">你的知识点平均正确率</string>
+    <string name="gerate_tips">(每天凌晨1点左右更新数据)</string>
+
+    <string name="jishu_diagnose">极速智能诊断：基于人脑记忆规律设计，让老师和学生当天获取诊断结果，并在当天订正错题，从而减轻第二天的课堂学习负担，提升学生的学习效率并帮助老师实现精准教学；根据全国实际使用师生的数据反馈，该模式可较传统模式效率提高数倍，从而显著提升学习平均成绩（详见官网）。</string>
+    <string name="common_duagnose">普通诊断：老师和学生得到诊断结果的时间不确定，与传统教与学模式相比，学生的学习效率和成绩可以得到一定的提升，但效果弱于极速智能诊断。</string>
+
+    <string name="self_create_refine_tips">在提升 - 错题再练本栏目处下载使用，答题后可上传再次诊断</string>
+    <string name="self_create_variant_tips">在提升 - 变式训练本栏目处下载使用，答题后可上传诊断</string>
+    <string name="self_create_errbook_tips">在提升 - 错题浏览本栏目处下载使用，供复习翻阅使用</string>
+    <string name="limit_one_day">每日限用5次</string>
+
+    <string name="week_report_nodata">本周没有周学习分析，快去学习吧～</string>
+
+    <!-- 定制学 -->
+    <string name="immediate_jion">立即加入</string>
+
+    <array name="question_type_ch">
+        <item>单选题</item>
+        <item>多选题</item>
+        <item>填空题</item>
+        <item>判断题</item>
+        <item>解答题</item>
+        <item>计算题</item>
+    </array>
+
+    <array name="question_type_en">
+        <item>choice</item>
+        <item>mutichoice</item>
+        <item>fill_in</item>
+        <item>judge</item>
+        <item>solution</item>
+        <item>calculation</item>
+    </array>
+
+    <array name="knowledge_time_filter_array">
+        <item>最近一周</item>
+        <item>最近一月</item>
+        <item>最近两月</item>
+        <item>自选时间</item>
+    </array>
+
+    <array name="time_filter_array">
+        <item>全部</item>
+        <item>最近一周</item>
+        <item>最近一月</item>
+        <item>最近两月</item>
+        <item>自选时间</item>
+    </array>
+
+    <array name="grade_filter_array">
+        <item>四年级</item>
+        <item>五年级</item>
+        <item>六年级</item>
+        <item>七年级</item>
+        <item>八年级</item>
+        <item>九年级</item>
+        <item>全部</item>
+    </array>
+
+    <array name="kind_filter_array">
+        <item>作业</item>
+        <!-- <item>周练</item>-->
+        <item>考试</item>
+        <item>全部</item>
+    </array>
+
+    <array name="datetype_filter_array">
+        <item>全部</item>
+        <item>周</item>
+        <item>月</item>
+        <item>考前</item>
+        <item>自定义</item>
+    </array>
+
+    <array name="time_filter_array_en">
+        <item>oneweek</item>
+        <item>twoweek</item>
+        <item>onemonth</item>
+        <item>twomonth</item>
+        <item>alltime</item>
+    </array>
+
+    <array name="question_reason_ch">
+        <item>审题错误</item>
+        <item>概念模糊</item>
+        <item>运算错误</item>
+        <item>思路错误</item>
+        <item>粗心大意</item>
+        <item>其他原因</item>
+    </array>
+
+    <array name="correct_reason">
+        <item>批改错误</item>
+        <!-- item>参考答案不符合目前所学知识点</item -->
+        <item>参考答案或题目有误</item>
+    </array>
+
+    <array name="question_reason_en">
+        <item>unknown</item>
+        <item>theoryFuzzy</item>
+        <item>miscalculation</item>
+        <item>mindWrong</item>
+        <item>careless</item>
+        <item>others</item>
+    </array>
+    <array name="question_type_ch_xbook">
+        <item>单选题</item>
+        <item>填空题</item>
+        <item>解答题</item>
+    </array>
+    <array name="question_type_en_xbook">
+        <item>choice</item>
+        <item>fill_in</item>
+        <item>solution</item>
+    </array>
+</resources>

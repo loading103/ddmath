@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/bg_zhuye"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.WorkToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <!-- 昵称 与 性别 隐藏不用 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <!-- 昵称 -->
+                <EditText
+                    android:id="@+id/et_nickname"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_rect_register_r4"
+                    android:drawableStart="@drawable/ic_photo"
+                    android:drawablePadding="4dp"
+                    android:hint="@string/usercenter_input_nickname"
+                    android:imeOptions="flagNoExtractUi"
+                    android:maxLength="16"
+                    android:singleLine="true"
+                    android:textColorHint="@color/input_hint_text_color"
+                    android:textSize="@dimen/text_large"/>
+
+                <com.tsinghuabigdata.edu.ddmath.view.GenderSelectorView
+                    android:id="@+id/genderview"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="4dp"
+                    android:background="@drawable/bg_rect_register_r4"/>
+
+            </LinearLayout>
+
+            <!-- 手机号 -->
+            <EditText
+                android:id="@+id/et_phone_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_rect_register_r4"
+                android:drawablePadding="4dp"
+                android:drawableStart="@drawable/ic_iphone_register"
+                android:hint="@string/usercenter_input_phone"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:singleLine="true"
+                android:textColorHint="@color/input_hint_text_color"
+                android:textSize="@dimen/text_large" />
+
+            <!-- 验证码 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <EditText
+                    android:id="@+id/et_verifycode"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/bg_rect_verifycode_r4"
+                    android:hint="@string/usercenter_pw_incode"
+                    android:digits="@string/redeem_code_filter"
+                    android:maxLength="10"
+                    android:textColorHint="@color/input_hint_text_color"
+                    android:textSize="@dimen/text_middle"
+                    android:imeOptions="flagNoExtractUi"
+                    android:drawableStart="@drawable/ic_yanzhengma"
+                    android:drawablePadding="4dp"
+                    />
+
+                <Button
+                    android:id="@+id/bt_verifycode"
+                    android:layout_width="128dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/bg_rect_verifycodebtn_r4"
+                    android:text="@string/usercenter_pw_getcode"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_large" />
+
+            </LinearLayout>
+
+
+            <!-- 密码 -->
+            <EditText
+                android:id="@+id/et_passwd"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_rect_register_r4"
+                android:drawableStart="@drawable/ic_key"
+                android:drawablePadding="4dp"
+                android:hint="@string/usercenter_pw_input"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="textPassword"
+                android:digits="@string/password_filter"
+                android:maxLength="16"
+                android:singleLine="true"
+                android:textColorHint="@color/input_hint_text_color"
+                android:textSize="@dimen/text_large"/>
+
+            <!-- 推荐人 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/et_recommend_num"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_rect_register_r4"
+                    android:drawableStart="@drawable/ic_iphonetuijian"
+                    android:drawablePadding="4dp"
+                    android:hint="@string/usercenter_input_recommend_num"
+                    android:imeOptions="flagNoExtractUi"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:singleLine="true"
+                    android:textColorHint="@color/input_hint_text_color"
+                    android:textSize="@dimen/text_large"/>
+
+                <TextView
+                    android:id="@+id/tv_give_bean"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:textSize="12sp"
+                    android:textColor="#999999"/>
+
+            </LinearLayout>
+
+            <!-- 注册按钮  -->
+            <Button
+                android:id="@+id/bt_register"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/btn_state_bg"
+                android:gravity="center"
+                android:text="注册"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_large"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:gravity="center_vertical">
+
+                <!-- 用户协议 -->
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkbox"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:checked="true"
+                        android:background="@drawable/selector_login_protocol"
+                        android:button="@null"/>
+
+                    <TextView
+                        android:id="@+id/tv_have_read"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@id/checkbox"
+                        android:text="我已阅读并同意"
+                        android:textColor="@color/color_48B8FF"
+                        android:textSize="@dimen/text_small"/>
+
+                    <TextView
+                        android:id="@+id/tv_protocol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/tv_have_read"
+                        android:text="@string/user_procotol"
+                        android:textColor="@color/color_52BDC9"
+                        android:textSize="@dimen/text_small"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/bt_login"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="已注册，去登录"
+                    android:gravity="right"
+                    android:textColor="@color/color_48B8FF"
+                    android:drawableEnd="@drawable/ic_register"
+                    android:drawablePadding="2dp"
+                    android:paddingEnd="12dp"
+                    android:textSize="@dimen/text_middle"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

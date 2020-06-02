@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 连击层 按钮层 -->
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.MyRelativeLayout
+        android:id="@+id/view_shareseries_toollayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 显示 连击效果(第一次进入时)-->
+        <LinearLayout
+            android:id="@+id/view_shareseries_hitlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+
+            <RelativeLayout
+                android:id="@+id/view_shareseries_closehitlayout"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_circle_gray"
+                android:layout_gravity="end"
+                android:layout_marginBottom="-30dp"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ico_close"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@null"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/img_nclick"
+                    android:contentDescription="@null"/>
+
+                <TextView
+                    android:id="@+id/view_shareseries_hitcount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9"
+                    android:textColor="#FFEF05"
+                    android:textSize="80dp"
+                    android:layout_centerInParent="true"
+                    android:paddingStart="10dp"
+                    android:textStyle="bold"
+                    android:paddingBottom="30dp"/>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/view_shareseries_hitshare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_share_work"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@null"
+                />
+
+        </LinearLayout>
+
+        <!-- 连击分享按钮 -->
+        <RelativeLayout
+            android:id="@+id/view_shareseries_sharebtnlayout"
+            android:layout_width="122dp"
+            android:layout_height="91dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_3clicks"
+                android:contentDescription="@null"/>
+
+            <TextView
+                android:id="@+id/view_shareseries_hitcount1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="99"
+                android:textColor="#FFEF05"
+                android:textSize="36dp"
+                android:layout_centerInParent="true"
+                android:paddingStart="2dp"
+                android:textStyle="bold"
+                android:paddingBottom="10dp"/>
+
+            <RelativeLayout
+                android:id="@+id/layout_closehitview"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/bg_circle_gray"
+                android:layout_alignParentEnd="true"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ico_close"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@null"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </com.tsinghuabigdata.edu.ddmath.module.ddwork.view.MyRelativeLayout>
+
+    <!--&lt;!&ndash; 分享层 &ndash;&gt;-->
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/view_shareseries_sharelayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:visibility="gone"-->
+        <!--&gt;-->
+
+        <!--<com.tsinghuabigdata.edu.ddmath.module.ddwork.view.ShareView-->
+            <!--android:id="@+id/view_shareseries_shareview"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"/>-->
+
+    <!--</RelativeLayout>-->
+
+
+</FrameLayout>

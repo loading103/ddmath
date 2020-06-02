@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_workexam_mainlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.tsinghuabigdata.edu.ddmath.module.studyfeedback.view.ExamLineChart
+        android:id="@+id/view_workexam_linechart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_report_chartd_r18"
+        android:layout_marginBottom="24dp"/>
+
+    <com.tsinghuabigdata.edu.ddmath.module.studyfeedback.view.ChartSelectView
+        android:id="@+id/view_workexam_select"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <!--  没有数据 -->
+    <RelativeLayout
+        android:id="@+id/view_workexam_nodata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_report_chartd_r18"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nofinddata"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_large_xx"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.WorkToolbar
+        android:id="@+id/worktoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg">
+
+        <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+            android:id="@+id/loadingPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="9dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/bonus"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/myscore_maohao"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_large_x20"
+                    android:layout_marginStart="6dp"/>
+
+                <TextView
+                    android:id="@+id/tv_myscore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_large_xx"
+                    android:textColor="@color/color_FFA12A"
+                    android:text=""/>
+
+            </LinearLayout>
+
+            <com.handmark.pulltorefresh.library.PullToRefreshGridView
+                android:id="@+id/girdview_product"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:numColumns="4"
+                android:scrollbars="none"
+                android:listSelector="@color/transparent"
+                android:verticalSpacing="24dp"
+                android:horizontalSpacing="24dp"
+                android:layout_marginTop="12dp"
+                />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

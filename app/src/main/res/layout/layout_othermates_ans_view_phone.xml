@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="小豆（高新中学）的正确答案"
+        android:textColor="@color/black"/>
+
+    <ImageView
+        android:id="@+id/iv_otherans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:scaleType="fitXY"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/filtrate_theme"></View>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_givelike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_thumb_up"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="赞"
+                android:textColor="@color/msg_tag_recommand"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/tv_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="换一个"
+                android:textColor="@color/msg_tag_recommand"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

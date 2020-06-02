@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_knowledge_chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="36dp"
+            android:text="@string/report_knowchart"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_middle"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="177dp"
+                android:background="@drawable/img_atlasreport_frame"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/tv_student_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="某莫某"
+                        android:textColor="#C37E40"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="4dp"
+                        android:singleLine="true"
+                        android:text="知识图谱报告"
+                        android:textColor="#C37E40"
+                        android:textSize="14sp"/>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_update_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:text="更新时间：2017-12-11 21:12"
+                    android:textColor="@color/color_999999"
+                    android:textSize="12sp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17dp"
+                    android:src="@drawable/ic_atlasreport"/>
+
+                <Button
+                    android:id="@+id/btn_atlas_mode"
+                    android:layout_width="99dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_btn_atlasreport"
+                    android:text="图谱模式"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"/>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="177dp"
+                android:background="@drawable/img_listreport_frame"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/tv_student_name2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="某莫某"
+                        android:textColor="#3DA4BD"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="4dp"
+                        android:singleLine="true"
+                        android:text="知识图谱报告"
+                        android:textColor="#3DA4BD"
+                        android:textSize="14sp"/>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_update_time2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:text="更新时间：2017-12-11 21:12"
+                    android:textColor="@color/color_999999"
+                    android:textSize="12sp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="19dp"
+                    android:src="@drawable/ic_listreport"/>
+
+                <Button
+                    android:id="@+id/btn_list_mode"
+                    android:layout_width="99dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="17dp"
+                    android:background="@drawable/bg_btn_listreport"
+                    android:text="列表模式"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+        android:id="@+id/loadingPager_knowledge_chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"/>
+
+</FrameLayout>

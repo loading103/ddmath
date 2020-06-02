@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- 相机图 -->
+    <android.view.SurfaceView
+        android:id="@+id/xbook_camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- 分割线 -->
+    <com.tsinghuabigdata.edu.ddmath.module.xbook.view.CameraGridView
+        android:id="@+id/xbook_camera_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000" />
+
+    <!-- 控制层 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <!--手电筒模式 -->
+        <RelativeLayout
+            android:id="@+id/xbook_layout_cameraledbtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:background="@drawable/xbook_circle_background">
+
+            <ImageView
+                android:id="@+id/xbook_camera_flashimg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/xbook_light"/>
+
+        </RelativeLayout>
+
+        <!-- 提示-->
+        <RelativeLayout
+            android:id="@+id/xbook_camera_tiplayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:paddingLeft="36dp"
+            android:paddingRight="36dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_rect_black_a20"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_centerInParent="true">
+
+                <TextView
+                    android:id="@+id/xbook_camera_tiptext2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:text="@string/camera_tips3"
+                    android:gravity="center_horizontal"
+                    android:textSize="16sp"
+                    android:visibility="visible"/>
+
+                <LinearLayout
+                    android:id="@+id/xbook_camera_tiptext3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="请"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="竖屏"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="拍照"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/xbook_camera_tiptext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:text="@string/camera_tips"
+                    android:textSize="16sp"
+                    android:layout_centerInParent="true"
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp">
+
+            <!-- 相册 -->
+            <TextView
+                android:id="@+id/xbook_iv_photobtn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:textColor="@android:color/white"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:text="相册"
+                android:background="@drawable/xbook_circle_background"/>
+
+            <!-- 拍照 -->
+            <RelativeLayout
+                android:id="@+id/xbook_camera_enter"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:background="@drawable/btn_camera_bg"
+                />
+
+            <!-- 取消 -->
+            <RelativeLayout
+                android:id="@+id/xbook_layout_cameracancel"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/xbook_circle_background">
+
+                <ImageView
+                    android:id="@+id/xbook_iv_cancelimg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ico_close"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!-- 聚焦效果 -->
+        <com.tsinghuabigdata.edu.ddmath.module.mylearn.view.MoveImageView
+            android:id="@+id/xbook_iv_focusimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ico_focus"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

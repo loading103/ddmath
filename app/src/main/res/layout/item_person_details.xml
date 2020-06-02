@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingLeft="32dp">
+    <RelativeLayout
+        android:id="@+id/rv_1"
+        android:layout_width="39dp"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true">
+        <com.tsinghuabigdata.edu.ddmath.module.scoreplan.view.ImaginaryLineView
+            android:id="@+id/line_dote_up"
+            android:layout_centerHorizontal="true"
+            android:layout_width="2dp"
+            android:layout_height="30dp"/>
+        <com.tsinghuabigdata.edu.ddmath.module.scoreplan.view.ImaginaryLineView
+            android:id="@+id/line_dote_down"
+            android:layout_centerHorizontal="true"
+            android:layout_width="2dp"
+            android:layout_marginTop="32dp"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:id="@+id/iv_headview"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:src="@drawable/icon_cuotidingzheng"
+            android:layout_marginTop="18dp" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp">
+        <include layout="@layout/item_custom_erro"/>
+        <include layout="@layout/item_custom_syn"/>
+        <include layout="@layout/item_custom_define"/>
+    </RelativeLayout>
+</LinearLayout>

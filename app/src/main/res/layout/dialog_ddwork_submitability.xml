@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zx30_black">
+
+    <!-- 主要内容区  -->
+    <RelativeLayout
+        android:id="@+id/dialog_mainlayout"
+        android:layout_width="540dp"
+        android:layout_height="280dp"
+        android:background="@drawable/bg_rect_white"
+        android:layout_centerInParent="true"
+        android:visibility="visible"
+        >
+
+        <ImageView
+            android:id="@+id/dialog_close"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/selector_dialog_close"
+            android:contentDescription="@null"
+            />
+
+        <!-- 能力显示 -->
+        <LinearLayout
+            android:id="@+id/dialog_qreview_abilitylayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="32dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <!-- 学力 -->
+            <RelativeLayout
+                android:id="@+id/dialog_submit_abilitylayout"
+                android:layout_width="144dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_ribbon"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/dialog_leranability"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="@dimen/text_large_x"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_FFF4A7"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginEnd="24dp"/>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/dialog_submit_imageview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/upload_succes_normal"/>
+
+            <!-- 能力增加 -->
+            <LinearLayout
+                android:id="@+id/dialog_abilitylayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/dialog_qreview_powertext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_heart_v"
+                        android:drawablePadding="8dp"
+                        android:text=""
+                        android:textColor="@color/color_364347"
+                        android:textSize="@dimen/text_middle"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/dialog_qreview_speedtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_flash"
+                        android:drawablePadding="8dp"
+                        android:text=""
+                        android:textColor="@color/color_364347"
+                        android:textSize="@dimen/text_middle"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/dialog_qreview_attacktext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_sword"
+                        android:drawablePadding="8dp"
+                        android:text=""
+                        android:textColor="@color/color_364347"
+                        android:textSize="@dimen/text_middle"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/dialog_qreview_forcetext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_bomb"
+                        android:drawablePadding="8dp"
+                        android:text=""
+                        android:textColor="@color/color_364347"
+                        android:textSize="@dimen/text_middle"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <!-- 作业提交完成 -->
+            <TextView
+                android:id="@+id/dialog_submit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="@string/cheat_submit_success"
+                android:textSize="@dimen/text_large_xx"
+                android:textColor="@color/color_AC9C51"
+                android:layout_marginTop="10dp"
+                />
+
+            <!-- 作业提交完成鼓励文本 -->
+            <TextView
+                android:id="@+id/dialog_hearten_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/cheat_submit_tips1"
+                android:textColor="@color/color_AC9C51"
+                android:textSize="@dimen/text_large_x"
+                android:layout_marginTop="10dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/dialog_sumit_enterbtn"
+                android:layout_width="180dp"
+                android:layout_height="54dp"
+                android:background="@drawable/bg_dialog_enter_r18"
+                android:textSize="@dimen/text_large_x"
+                android:textColor="@color/white"
+                android:text="确定"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginBottom="2dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- 提示 图标 -->
+    <!--<ImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_above="@id/dialog_mainlayout"-->
+    <!--android:src="@drawable/personalcenter_bg_popup_photochange_doudou"-->
+    <!--android:layout_marginBottom="-16dp"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:paddingRight="160dp"-->
+    <!--/>-->
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/ll_score_bg"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:visibility="visible">-->
+        <!--<ImageView-->
+            <!--android:id="@+id/iv_score_bg"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:src="@drawable/pic02"-->
+            <!--android:scaleType="fitXY"-->
+            <!--android:layout_centerHorizontal="true" />-->
+        <!--<ImageView-->
+            <!--android:id="@+id/iv_close_bg"-->
+            <!--android:layout_width="24dp"-->
+            <!--android:layout_height="24dp"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_marginEnd="12dp"-->
+            <!--android:layout_marginTop="12dp"-->
+            <!--android:src="@drawable/selector_dialog_close"-->
+            <!--android:contentDescription="@null" />-->
+    <!--</RelativeLayout>-->
+
+    <RelativeLayout
+        android:id="@+id/ll_score_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:background="#fff" >
+        <!--android:paddingLeft="20dp"-->
+        <!--android:paddingRight="20dp"-->
+        <!--android:paddingTop="22dp"-->
+
+        <ImageView
+            android:id="@+id/iv_score_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/pic05"
+            android:scaleType="fitXY"
+            android:layout_centerHorizontal="true" />
+        <ImageView
+            android:id="@+id/iv_close_bg"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="18dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ico_cancel"
+            android:contentDescription="@null" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/iv_score_head"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="22dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icon_morentouxiang" />
+            <TextView
+                android:id="@+id/tv_score_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="作业成功提交，真棒！"
+                android:textColor="#FF222222"
+                android:textSize="24dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="22dp"
+                android:gravity="center"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

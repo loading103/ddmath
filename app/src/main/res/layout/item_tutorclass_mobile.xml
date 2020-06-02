@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_item_tutorclass"
+        android:orientation="vertical"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_classinfo_layout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/color_99ADFA">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/tv_school_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/text_middle" />
+
+                <TextView
+                    android:id="@+id/tv_class_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/text_middle" />
+
+                <TextView
+                    android:id="@+id/tv_class_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/text_small" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <!-- 老师列表 -->
+            <LinearLayout
+                android:id="@+id/ll_teacher_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"/>
+
+            <!-- 没有老师 -->
+            <RelativeLayout
+                android:id="@+id/rl_noteacher_container"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/noteacher"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/text_middle"
+                    android:background="@drawable/no_teacher_inclass"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    />
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/tag_view"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="@null"
+        android:src="@drawable/current_class"/>
+
+</RelativeLayout>

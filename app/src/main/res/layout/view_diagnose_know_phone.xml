@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 内容 -->
+    <LinearLayout
+        android:id="@+id/ll_class"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 个人信息 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="65"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="72dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp">
+
+                <com.tsinghuabigdata.edu.ddmath.view.CircleImageView
+                    android:id="@+id/iv_my_head_class"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="4dp"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_touxiang"
+                    android:contentDescription="@null"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="18dp"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_my_name_class"
+                        android:layout_width="68dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:textColor="#91771C"
+                        android:textSize="@dimen/text_middle"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_marginStart="30dp">
+
+                <TextView
+                    android:id="@+id/tv_my_honorvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/color_ABEAF1"
+                    android:textSize="@dimen/text_middle"/>
+
+                <TextView
+                    android:id="@+id/tv_my_diagnosetime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/color_ABEAF1"
+                    android:textSize="@dimen/text_middle"
+                    android:layout_marginTop="2dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- listview 头 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="26"
+            android:background="@drawable/ic_line"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="三级知识点"
+                android:textColor="@color/color_ABEAF1"
+                android:textSize="@dimen/text_large"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="正确率"
+                android:textColor="@color/color_ABEAF1"
+                android:textSize="@dimen/text_large"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="较之前"
+                android:textColor="@color/color_ABEAF1"
+                android:textSize="@dimen/text_large"/>
+
+        </LinearLayout>
+
+        <!-- 数据列表 -->
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/lv_class"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="158"
+            android:divider="@color/transparent"
+            android:dividerHeight="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:scrollbars="none">
+
+        </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+    </LinearLayout>
+
+    <!-- 加载动画 -->
+    <com.tsinghuabigdata.edu.ddmath.view.HonourDialogLoadingPager
+        android:id="@+id/loadingPager_class"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <!-- 没有数据时 -->
+    <RelativeLayout
+        android:id="@+id/giagnose_nodata_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <!-- 诊断按钮-->
+        <ImageView
+            android:id="@+id/giagnose_start_gbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/upload2"
+            android:contentDescription="@null"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/giagnose_nodata_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/diagnose_nodata_tips"
+            android:layout_above="@id/giagnose_start_gbtn"
+            android:textSize="@dimen/text_middle"
+            android:textColor="@color/color_F4A546"
+            android:layout_marginBottom="8dp"
+            android:layout_centerHorizontal="true"
+            />
+
+    </RelativeLayout>
+</FrameLayout>

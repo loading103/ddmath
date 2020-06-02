@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_class_item"
+              android:layout_width="match_parent"
+              android:layout_height="32dp"
+              android:orientation="horizontal">
+
+    <!-- 知识点名称 -->
+    <TextView
+        android:id="@+id/tv_know_name"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@color/knowdiagnose_text_color"
+        android:textSize="@dimen/text_small"/>
+
+    <!-- 正确率 -->
+    <TextView
+        android:id="@+id/tv_know_rate"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@color/knowdiagnose_text_color"
+        android:textSize="@dimen/text_small"/>
+
+    <!-- 变化 -->
+    <TextView
+        android:id="@+id/tv_know_adjustvalue"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textSize="@dimen/text_small"/>
+
+
+</LinearLayout>

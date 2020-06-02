@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="420dp"
+              android:layout_height="286dp"
+              android:background="@drawable/bg_produce_book_phone"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:gravity="center"
+        android:text="确定要取消生成错题本？"
+        android:textColor="#018ABB"
+        android:textSize="24sp"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginTop="106dp">
+
+        <Button
+            android:id="@+id/btn_wait"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_date_state_unselect"
+            android:text="再等等"
+            android:textColor="#48B8FF"
+            android:textSize="16sp"/>
+
+
+        <Button
+            android:id="@+id/btn_sure"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/bg_date_state_select"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

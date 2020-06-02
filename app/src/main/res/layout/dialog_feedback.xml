@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="439dp"
+                android:layout_height="196dp"
+                android:background="@drawable/bg_dialog_feedback">
+
+
+    <TextView
+        android:id="@+id/tv_dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp"
+        android:gravity="center"
+        android:text="感谢你的耐心反馈，我们会尽快处理"
+        android:textColor="@color/color_333333"
+        android:textSize="20sp"/>
+
+
+    <Button
+        android:id="@+id/btn_know"
+        android:layout_width="140dp"
+        android:layout_height="48dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="124dp"
+        android:background="@drawable/btn_select_tutor"
+        android:text="知道了"
+        android:textColor="@color/white"
+        android:textSize="20sp"/>
+
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/ic_close_pdf"
+        />
+
+</RelativeLayout>

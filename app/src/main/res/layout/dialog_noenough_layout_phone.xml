@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zx30_black"
+    >
+
+    <!-- 主要内容区  -->
+    <RelativeLayout
+        android:layout_width="320dp"
+        android:layout_height="240dp"
+        android:background="@drawable/ic_frame"
+        android:layout_centerInParent="true">
+
+        <!-- 关闭按钮 -->
+        <ImageView
+            android:id="@+id/dialog_custom_closebtn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/ic_frame_cancle"
+            android:contentDescription="@null"
+            android:layout_marginTop="2dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="20dp"
+            android:visibility="visible"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="24dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingMultiplier="1.5"
+                    android:maxLines="2"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:textColor="@color/color_AC9C51"
+                    android:text="@string/nolearn_tips"/>
+
+                <TextView
+                    android:id="@+id/dialog_custom_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textSize="@dimen/text_middle"
+                    android:gravity="center"
+                    android:textColor="@color/red"
+                    android:text="现有2000学豆，仍需充值1000学豆。"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                >
+
+                <!-- 充值按钮 -->
+                <ImageView
+                    android:id="@+id/dialog_recharge_btn"
+                    android:layout_width="140dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/selector_enter_btn"
+                    />
+
+                <!-- 充值提示 -->
+                <TextView
+                    android:id="@+id/dialog_recharge_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_small_x"
+                    android:gravity="center"
+                    android:textColor="@color/color_AC9C51"
+                    android:text="充n元送m学豆"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+

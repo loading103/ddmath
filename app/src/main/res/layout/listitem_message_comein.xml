@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xlhRatingBar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="7dp"
+    android:layout_marginTop="7dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_user_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img_robot" />
+
+    <LinearLayout
+        android:id="@+id/ll_content_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="100dp"
+        android:background="@drawable/bubble"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_text_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.5"
+                android:padding="5dp"
+                android:text="XXX同学，你好，我是小豆，很高兴与你见面。我是小豆，很高兴与你见面。我是小豆，很高兴与你见面。"
+                android:textColor="@color/robot_common_text_color" />
+
+            <ImageView
+                android:id="@+id/iv_text_module"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <com.tsinghuabigdata.edu.ddmath.module.robotqa.SubjectView
+            android:id="@+id/ll_topic_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="7dp" />
+        <com.tsinghuabigdata.edu.ddmath.module.robotqa.OtherMatesAnsView
+            android:id="@+id/ll_mateans_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="7dp" />
+
+        <com.tsinghuabigdata.edu.ddmath.module.robotqa.KnowledgeView
+            android:id="@+id/ll_knowledge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="7dp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_comment_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="5dp"
+                android:background="@color/filtrate_theme"/>
+
+            <TextView
+                android:id="@+id/tv_thumbsup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="5dp"
+                android:drawableLeft="@drawable/ic_thumb_up"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:text="有用，赞一个"
+                android:textColor="@color/msg_tag_recommand" />
+
+            <com.tsinghuabigdata.edu.ddmath.view.MyRatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                xlhRatingBar:canEdit="true"
+                xlhRatingBar:countSelected="5"
+                xlhRatingBar:differentSize="false"
+                xlhRatingBar:dividerWidth="5dp"
+                xlhRatingBar:starCount="5"
+                xlhRatingBar:stateResId="@drawable/sel_ratingbar"
+                xlhRatingBar:widthAndHeight="16dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+</LinearLayout>

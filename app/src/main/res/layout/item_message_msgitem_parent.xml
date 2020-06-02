@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp">
+
+        <!-- 图标区域 -->
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp">
+
+            <!-- 消息类型图标 -->
+            <ImageView
+                android:id="@+id/item_msg_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_homework_message"
+                android:contentDescription="@null"/>
+
+            <!-- 未读小红点提示 -->
+            <ImageView
+                android:id="@+id/item_msg_redpoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_oval"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@null"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- 重要消息提示 -->
+                <ImageView
+                    android:id="@+id/item_msg_keytips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_alert"
+                    android:layout_marginEnd="6dp"
+                    android:contentDescription="@null"
+                    />
+
+                <TextView
+                    android:id="@+id/item_msg_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="批阅完成的信息"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/item_msg_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2017-04-20"
+                    android:textColor="@color/color_888888"
+                    android:textSize="@dimen/text_small" />
+
+            </LinearLayout>
+
+            <!-- 信息内容 -->
+            <TextView
+                android:id="@+id/item_msg_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:singleLine="true"
+                android:text="你2017-03-10上传的学校作业已经批阅完成"
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/text_middle" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_EAEAEA"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"/>
+
+</LinearLayout>

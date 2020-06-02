@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.tsinghuabigdata.edu.ddmath">
+
+    <!-- 电话权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG"/>
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+
+    <!-- 存储权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
+
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+
+    <!-- 友盟统计 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 浮动层 -->
+    <!--<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>-->
+    <!-- 允许应用程序改变网络状态 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <!-- 允许应用程序改变WIFI连接状态 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <!-- 允许应用程序访问WIFI网卡的网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 允许应用程序完全使用网络 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="com.tsinghuabigdata.edu.ddmath.permission.JPUSH_MESSAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <!-- Optional for location -->
+
+    <!-- 定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+
+    <!-- 高亮 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <!-- 相机 -->
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
+    <!-- 多媒体相关 -->
+    <!--<uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>-->
+
+    <permission
+        android:name="com.tsinghuabigdata.edu.ddmath.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature"/>
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"
+        tools:ignore="ProtectedPermissions"/>
+
+    <!--<permission
+        android:name="com.tsinghuabigdata.edu.ddmath.permission.RECEIVE_MSG"
+        android:protectionLevel="signature"/>-->
+
+    <!-- 华为手机显示桌面消息数 -->
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/>
+
+    <application
+        android:name=".SophixStubApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:name">
+
+        <!-- 友盟统计 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="58f9d2d44ad1566f1b0000e8"/>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="豆豆数学"/>
+
+        <!-- 支持全面屏 -->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1"/>
+
+        <service android:name="com.amap.api.location.APSService"/>
+        <!-- 高德地图 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="f4b04ee47e47b373f8b3615f3acca95d"/>
+
+        <!-- 阿里热更新 -->
+        <meta-data
+            android:name="com.taobao.android.hotfix.IDSECRET"
+            android:value="24471221-1"/>
+        <meta-data
+            android:name="com.taobao.android.hotfix.APPSECRET"
+            android:value="ab96820c492445595565d9c2a3e994dd"/>
+        <meta-data
+            android:name="com.taobao.android.hotfix.RSASECRET"
+            android:value="MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDRtpkIe5MKW++62OkP4EfSI9GlHqINb3hb7LFvktlMzG469UMGOKI9o3ZO4ELjf1oQz4j2c7u/Dh3XELRa7uNc879worwQIeeRyBK2dX7qXYx/4Fur9uaH9lJPRTuQPTlvkG4X1Duy/XHcnLZGzAZg5AxZmlf2roSgO+X87boC57WYg2SXQqveSi3ukxVys943R86F3stQvn3hGBPZekaRqqBS03JEM/T4P52gsxWoPrmaUGB+LTTcWTx5n6Jk5/wnd9a94a+XvEwi/0gO555+kRkjNRQyfuskB9plKy61eV8e+Pmtn/I3DMfc2781TFK8QI0p4ZgYfGUvkiwBry07AgMBAAECggEAKl0fpvYHqyUNVYpx8lIVUB8KP7fjdqFZCADVizt4CCqX7fMTuhMAu0DlKmPlPz2/vPufqGGSwLKiVoq6VFBDv8hBmQhWw0+GDw4Csbckj0Wcl0yEWEXFJhwdXoQW1zl2+9GKW+f0s2C9eppxu/WFKFeJIySptlxk0FWpTSHc3K8CgpQO+NP3jePmNzpHO5+mmcbLkf/J9Zy/X7hrc2VoUhj5G+nX3/T4iFCE8Su0htyesUt9dfBP5KBuMn04+Tnq6liOD+ODIMbVXacufwZ/kBhD3SvN7eUgxvFWi2+X3HKXOCwH2EoGpUTPNpmogOqNDfP9ivuKEOibMxR2sUcRyQKBgQDqXptI+8ccaBDbgjbjZ8QAgSWD2DY2K+b9KLydRm21IOipXuE1AbYAL6jo4jBsrayHUk/5wieG7P8mZwBaGRGBBeG97spEO2CNLEoPUTETzJtKwV8W66uPzYX6bMpCxBsdwVllOM7EzT2N4fJY6hSyBIhh46gH3EORt8bl9r/M/wKBgQDlEXFtXZYy+gPLrpRDaLkFxOFaHPRJeKJE0zNk3Y56cHFOjQRwd6vVPVzYaEF2UyF9o3EZ19BGQI9rqLTVgRfu7yqJpmVOxn+1rDFNlQdM3Sl0obFETntcfyufkE4jzlwdigkA/NWvI2U2eOS8xrhuS/5BYHab2Ran44uVIqCTxQKBgDcuCxWF4f04Ky/jWpTz61vLDFAcabcbYwkbvDyzRkUs+FpYMmHOg1FL51LdXlVYFpTNtnKxWakUx4X9HkIYQNzFy75yKEEkUbkrQkyU6x8kPzO8j2zQE9aJpw+s6XoKve+lhCym0VfYkrODDRIOGs1G7+1MMlWXcHkwca3XCJV1AoGBAKCVDNYlcGEGIdkM5sUmyeZAcdZRS/OhjOgAwxunsfUllFkDxKPvUNepL8hJtfJ0Lps8E9KRF2HYanKHj1XJLPUEVuauboC96NN8BggkPDznIeOwYmvHNPXP9M3kRNMXHD5dARjfJhGkF5ULRRcNnEc+INzF+gAhPJ+vha+j2bwdAoGBALUAB8BGGYwcftfMOIQItx4Sl/9Cj5DaYGCdgnu+VMlm6jW79NrGxSW31mJUe6B6TPfJuMeOFJ5JQo4fdq81EPP5NRVwW1sSvWPJBmoA1uuIQKkTqiYwdZpIrrx08gLIuze1WW3I2KlvuOIAaqk6NshK5dHlqqiz75jhcodebXSp"/>
+
+        <!-- android:name=".activity.InitActivity" -->
+        <activity
+            android:name=".activity.InitActivity"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="zxyx"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.WelcomeActivity"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/VAppTheme"/>
+
+        <activity
+            android:name=".activity.MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:hardwareAccelerated="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="fullSensor"/>
+
+        <!-- 豆豆作业 -->
+        <activity
+            android:name=".module.ddwork.DDCameraActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.ddwork.DDPreviewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.ddwork.DDUploadActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+
+        <!-- 原版教辅 -->
+        <activity
+            android:name=".module.learnmaterial.CreateWorkActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".activity.ReportQuestionDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+
+        <!-- 入学评测 -->
+        <activity
+            android:name=".module.entrance.EntranceEvaluationActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.entrance.EntranceListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+
+        <!-- 我的学习 -->
+        <activity
+            android:name=".module.mylearn.ScWorkPreviewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.mylearn.WaitUploadActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.mylearn.MyLearnListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".module.mylearn.ScWorkCameraActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.mylearn.ScWorkCropImageActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.mycenter.EditUserHeaderActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/transparent_activity"/>
+        <activity
+            android:name=".activity.PicturePreviewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/NoTitleBar.Fullscreen"/>
+        <activity
+            android:name=".activity.SinglePicturePreviewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/NoTitleBar.Fullscreen"/>
+        <activity
+            android:name=".activity.ScreenPreviewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name=".module.login.RegisterActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="fullSensor"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".module.login.LoginActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="fullSensor"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".module.login.UserProtocolActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="behind"/>
+        <activity
+            android:name=".module.login.RecoverPassActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".module.login.ModifyPassActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.login.UserInfoSuplementActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity android:name=".module.login.UserJoinClassActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.mycenter.EditPersonalinfoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.mycenter.JoinClassActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.mycenter.SchoolSelectActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".module.mycenter.UserInfoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+
+        <!-- <activity -->
+        <!-- android:name=".module.login.view.BindMobileActivity" -->
+        <!-- android:screenOrientation="fullSensor" /> -->
+        <!-- android:configChanges="orientation|screenSize|keyboardHidden" -->
+        <activity
+            android:name=".module.message.MessageActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.message.MessageDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.message.ShowMsgWebviewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".activity.CommonWebviewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".activity.CommonWvNoActionbarActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.famousteacher.FamousVideoPayActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.mystudybean.BuySuiteActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.mycenter.ExchangeIntroActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.entrance.QualityAnalysisWebviewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".activity.NewTopMessageActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity
+            android:name=".activity.ServerUpgradingActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <service
+            android:name=".module.message.service.TopMessagService"
+            android:exported="false"/>
+        <service
+            android:name=".module.first.service.WorkTimeService"
+            android:exported="false"/>
+        <service
+            android:name=".module.first.service.MyWorkService"
+            android:exported="false"/>
+
+        <!-- 商品 -->
+        <activity
+            android:name=".module.product.ProductDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.product.ProductExchangeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.product.ProductHelpActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.product.AllTreasureActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.product.MyTreasureActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.product.AddTreasureActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.floatwindow.activity.HelpBrowseActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+
+        <!-- 充值 -->
+        <activity
+            android:name=".module.mystudybean.WebViewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.mystudybean.ReplacePayActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.mystudybean.SendProtocolActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.mystudybean.activity.PayProtocolActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.mystudybean.RechargeCenterActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+
+        <!-- 提分秘籍 -->
+        <activity
+            android:name=".module.studycheat.ErrQuestionReviewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.studycheat.ForceTrainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.studycheat.StudyCheatActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.errorbook.EBookDayCleanActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.errorbook.PdfViewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+
+        <!-- 拍照错题本 -->
+        <activity
+            android:name=".module.xbook.XBookCameraActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.xbook.XBookCropImageActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.robotqa.RobotQaActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.robotqa.ClassmateAnsImageActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.robotqa.TextZoomActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.robotqa.QuestionDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+
+        <!-- 原版教辅 -->
+        <activity
+            android:name=".module.learnmaterial.LMCameraActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.learnmaterial.LMCameraActivity2"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.learnmaterial.LMPreviewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="behind"/>
+        <activity
+            android:name=".module.learnmaterial.LMUserAdjustActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="behind"/>
+
+        <!-- 名师精讲 -->
+        <activity
+            android:name=".module.famousteacher.FamousTeacherActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+
+        <!-- 知识诊断 -->
+        <activity
+            android:name=".module.onekeydiagnose.activity.KnowledgeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".module.onekeydiagnose.activity.CreatPromoteActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+
+        <!-- 班级码加班 -->
+        <activity
+            android:name=".module.mycenter.ClassCodeJoinClassActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+
+
+        <!-- 家长端界面 -->
+        <activity
+            android:name=".parent.activity.ParentMainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".parent.activity.ParentAboutActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".parent.activity.ParentFeedBackActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".parent.activity.ParentChildrenActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity android:name=".parent.activity.ParentPrivilegeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name=".parent.activity.ParentMessageListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".parent.activity.ParentMsgDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".parent.activity.ParentInfoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".parent.activity.ParentBindingPhoneActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".parent.activity.ParentModifyPwActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".parent.activity.ParentInviteActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".parent.activity.ReportDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity android:name=".parent.activity.ParentProductActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="fullSensor"/>
+        <activity android:name=".parent.activity.ParentRechargeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".parent.activity.ArticleDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+
+        <!-- 积分 -->
+        <activity android:name=".module.myscore.ScoreExchangeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity android:name=".module.myscore.ExchangeRecordActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+
+        <!-- 提分方案 -->
+        <activity android:name=".module.scoreplan.activity.CalenderPlanActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity android:name=".module.scoreplan.activity.ScorePlanActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity android:name=".module.scoreplan.activity.ScorePlanIntroActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity android:name=".module.scoreplan.activity.ScoreGuideActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+        <activity android:name=".module.scoreplan.activity.ScorePlanVideoPayActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor"/>
+
+        <!-- JPush SDK -->
+        <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@style/MyDialogStyle">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.tsinghuabigdata.edu.ddmath"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:screenOrientation="fullSensor"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.tsinghuabigdata.edu.ddmath"/>
+            </intent-filter>
+        </activity>
+        <!-- Required  SDK核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false"/>
+
+        <!-- Required SDK 核心功能 -->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER"/>
+                <action android:name="cn.jpush.android.intent.REPORT"/>
+                <action android:name="cn.jpush.android.intent.PushService"/>
+                <action android:name="cn.jpush.android.intent.PUSH_TIME"/>
+            </intent-filter>
+        </service>
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService"/>
+
+                <category android:name="com.tsinghuabigdata.edu.ddmath"/>
+            </intent-filter>
+        </service>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY"/>
+                <!-- Required  显示通知栏 -->
+                <category android:name="com.tsinghuabigdata.edu.ddmath"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false"/>
+
+        <!-- User defined.  For test only  用户自定义的广播接收器 -->
+        <receiver
+            android:name=".receive.JPushClientReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION"/>
+                <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION"/>
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED"/>
+                <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED"/>
+                <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED"/>
+                <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK"/>
+                <!-- Optional 用户接受Rich Push Javascript 回调函数的intent -->
+                <!-- action android:name="cn.jpush.android.intent.CONNECTION" / -->
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.tsinghuabigdata.edu.ddmath"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default"/>
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="9a0012dc2f241836d923f009"/>
+        <!-- </>值来自开发者平台取得的AppKey -->
+        <!-- JPush SDK END -->
+
+
+        <!-- 分享 相关界面 START -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+            <!-- QQ和QQ空间分享 QQ登录的回调必须要配置的 -->
+            <!--<intent-filter>-->
+            <!--<data android:scheme="tencent1106675811" />-->
+            <!--<action android:name="android.intent.action.VIEW" />-->
+            <!--<category android:name="android.intent.category.BROWSABLE" />-->
+            <!--<category android:name="android.intent.category.DEFAULT" />-->
+            <!--</intent-filter>-->
+
+            <!-- 新浪微博客户端分享回调必须配置 -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <!-- <activity -->
+        <!-- android:name="cn.sharesdk.framework.ShareSDKUIShell" -->
+        <!-- android:configChanges="keyboardHidden|orientation|screenSize" -->
+        <!-- android:screenOrientation="fullSensor" -->
+        <!-- android:theme="@android:style/Theme.Translucent.NoTitleBar" -->
+        <!-- android:windowSoftInputMode="stateHidden|adjustResize" /> -->
+
+
+        <!-- &lt;!&ndash;微信分享回调 &ndash;&gt; -->
+        <!-- <activity
+         android:name=".wxapi.WXEntryActivity"
+         android:configChanges="keyboardHidden|orientation|screenSize"
+         android:exported="true"
+         android:screenOrientation="fullSensor"
+         android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />-->
+
+        <!-- 微信支付回调 -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="fullSensor"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+
+
+        <!-- 分享 相关界面 END -->
+        <!--
+       ATTENTION: This was auto-generated to add Google Play services to your project for
+       App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+
+        <!-- 网易云DEMO -->
+        <!-- <meta-data -->
+        <!-- android:name="com.netease.nim.appKey" -->
+        <!-- android:value="1ee5a51b7d008254cd73b1d4369a9494" /> -->
+
+
+        <service android:name=".module.floatwindow.service.FloatMonkService"/>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.tsinghuabigdata.edu.ddmath.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/external_path"/>
+        </provider>
+
+        <!-- 应用保活处理 -->
+        <receiver
+            android:name=".daemon.receiver.WakeReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.wake.gray" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".daemon.GrayService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":gray" />
+        <service
+            android:name=".daemon.GrayService$GrayInnerService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":gray" />
+        <service
+            android:name=".daemon.receiver.WakeReceiver$WakeNotifyService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".daemon.receiver.WakeReceiver$WakeGrayInnerService"
+            android:enabled="true"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

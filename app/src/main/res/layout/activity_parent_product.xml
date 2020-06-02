@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/color_F1FBF7"
+    android:orientation="vertical">
+
+    <!-- 状态栏 -->
+    <com.tsinghuabigdata.edu.ddmath.parent.view.ParentToolbar
+        android:id="@+id/worktoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="14dp"
+            android:paddingBottom="10dp"
+            android:paddingStart="-2dp"
+            android:paddingEnd="-2dp"
+            android:gravity="center_horizontal">
+
+            <!-- 可用学豆 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_large"
+                    android:textColor="@color/color_333333"
+                    android:text="可用学豆  "
+                    android:gravity="center_horizontal"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_usable_xuedou"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_large"
+                    android:textColor="@color/color_13D182"
+                    android:text="56个"
+                    android:gravity="center_horizontal"
+                    />
+
+            </LinearLayout>
+
+            <!--  -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_small"
+                android:textColor="@color/color_888888"
+                android:text="@string/parent_product_tips"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:drawableStart="@drawable/tixing"
+                android:drawablePadding="2dp"
+                />
+
+            <!-- 套餐列表 -->
+            <com.handmark.pulltorefresh.library.PullToRefreshListView
+                android:id="@+id/lv_product_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/transparent"
+                android:dividerHeight="12dp"
+                android:listSelector="@color/transparent"
+                android:scrollbars="none"
+                android:layout_marginTop="12dp"/>
+            <include layout="@layout/layout_no_class_parent"/>
+
+        </LinearLayout>
+
+        <!-- -->
+        <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+            android:id="@+id/loadingPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+</LinearLayout>

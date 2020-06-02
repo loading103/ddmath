@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!-- 内容区-->
+    <LinearLayout
+        android:id="@+id/studyfb_workexam_mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <!-- 趋势图 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dp"
+                    android:background="@drawable/bg_report_chart_r12">
+
+                    <com.tsinghuabigdata.edu.ddmath.module.studyfeedback.view.ChartBtnView
+                        android:id="@+id/studyfb_workexam_allbtn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"/>
+
+                    <com.tsinghuabigdata.edu.ddmath.module.studyfeedback.view.ChartBtnView
+                        android:id="@+id/studyfb_workexam_workbtn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"/>
+
+                    <com.tsinghuabigdata.edu.ddmath.module.studyfeedback.view.ChartBtnView
+                        android:id="@+id/studyfb_workexam_exambtn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"/>
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- 全部数据图表 -->
+                    <com.tsinghuabigdata.edu.ddmath.module.studyfeedback.view.ChartLineView
+                        android:id="@+id/studyfb_workexam_chart_all"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                    <!-- 作业数据图表 -->
+                    <com.tsinghuabigdata.edu.ddmath.module.studyfeedback.view.ChartLineView
+                        android:id="@+id/studyfb_workexam_chart_work"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"/>
+
+                    <!-- 考试数据图表 -->
+                    <com.tsinghuabigdata.edu.ddmath.module.studyfeedback.view.ChartLineView
+                        android:id="@+id/studyfb_workexam_chart_exam"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <!-- 考试报告列表 -->
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/studyfb_workexam_listview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:layout_marginTop="2dp"
+            android:divider="@color/transparent"
+            android:listSelector="@color/transparent"
+            android:scrollbars="none"
+            android:showDividers="middle"
+            android:layout_marginStart="4dp"
+            />
+
+    </LinearLayout>
+
+    <!-- 加载动画-->
+    <com.tsinghuabigdata.edu.ddmath.view.QuestionPager
+        android:id="@+id/loading_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+</RelativeLayout>

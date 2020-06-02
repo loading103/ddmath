@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/zx30_black">
+
+    <!-- 主要内容区  -->
+    <RelativeLayout
+        android:id="@+id/dialog_headimage_mainlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bg_rect_white">
+
+        <ImageView
+            android:id="@+id/dialog_headimage_closebtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/personalcenter_bg_popup_logout_icon_quit" />
+
+        <!-- 内容区域 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:background="@color/color_EAF7FF">
+
+                <ImageView
+                    android:id="@+id/dialog_headimage_imageview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY" />
+
+                <com.tsinghuabigdata.edu.ddmath.view.CaptureView
+                    android:id="@+id/mask_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </com.tsinghuabigdata.edu.ddmath.view.CaptureView>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="16dp">
+
+                <com.tsinghuabigdata.edu.ddmath.view.CircleImageView
+                    android:id="@+id/dialog_headimage_circleimage"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+                <!-- 拍照 -->
+                <Button
+                    android:id="@+id/dialog_headimage_camerabtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_rect_blue_r24"
+                    android:gravity="center"
+                    android:text="拍照"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <!-- 相册 -->
+                <Button
+                    android:id="@+id/dialog_headimage_picsbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_rect_blue_r24"
+                    android:text="从相册选择图片"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- 提示 图标 -->
+    <ImageView
+        android:id="@+id/dialog_headimage_tipimage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@id/dialog_headimage_mainlayout"
+        android:layout_alignLeft="@id/dialog_headimage_mainlayout"
+        android:layout_marginLeft="80dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

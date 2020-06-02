@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    tools:context=".module.ddwork.DDUploadActivity"
+    android:background="@drawable/bg_shade">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/ddwork_list_drawerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Toolbar 状态条 -->
+                <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.WorkToolbar
+                    android:id="@+id/ddwork_list_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <LinearLayout
+                    android:id="@+id/ddwork_list_mainlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
+
+                    <!--  左边 部分  -->
+                    <LinearLayout
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="@color/color_FFFDEC">
+
+                        <ListView
+                            android:id="@+id/ddwork_list_worklist"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:dividerHeight="0px"
+                            android:listSelector="#00000000"
+                            android:cacheColorHint="#00000000"
+                            android:divider="@color/transparent"
+                            android:scrollbars="none"
+                            android:fadeScrollbars="false"/>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <!-- 状态 -->
+                            <RelativeLayout
+                                android:id="@+id/ddwork_list_workstatuslayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:visibility="visible"
+                                android:background="@drawable/ic_submiting">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical">
+                                    <TextView
+                                        android:id="@+id/ddwork_list_workstatus"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="提交作业"
+                                        android:textSize="18sp"
+                                        android:textColor="@color/white"
+                                        android:gravity="center"/>
+                                    <ImageView
+                                        android:id="@+id/ddwork_list_workimage"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/ic_waiting"
+                                        android:visibility="gone"/>
+                                </LinearLayout>
+
+
+                            </RelativeLayout>
+
+                            <!-- 已批阅 -->
+                            <RelativeLayout
+                                android:id="@+id/ddwork_list_correctlayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|center_horizontal"
+                                android:visibility="gone"
+                                android:minHeight="80dp"
+                                android:paddingTop="4dp"
+                                android:paddingBottom="4dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/ic_rightandwrong"
+                                >
+
+                                <!--  -->
+                                <TextView
+                                    android:id="@+id/ddwork_list_correctedResult_right"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="正确 6 题"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/color_3F260F"
+                                    android:gravity="center_horizontal"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/ddwork_list_correctedResult_wrong"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="错误 5 题"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/color_3F260F"
+                                    android:paddingTop="8dp"
+                                    android:layout_below="@id/ddwork_list_correctedResult_right"
+                                    android:layout_centerHorizontal="true"
+                                    />
+
+                            </RelativeLayout>
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                    <!-- 右边 -->
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:padding="4dp"
+                        android:background="@color/color_F0FAFB">
+
+                        <!-- 页面详情 -->
+                        <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.QuestionListView
+                            android:id="@+id/ddwork_list_qustionlist"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:dividerHeight="0dp"
+                            android:divider="@color/transparent"
+                            android:listSelector="@color/transparent"
+                            android:scrollbars="none"
+                            android:fadeScrollbars="false"
+                            />
+
+                        <!-- 拍照 -->
+                        <RelativeLayout
+                            android:id="@+id/ddwork_list_cameralayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="visible"
+                            android:layout_marginRight="8dp">
+
+                            <LinearLayout
+                                android:id="@+id/ddwork_list_camerabtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="center|center_horizontal"
+                                android:layout_alignParentRight="true">
+
+                                <ImageView
+                                    android:id="@+id/ddwork_list_cameraImage"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:src="@drawable/ic_camera_purple_work"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/ddwork_list_cameratext"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textSize="@dimen/text_large_x20"
+                                    android:textColor="@color/color_8A8BC2"
+                                    android:gravity="center_horizontal"
+                                    android:drawableTop="@drawable/ic_camera_purple_work"
+                                    android:drawablePadding="8dp"
+                                    android:visibility="gone"/>
+                            </LinearLayout>
+
+                            <!-- 标记错题 -->
+                            <TextView
+                                android:id="@+id/tv_mark_errorquestion"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/btn_mark_errq"
+                                android:textSize="@dimen/text_small"
+                                android:textColor="@color/color_13C1D2"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginEnd="12dp"
+                                android:drawableStart="@drawable/ico_mark"
+                                android:drawablePadding="4dp"
+                                android:visibility="gone"
+                                />
+
+                        </RelativeLayout>
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <!-- 侧边栏滑动提示 -->
+                <LinearLayout
+                    android:id="@+id/ddwork_list_slidelayout"
+                    android:layout_width="40dp"
+                    android:layout_height="400dp"
+                    android:layout_gravity="end|bottom"
+                    android:gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/bg_rect_selectquestion"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/slide_left"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/text_large"
+                        android:ems="1"
+                        android:drawableTop="@drawable/ic_slideto_left"
+                        android:drawablePadding="12dp"
+                        android:layout_gravity="center_vertical"
+                        android:lineSpacingMultiplier="1.2"
+                        android:gravity="center"
+                        />
+
+                </LinearLayout>
+
+                <!--  -->
+                <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+                    android:id="@+id/loadingPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"/>
+
+                <!-- 原版教辅拍照引导页 -->
+                <com.tsinghuabigdata.edu.ddmath.module.learnmaterial.view.LmGuideView
+                    android:id="@+id/ddwork_list_lmguideview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"/>
+
+                <!-- 批阅完成后的连击分享功能 -->
+                <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.SeriesHitView
+                    android:id="@+id/ddwork_list_serieshitview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!-- 选择题目的功能 -->
+        <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.SelectQuestionView
+            android:id="@+id/ddwork_list_selectquestionview"
+            android:layout_width="600dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:visibility="visible"/>
+
+    </android.support.v4.widget.DrawerLayout>
+
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.SelectErrorQuestionView
+        android:id="@+id/selectErrorQuestionView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+</FrameLayout>
+
+
+
+

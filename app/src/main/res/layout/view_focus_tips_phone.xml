@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/vfocus_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请轻触屏幕对焦"
+            android:textColor="@color/color_FB6900"
+            android:textSize="@dimen/font_size_xlarge"/>
+
+        <ImageView
+            android:id="@+id/vfocus_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/focusclick_anim"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@null"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

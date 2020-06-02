@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/item_workimage_layout"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:visibility="visible"
+        >
+
+        <FrameLayout
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/item_workimage_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/start_page"
+                />
+            <com.tsinghuabigdata.edu.ddmath.view.CaptureView
+                android:id="@+id/item_workimage_rectcoverView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+            <View
+                android:id="@+id/item_workimage_coverview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/zx40_white"
+                android:visibility="gone"
+                />
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/item_workimage_delbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_delete_round"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"/>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="4dp">
+
+                <ImageView
+                    android:id="@+id/item_workimage_finish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_upload_success_green"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/item_workimage_uploadgif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/upload_animate"
+                    android:visibility="gone"/>
+
+            </FrameLayout>
+
+
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+    <!-- 添加 -->
+    <RelativeLayout
+        android:id="@+id/item_workimage_addimage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:visibility="gone"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:background="@drawable/bg_rect_blue_r24white"
+            >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/color_48B8FF"
+                android:layout_marginRight="45dp"
+                android:layout_marginLeft="45dp"
+                android:layout_centerInParent="true"/>
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_48B8FF"
+                android:layout_marginTop="45dp"
+                android:layout_marginBottom="45dp"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/item_workimage_index"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12"
+        android:textColor="@color/color_6A6AA1"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/bg_rect_imageindex"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_zhuye"
+    android:fitsSystemWindows="true">
+
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.WorkToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.tsinghuabigdata.edu.ddmath.module.ddwork.view.WorkToolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="8dp">
+
+        <LinearLayout
+            android:id="@+id/ll_pro_city"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="270"
+            android:background="@drawable/inputbox_login">
+
+            <TextView
+                android:id="@+id/tv_pro_city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:singleLine="true"
+                android:text="选择省市"
+                android:textColor="#999999"
+                android:textSize="14sp"
+                />
+
+
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="9dp"
+                android:layout_marginEnd="6dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_pulldown"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="335">
+
+            <EditText
+                android:id="@+id/et_school"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/inputbox_login"
+                android:hint="@string/select_school"
+                android:imeOptions="actionDone|flagNoExtractUi"
+                android:singleLine="true"
+                android:textColorHint="@color/input_hint_text_color"
+                android:textSize="@dimen/text_large"/>
+
+            <RelativeLayout
+                android:layout_width="36dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/iv_search"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_found_blue"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_delete"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_cancel_blue"
+                    android:visibility="gone"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_periodSchool"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/ll_primary"
+                android:layout_width="84dp"
+                android:layout_height="40dp"
+                android:src="@drawable/sel_school_primary_bg"
+                android:contentDescription="@null"/>
+
+            <ImageView
+                android:id="@+id/ll_middle"
+                android:layout_width="84dp"
+                android:layout_height="40dp"
+                android:src="@drawable/sel_school_middle_bg"
+                android:contentDescription="@null"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_list_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#9cffffff"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="256"/>
+
+        <ListView
+            android:id="@+id/listview_school"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="410"
+            android:divider="#DAD8D8"
+            android:dividerHeight="0.5dp"
+            android:background="@null">
+
+        </ListView>
+
+    </LinearLayout>
+
+</LinearLayout>

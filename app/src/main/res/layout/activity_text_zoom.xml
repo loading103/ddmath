@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fr_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.QuestionTextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center|left"
+            android:lineSpacingMultiplier="1.5"
+            android:text="ddd"
+            android:textSize="@dimen/text_large_xx" />
+    </FrameLayout>
+
+</LinearLayout>

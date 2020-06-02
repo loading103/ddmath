@@ -1,0 +1,91 @@
+<RadioGroup
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_revise_radiogroup"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="@drawable/bg_rect_c66666"
+    android:gravity="center_vertical"
+    android:weightSum="4">
+
+    <LinearLayout
+        android:id="@+id/dialog_revise_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.ChooseRadioButtonView
+            android:id="@+id/dialog_revise_radiobtnA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/fg_radiobtn_choose"
+            android:button="@null"
+            android:gravity="center"
+            android:text="[ A ]"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/text_large_x" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.ChooseRadioButtonView
+            android:id="@+id/dialog_revise_radiobtnB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/fg_radiobtn_choose"
+            android:button="@null"
+            android:gravity="center"
+            android:text="[ B ]"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/text_large_x" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.ChooseRadioButtonView
+            android:id="@+id/dialog_revise_radiobtnC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/fg_radiobtn_choose"
+            android:button="@null"
+            android:gravity="center"
+            android:text="[ C ]"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/text_large_x" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.ChooseRadioButtonView
+            android:id="@+id/dialog_revise_radiobtnD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/fg_radiobtn_choose"
+            android:button="@null"
+            android:gravity="center"
+            android:text="[ D ]"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/text_large_x" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</RadioGroup>

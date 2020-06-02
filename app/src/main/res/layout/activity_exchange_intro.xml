@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.WorkToolbar
+        android:id="@+id/worktoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg">
+
+        <ScrollView
+            android:background="@color/white"
+            android:id="@+id/container_suite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp">
+
+            <LinearLayout
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/color_50BDC9"
+                    android:text="1.什么是VIP卡兑换码？"
+                    android:textSize="21sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/color_666666"
+                    android:text="@string/vip_card_tisp"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/color_50BDC9"
+                    android:text="2.VIP卡兑换码是什么样的？"
+                    android:textSize="21sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/color_666666"
+                    android:text="VIP卡兑换码是一串字母或数字的组合。"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/color_50BDC9"
+                    android:text="3.VIP卡兑换码如何使用？"
+                    android:textSize="21sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/color_666666"
+                    android:text="3.1.在兑换页面输入正确的VIP卡兑换码，点击“确认兑换”按钮即可兑换VIP卡内包含的所有套餐，进行使用。\n3.2.每个VIP卡兑换码只可兑换一次，兑换成功后立即失效。"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/color_50BDC9"
+                    android:text="4.如何查看VIP卡兑换的套餐功能？"
+                    android:textSize="21sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/color_666666"
+                    android:text="兑换成功后便可开始使用VIP卡内包含的套餐功能，可以在【服务中心】-【VIP卡兑换】-【VIP卡兑换记录】中查询详情。"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

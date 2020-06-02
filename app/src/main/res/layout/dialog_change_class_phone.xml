@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="345dp"
+                android:layout_height="223dp"
+                android:background="@drawable/ic_frame"
+                android:orientation="vertical">
+
+
+    <!-- 关闭按钮 -->
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_frame_cancle"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_change_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="60dp"
+        android:lineSpacingMultiplier="1.2"
+        android:text="确定切换xx班级吗？"
+        android:textColor="@color/color_AC9C51"
+        android:textSize="16sp"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="160dp">
+
+        <ImageView
+            android:id="@+id/iv_cancel"
+            android:layout_width="98dp"
+            android:layout_height="42dp"
+            android:src="@drawable/ic_frame_cancel"/>
+
+        <ImageView
+            android:id="@+id/iv_sure"
+            android:layout_width="98dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/ic_frame_ok"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

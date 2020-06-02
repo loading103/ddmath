@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- 形象的表达：bottom代表背景部分在上边缘超出阴影的高度，right代表背景部分在左边超出阴影的宽度（相对应的offset） -->
+    <item>
+
+        <shape android:shape="rectangle">
+
+            <corners android:bottomLeftRadius="18dp" android:bottomRightRadius="18dp"/>
+            <solid android:color="@color/color_EBFBFF"/>
+
+        </shape>
+    </item>
+
+</layer-list>

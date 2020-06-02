@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_diagnose_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/diagios_history"
+        android:textColor="@color/color_333333"
+        android:textSize="16sp"
+        android:layout_centerVertical="true"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        />
+
+    <!-- 帮助 -->
+    <ImageView
+        android:id="@+id/iv_how_use"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_toEndOf="@id/tv_diagnose_detail"
+        android:layout_marginStart="6dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_howtouse"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="每日限用2次"
+        android:textSize="@dimen/text_small"
+        android:textColor="@color/color_999999"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:drawableStart="@drawable/icon_tishi"
+        android:drawablePadding="4dp"/>
+
+</RelativeLayout>

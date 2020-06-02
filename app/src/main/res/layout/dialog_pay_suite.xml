@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:paddingEnd="15dp"
+        android:paddingStart="20dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="购买套餐"
+            android:textColor="@color/color_666666"
+            android:textSize="24sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_buy_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_large_x"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/tv_title"
+            android:layout_marginStart="24dp"
+            android:visibility="gone"
+            android:text=""/>
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/cancel"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tv_suite_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XXXXXXXX套餐"
+            android:textColor="@color/color_666666"
+            android:textSize="26sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_suite_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="XXXX元"
+            android:textColor="@color/common_blue"
+            android:textSize="26sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_suite_price_old"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="XXXX元"
+            android:textColor="@color/color_999999"
+            android:textSize="20sp"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center_vertical">
+
+        <CheckBox
+            android:id="@+id/cb_bean_deduction"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/selector_bean_deduction"
+            android:button="@null"/>
+
+        <TextView
+            android:id="@+id/tv_use_deduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:text="使用学豆抵扣金额"
+            android:textColor="@color/use_deduction_text_color"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tv_deduction_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="xx学豆抵扣x.x元"
+            android:textColor="@color/color_999999"
+            android:textSize="20sp"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="15dp"
+        android:text="请选择支付方式"
+        android:textColor="@color/color_999999"
+        android:textSize="20sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="152dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="34dp"
+        android:orientation="horizontal">
+
+
+
+        <ImageView
+            android:id="@+id/iv_wxpay"
+            android:layout_width="276dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/selector_wechatpay"/>
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/iv_alipay"
+            android:layout_width="276dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/selector_alipay"/>
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/iv_parentpay"
+            android:layout_width="276dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/selector_parentpay"/>
+
+
+    </LinearLayout>
+
+    <!-- 用户使用协议 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="40dp">
+
+        <TextView
+            android:id="@+id/tv_have_read"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击确认支付，即表示您已同意"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/text_large_x" />
+
+        <TextView
+            android:id="@+id/tv_protocol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/tv_have_read"
+            android:text="@string/user_procotol"
+            android:textColor="@color/color_52BDC9"
+            android:textSize="@dimen/text_large_x20"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt_confirmPay"
+        android:layout_width="480dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_loading_retry"
+        android:text="确认支付"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:layout_marginBottom="12dp"/>
+
+</LinearLayout>

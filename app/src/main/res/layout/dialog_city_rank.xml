@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="640dp"
+    android:layout_height="420dp"
+    android:orientation="vertical"
+    android:background="@drawable/bg_class_rank_phone">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/bg_rect_city_ranklist_phone"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/city_ranklist"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_large_x24"/>
+
+            <TextView
+                android:id="@+id/tv_rank_city_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/city_user_count"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_large_x"
+                android:layout_marginTop="6dp"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_close"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="9dp"
+            android:layout_marginTop="9dp"
+            android:layout_alignParentEnd="true">
+
+            <ImageView
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/icon_tuichu"
+                android:contentDescription="@null"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="6dp">
+
+        <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+            android:id="@+id/loadingPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/create_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_middle"
+                android:textColor="@color/color_999999"
+                android:text="@string/gerate_tips"
+                android:layout_marginBottom="12dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone"/>
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/chart_city_distribute"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/create_tips"
+                android:layout_marginBottom="6dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginTop="16dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="6dp">
+
+                <View
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:background="@color/color_1DA9FF"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_large_xx"
+                    android:text="@string/person_know_rate"
+                    android:layout_marginStart="4dp"/>
+
+                <TextView
+                    android:id="@+id/tv_user_avrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#1DA9FF"
+                    android:textSize="@dimen/text_large_xx"
+                    android:text="30%"
+                    android:layout_marginStart="4dp"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_middle"
+                android:textColor="@color/color_999999"
+                android:text="人数"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_middle"
+                android:textColor="@color/color_999999"
+                android:text="正确率"
+                android:layout_marginBottom="22dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+</LinearLayout>

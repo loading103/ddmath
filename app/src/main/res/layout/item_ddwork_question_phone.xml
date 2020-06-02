@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_ddwork_mainlayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp">
+
+    <!-- 页码分割线 -->
+    <LinearLayout
+        android:id="@+id/item_ddwork_pageinfo_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:layerType="software"
+            android:background="@drawable/bg_rect_qpage"/>
+
+        <TextView
+            android:id="@+id/item_ddwork_pageinfo_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text=""
+            android:textColor="@color/color_AEAEAE"
+            android:textSize="@dimen/text_small" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:layerType="software"
+            android:background="@drawable/bg_rect_qpage" />
+
+    </LinearLayout>
+    <!-- 题型 -->
+    <TextView
+        android:id="@+id/item_ddwork_questiontype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/color_492A0E"
+        android:text=""
+        android:paddingBottom="8dp"
+        android:paddingEnd="8dp"
+        />
+
+    <!-- 题目内容 -->
+    <LinearLayout
+        android:id="@+id/item_ddwork_questionlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="4dp"
+        android:orientation="vertical"
+        android:paddingBottom="4dp"
+        android:visibility="visible">
+
+        <!-- 题干内容 -->
+        <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.QuestionTextView
+            android:id="@+id/item_ddwork_questiondata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_492A0E"
+            android:textSize="14sp" />
+
+        <!-- 用户答案 -->
+        <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.QuestionAnswerImageView
+            android:id="@+id/item_ddwork_question_answerimage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"/>
+        <!-- 用户答案 -->
+        <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.QuestionAnswerImageView
+            android:id="@+id/item_ddwork_question_answerimage_second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"/>
+
+        <!-- 问小豆 && 申请重判 && 错题订正入口 -->
+        <RelativeLayout
+            android:id="@+id/item_ddwork_correctErrorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <com.tsinghuabigdata.edu.ddmath.view.AskXiaoDouView
+                android:id="@+id/item_ddwork_askDouDouView"
+                android:layout_width="96dp"
+                android:layout_height="36dp"
+                android:layout_centerInParent="true" />
+
+            <!-- 我要申诉功能 -->
+            <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.AppealStatusView
+                android:id="@+id/item_ddwork_appealanswer"
+                android:layout_width="96dp"
+                android:layout_height="36dp"
+                />
+
+            <!-- 错题订正入口 -->
+            <Button
+                android:id="@+id/item_ddwork_reviseErrBtn"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="96dp"
+                android:layout_height="36dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/selector_correct_btnbg"
+                android:gravity="center"
+                android:text="@string/correct_question"
+                android:textSize="@dimen/text_middle"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:visibility="visible"/>
+
+        </RelativeLayout>
+
+        <!-- 错题订正答案 -->
+        <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.QuestionAnswerImageView
+            android:id="@+id/item_ddwork_reviseanswerimage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"/>
+
+        <!-- 订正答案 我要申诉入口 -->
+        <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.AppealStatusView
+            android:id="@+id/item_ddwork_reviceappealanswer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:minHeight="44dp"
+            android:minWidth="108dp"/>
+
+        <!-- 参考答案 -->
+        <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.QuestionItemView
+            android:id="@+id/item_ddwork_standardAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="6dp"
+            android:textSize="14sp" />
+
+        <!-- 解题思路 -->
+        <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.QuestionItemView
+            android:id="@+id/item_ddwork_solveThink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="6dp"
+            android:textSize="14sp"
+            />
+
+        <!-- 错误知识点 -->
+        <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.QuestionItemView
+            android:id="@+id/item_ddwork_errKonwledge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="6dp"
+            />
+
+        <!-- 错误原因 -->
+        <com.tsinghuabigdata.edu.ddmath.module.ddwork.view.QuestionItemView
+            android:id="@+id/item_ddwork_errReasons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="6dp"
+            />
+
+        <View
+            android:id="@+id/item_ddwork_questionsplitline"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/color_7B4A20" />
+
+    </LinearLayout>
+
+</LinearLayout>

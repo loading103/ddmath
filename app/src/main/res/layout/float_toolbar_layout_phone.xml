@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <!--<include-->
+        <!--android:id="@+id/float_id"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--layout="@layout/arcmenu_layout_center"-->
+        <!--android:layout_gravity="end"/>-->
+
+    <LinearLayout
+        android:id="@+id/cartoon_dd_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+
+        <!-- 豆豆形象 -->
+        <ImageView
+            android:id="@+id/cartoon_dd_imageview"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/cartoondd_animate"
+            android:contentDescription="@null"/>
+
+
+        <!-- 帮助 -->
+        <LinearLayout
+            android:id="@+id/cartoon_dd_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/cartoon_dd_help"
+                android:contentDescription="@null"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/help"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_small"
+                />
+
+        </LinearLayout>
+
+        <!-- 敬请期待 -->
+        <LinearLayout
+            android:id="@+id/cartoon_dd_expect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:visibility="gone"
+            android:layout_marginStart="4dp">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/cartoon_dd_expect"
+                android:contentDescription="@null"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/except"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_small"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

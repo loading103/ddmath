@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"/>
+
+
+    <TextView
+        android:id="@+id/tv_jump"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/jump"
+        android:textColor="@color/white"
+        android:textSize="18sp"/>
+
+
+    <TextView
+        android:id="@+id/tv_experience"
+        android:layout_width="106dp"
+        android:layout_height="31dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="13dp"
+        android:background="@drawable/drawable_experience"
+        android:gravity="center"
+        android:text="@string/experience_immediately"
+        android:textColor="@color/white"
+        android:textSize="16sp"/>
+
+
+</RelativeLayout>

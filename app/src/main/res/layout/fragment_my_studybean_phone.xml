@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--  -->
+    <RelativeLayout
+        android:id="@+id/rl_studybean_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/btn_buy_detail"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="33dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_buy_detail"
+            android:text="@string/buy_detail"
+            android:textColor="@color/color_59CBD7"
+            android:textSize="14sp"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_study_bean"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="3dp"
+                android:text="可用学豆"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/text_small" />
+
+            <TextView
+                android:id="@+id/tv_total_bean"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="3dp"
+                android:text=""
+                android:textColor="@color/color_FFA12A"
+                android:textSize="@dimen/text_large_x"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="3dp"
+                android:text="个"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/text_small"/>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_recharge_bean"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="33dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_buy_detail"
+            android:text="@string/recharge_bean"
+            android:visibility="gone"
+            android:textColor="@color/color_59CBD7"
+            android:textSize="14sp"/>
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.tsinghuabigdata.edu.ddmath.view.LoadingPager
+            android:id="@+id/loadingPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:id="@+id/ll_studybean_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.handmark.pulltorefresh.library.PullToRefreshListView
+                android:id="@+id/lv_suite"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:divider="@color/transparent"
+                android:dividerHeight="8dp"
+                android:scrollbars="none"
+                />
+
+
+        </LinearLayout>
+
+        <include layout="@layout/layout_no_class_phone"/>
+        <include layout="@layout/layout_no_nom_class_phone"/>
+    </FrameLayout>
+
+
+
+</LinearLayout>
